@@ -1,11 +1,10 @@
 import React from 'react';
-import './homeStyle.css';
+import { Cover } from '../components/Cover';
 
 export const HomePage = () => {
     return (
         <section id='home'>
-            <img src='images/album_cover.jpg' alt='album cover' />
-            <h1>CHASTITY BELT</h1>
+            <Cover />
         </section>
     );
 };

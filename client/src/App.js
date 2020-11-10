@@ -1,10 +1,9 @@
 import React from 'react';
 // import { Component } from 'react';
 
-import { Socials } from './components/Socials/Socials.js';
 import { Listen } from './components/Listen';
-import { Menu } from './pages/Menu.js';
-import { HomePage } from './pages/Home/Home.js';
+import { Menu } from './pages/Menu';
+import { HomePage } from './pages/Home';
 // import { ShowsPage } from './pages/Shows';
 // import { FanArtPage } from './pages/FanArt';
 // import { ContactPage } from './pages/Contact';
@@ -19,7 +18,6 @@ const App = () => {
             <Menu />
             <HomePage />
             <Listen />
-            <Socials />
         </main>
     );
 }

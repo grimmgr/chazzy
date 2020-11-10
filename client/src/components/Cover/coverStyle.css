@@ -1,0 +1,14 @@
+.cover {
+    text-align: center;
+    padding-top: 70px;
+    width: 100%;
+}
+
+img {
+    margin: 0 auto;
+    width: 60%;
+}
+
+h1 {
+    font-style: italic;
+}

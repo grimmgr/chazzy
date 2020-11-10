@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { NavButton } from '../components/NavButton/NavButton.js';
-import { Nav } from '../components/Nav/Nav.js';
+import { NavButton } from '../components/NavButton';
+import { Nav } from '../components/Nav';
 
 export const Menu = () => {
     const [menuState, setMenuState] = useState(false);
@@ -11,7 +11,7 @@ export const Menu = () => {
     };
 
     return (
-        <section className='menu'>
+        <section id='menu'>
             { menuState ? <Nav /> : null}
                 
             <NavButton
