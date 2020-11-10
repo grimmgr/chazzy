@@ -1,0 +1,27 @@
+.nav-button {
+    cursor: pointer;
+    height: 25px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+}
+
+.nav-button span {
+    background: rgb(0, 0, 0);
+    height: 5px;
+    position: absolute;
+    width: 100%;
+}
+
+.top {
+    top: 0;
+}
+
+.middle {
+    top: 10px;
+}
+
+.bottom {
+    top: 20px;
+}

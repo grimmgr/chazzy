@@ -1,0 +1,4 @@
+.socials-list {
+    display: flex;
+    justify-content: space-evenly;
+}
