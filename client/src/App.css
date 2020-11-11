@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap');
+
 * {
     box-sizing: border-box;
     font-family: 'Didot', serif;
@@ -19,7 +21,22 @@ a:visited {
 }
 
 #home {
+    background-image: url(./backgrounds/home_mobile.png);
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    justify-content: center;
+    position: relative;
+}
+
+h1 {
+    color: rgb(238, 238, 238);
+    font-size: 1.3rem;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
 @keyframes App-logo-spin {

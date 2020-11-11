@@ -1,17 +1,48 @@
 .cover {
     text-align: center;
-    padding-top: 40%;
     position: relative;
+    bottom: 7%;
     width: 100%;
 }
 
-h1 {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+p {
+    color: rgb(255, 249, 222);
 }
 
 img {
+    border: 2px solid rgba(255, 255, 255, .8);
     margin: 0 auto;
-    width: 60%;
+    margin-top: 20px;
+    width: 75%;
+}
+
+.buy {
+    cursor: pointer;
+    position: relative;
+    bottom: 16%;
+}
+
+.barcode {
+    border: 1px solid rgba(46, 12, 70, .5);
+    box-sizing: content-box;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: 'Libre Barcode 128 Text', cursive;
+    font-size: 2rem;
+    font-style: normal;
+    padding: 1px 10px;
+}
+
+
+.listen-patreon {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    text-decoration: underline;
+    width: 70%;
+}
+
+.wink {
+    font-family: sans-serif;
+    font-style: normal;
 }
