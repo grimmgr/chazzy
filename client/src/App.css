@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Didot', serif;
+    font-style: italic;
     margin: 0;
     padding: 0;
 }
@@ -15,6 +16,10 @@ a {
 
 a:visited {
     color: rgb(0, 0, 0);
+}
+
+#home {
+    height: 100vh;
 }
 
 @keyframes App-logo-spin {
