@@ -1,16 +1,23 @@
 .cover {
     text-align: center;
     position: relative;
-    bottom: 7%;
+    bottom: 8%;
     width: 100%;
+}
+
+h1 {
+    color: rgb(238, 238, 238);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 p {
     color: rgb(255, 249, 222);
 }
 
-img {
-    border: 2px solid rgba(255, 255, 255, .8);
+.album-cover {
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 3px 3px 5px rgba(69, 68, 68, 0.8);
     margin: 0 auto;
     margin-top: 20px;
     width: 75%;
@@ -20,21 +27,22 @@ img {
     cursor: pointer;
     position: relative;
     bottom: 16%;
+    margin: 0 auto;
+    width: fit-content;
 }
 
 .barcode {
-    border: 1px solid rgba(46, 12, 70, .5);
+    box-shadow: 1px 1px 3px rgb(67, 67, 67);
     box-sizing: content-box;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     font-family: 'Libre Barcode 128 Text', cursive;
     font-size: 2rem;
     font-style: normal;
-    padding: 1px 10px;
+    padding: 1px 12px;
 }
 
-
-.listen-patreon {
+.patreon {
     display: flex;
     margin: 0 auto;
     justify-content: space-evenly;
