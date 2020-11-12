@@ -1,11 +1,16 @@
-.smiley {
+.listen-icon {
     position: absolute;
     top: 20px;
     left: 20px;
 }
 
-.smiley img {
-    border-radius: 50%;
-    /* box-shadow: 2px 2px 3px rgb(121, 121, 121); */
-    width: 35px;
+.listen-icon i {
+    color: rgb(255, 255, 255);
+    font-size: 1.7rem;
 }
+
+/* .smiley img {
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px rgb(121, 121, 121);
+    width: 35px;
+} */

@@ -47,7 +47,7 @@ a:visited {
     background-repeat: no-repeat;
     background-size: contain;
     height: 500px;
-    padding-top: 20px;
+    padding-top: 40px;
     text-align: center;
 }
 
@@ -55,6 +55,14 @@ a:visited {
     color: rgb(255, 255, 255);
 }
 
+#subscribe {
+    padding-top: 40px;
+}
+
+#contact {
+    padding-top: 40px;
+    text-align: center;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
