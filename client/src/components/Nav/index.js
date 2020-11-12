@@ -8,8 +8,8 @@ export const Nav = () => {
             <div className='nav-container'>
                 <ul className='nav-list'>
                     <li><a href='#home'>Home</a></li>
-                    <li><a href='#shows'>Shows</a></li>
                     <li><a href='http://chastitybelt.limitedrun.com/store 'target='_blank' rel='noopener noreferrer'>Shop</a></li>
+                    <li><a href='#shows'>Shows</a></li>
                     <li><a href='https://www.patreon.com/chastitybelt' target='_blank' rel='noopener noreferrer'>Patreon</a></li>
                     <li><a href='#fan-art'>Fan Art</a></li>
                     <li><a href='#contact'>Contact</a></li>

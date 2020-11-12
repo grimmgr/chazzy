@@ -1,0 +1,11 @@
+.merch-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+.img-container {
+    width: 40%;
+}
+
+.img-container img {
+    width: 100%;
+}

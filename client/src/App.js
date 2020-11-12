@@ -4,7 +4,8 @@ import React from 'react';
 
 import { Menu } from './pages/Menu';
 import { HomePage } from './pages/Home';
-// import { ShowsPage } from './pages/Shows';
+import { MerchPage } from './pages/Merch';
+import { ShowsPage } from './pages/Shows';
 // import { FanArtPage } from './pages/FanArt';
 // import { ContactPage } from './pages/Contact';
 
@@ -17,6 +18,8 @@ const App = () => {
         <main>
             <Menu />
             <HomePage />
+            <MerchPage />
+            <ShowsPage />
         </main>
     );
 }
