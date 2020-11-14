@@ -3,6 +3,7 @@ import './merchItemsStyle.css';
 
 export const MerchItems = () => {
     return (
+        <div>
         <div className='merch-container'>
             <div className='img-container'>
                 <a href='http://chastitybelt.limitedrun.com/products/683025-cool-slut-beanie' target='_blank' rel='noopener noreferrer'>
@@ -15,5 +16,12 @@ export const MerchItems = () => {
                 </a>
             </div>
         </div>
+        <div className='go-store'>
+            <a href='http://chastitybelt.limitedrun.com/store' target='_blank'  rel='noopener noreferrer'>
+                <p>GO TO STORE</p>
+            </a>
+        </div>
+        <p className='treat'>treat yourself ;)</p>
+    </div>
     );
 };

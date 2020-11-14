@@ -36,8 +36,14 @@ a:visited {
 }
 
 #merch {
+    background-color: rgb(238, 197, 183);
     padding: 40px 0;
     text-align: center;
+}
+
+#merch h2 {
+    color: rgb(46, 12, 70);
+    margin-bottom: 20px;
 }
 
 #shows {

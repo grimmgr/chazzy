@@ -6,7 +6,6 @@ export const MerchPage = () => {
         <section id='merch'>
             <h2>New Merch!</h2>
             <MerchItems />
-            <p><a href='http://chastitybelt.limitedrun.com/store 'target='_blank' rel='noopener noreferrer'>treat yourself ;)</a></p>
         </section>
     );
 };
