@@ -15,11 +15,23 @@ p {
     color: rgb(255, 249, 222);
 }
 
+.listen {
+    border-bottom: 1px solid white;
+    margin: 5px auto;
+    width: fit-content;
+}
+
+.listen p {
+    color: white;
+    font-size: .8rem;
+    font-style: normal;
+}
+
 .album-cover {
-    border: 2px solid rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
     box-shadow: 3px 3px 5px rgba(69, 68, 68, 0.8);
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 5px;
     width: 75%;
 }
 
@@ -43,14 +55,28 @@ p {
 }
 
 .patreon {
-    display: flex;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-top: 1px solid rgb(255, 255, 255);
+    font-size: 1.1rem;
     margin: 0 auto;
-    justify-content: space-evenly;
-    text-decoration: underline;
-    width: 70%;
+    padding: 3px;
+    width: fit-content;
 }
 
-.wink {
+.patreon p {
+    background-color: rgba(255, 249, 222, .6);
+    color: rgb(46, 12, 70);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    padding: 2px;
+}
+
+/* #patreon {
+    text-shadow: 2px 2px 3px white;
+} */
+
+/* .wink {
     font-family: sans-serif;
     font-style: normal;
-}
+} */
