@@ -37,35 +37,40 @@ a:visited {
 
 #merch {
     background-color: rgb(238, 197, 183);
-    padding: 40px 0;
+    padding: 50px 0;
     text-align: center;
 }
 
 #merch h2 {
     color: rgb(46, 12, 70);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px whitesmoke;
 }
 
 #shows {
-    background-color: rgb(46, 12, 70);
-    background-image: url(./backgrounds/shows.jpg);
+    background-image: url(./backgrounds/shows.png);
     background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     height: 500px;
-    padding-top: 40px;
+    padding: 50px 0;
     text-align: center;
 }
 
 #shows h2 {
     color: rgb(255, 255, 255);
+    font-size: 1.4rem;
+    /* text-shadow: 1px 1px 2px rgb(147, 0, 147); */
 }
 
-#subscribe {
-    padding-top: 40px;
-}
+/* #shows img {
+    max-width: 100%;
+    position: relative;
+} */
 
 #contact {
+    color: white;
+    background-image: url(./backgrounds/purp.png);
+    background-size: cover;
     padding-top: 40px;
     text-align: center;
 }

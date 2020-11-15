@@ -6,6 +6,7 @@ import { Menu } from './pages/Menu';
 import { HomePage } from './pages/Home';
 import { MerchPage } from './pages/Merch';
 import { ShowsPage } from './pages/Shows';
+import { Subscribe } from './components/Subscribe';
 import { ContactPage } from './pages/Contact';
 // import { FanArtPage } from './pages/FanArt';
 
@@ -20,6 +21,7 @@ const App = () => {
             <HomePage />
             <MerchPage />
             <ShowsPage />
+            <Subscribe />
             <ContactPage />
         </main>
     );

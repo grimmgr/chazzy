@@ -4,8 +4,11 @@ import './noShowsStyle.css';
 export const NoShows = () => {
     return (
         <div className='no-events'>
-            <p>There are no upcoming events</p>
-            <p>;(</p>
+            <div className='note'>
+            <p>There are no upcoming events ;(
+                <br/>Join our mailing list below for updates!
+            </p>
+            </div>
         </div>
     );
 };
