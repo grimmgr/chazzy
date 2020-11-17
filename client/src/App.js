@@ -8,7 +8,7 @@ import { MerchPage } from './pages/Merch';
 import { ShowsPage } from './pages/Shows';
 import { Subscribe } from './components/Subscribe';
 import { ContactPage } from './pages/Contact';
-// import { FanArtPage } from './pages/FanArt';
+import { FanArtPage } from './pages/FanArt';
 
 // import logo from './logo.svg';
 import './App.css';
@@ -21,6 +21,7 @@ const App = () => {
             <HomePage />
             <MerchPage />
             <ShowsPage />
+            {/* <FanArtPage /> */}
             <Subscribe />
             <ContactPage />
         </main>
