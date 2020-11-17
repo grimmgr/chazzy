@@ -5,7 +5,12 @@ import '../pageStyles/merchStyle.css';
 
 export const MerchPage = () => {
     const [scrollPercentage, setScrollPercentage] = useState(0);
+    // const imgContainer = document.querySelector('.merch-container');
     const imgContainerArray = document.querySelectorAll('.img-container');
+
+    const test = () => {
+        setTimeout(() => console.log(document.querySelector('.img-container').getBoundingClientRect()), 2000);
+    }
 
     const rightArrowClick = () => {
         if (scrollPercentage > -700) {
@@ -57,6 +62,7 @@ export const MerchPage = () => {
                 </a>
             </div>
             <p className='treat'>treat yourself ;)</p>
+            { test() }
         </section>
     );
 };

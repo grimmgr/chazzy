@@ -7,7 +7,7 @@
     /* flex: none;
     flex-flow: row nowrap; */
     margin: 30px auto;
-    overflow: auto;
+    overflow: scroll;
     scroll-snap-type: x mandatory;
     width: 90%;
 }
@@ -37,7 +37,6 @@
     -webkit-text-fill-color: white;
     -webkit-text-stroke: 1px rgb(46, 12, 70);
     width: 10%;
-    z-index: 2;
 }
 
 .scrollLeft {
