@@ -2,7 +2,7 @@
     position: relative;
 }
 .merch-container {
-    border: 1px solid springgreen;
+    border: 2px solid rgba(196, 247, 164, .8);
     display: flex;
     /* flex: none;
     flex-flow: row nowrap; */
@@ -28,10 +28,12 @@
     background-color:  rgba(196, 247, 164, 0.6);
     /* border: 1px solid springgreen; */
     box-sizing: content-box;
-    color: white;
+    color: rgba(46, 12, 70, .7);
+    cursor: pointer;
     font-size: 2.2rem;
     position: absolute;
     bottom: 40%;
+    -webkit-text-fill-color: white;
     -webkit-text-stroke: 1px rgb(46, 12, 70);
     width: 10%;
     z-index: 2;

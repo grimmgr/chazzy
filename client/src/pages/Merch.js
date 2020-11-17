@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { MerchItem } from '../components/MerchItem';
 import merchData from '../merch.json';
 import '../pageStyles/merchStyle.css';
 
 export const MerchPage = () => {
+    const [scrollPercentage, setScrollPercentage] = useState(0);
+    const imgContainerArray = document.querySelectorAll('.img-container');
+
+    const rightArrowClick = () => {
+        if (scrollPercentage > -700) {
+            setScrollPercentage(prevPercent => prevPercent - 100);
+        };
+    };
+
+    const leftArrowClick = () => {
+        if (scrollPercentage < 0) {
+            setScrollPercentage(prevPercent => prevPercent + 100);
+        };
+    };
+
+    useEffect(() => {
+        imgContainerArray.forEach(img => {
+            img.style.transform = `translate(${scrollPercentage}%, 0)`;
+        });
+    }, [scrollPercentage])
+
     return (
         <section id='merch'>
             <h2>New Merch!</h2>
@@ -17,11 +38,17 @@ export const MerchPage = () => {
                         />
                     )) }
                 </div>
-                <div className='arrow scrollLeft'>
-                    <i class="fas fa-chevron-left"></i>
+                <div 
+                    className='arrow scrollLeft'
+                    onClick={ leftArrowClick }
+                    >
+                    <i className="fas fa-chevron-left"></i>
                 </div>
-                <div className='arrow scrollRight'>
-                    <i class="fas fa-chevron-right"></i>
+                <div 
+                    className='arrow scrollRight'
+                    onClick={ rightArrowClick }
+                    >
+                    <i className="fas fa-chevron-right"></i>
                 </div>
             </div>
             <div className='go-store'>
