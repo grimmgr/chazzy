@@ -44,7 +44,7 @@ a:visited {
 #merch h2 {
     color: rgb(46, 12, 70);
     margin-bottom: 30px;
-    text-shadow: 1px 1px 2px whitesmoke;
+    /* text-shadow: 1px 1px 2px whitesmoke; */
 }
 
 #shows {

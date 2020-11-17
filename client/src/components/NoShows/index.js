@@ -6,8 +6,8 @@ export const NoShows = () => {
         <div className='no-events'>
             <div className='note'>
             <p>There are no upcoming events ;(
-                <br/>Join our mailing list below for updates!
-            </p>
+            <br/>
+            <a href='#subscribe'>Join our mailing list</a> for updates!</p>
             </div>
         </div>
     );

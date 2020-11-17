@@ -3,7 +3,7 @@ import './subscribeStyle.css';
 
 export const Subscribe = () => {
     return (
-        <div className='subscribe-container'>
+        <section id='subscribe' className='subscribe-container'>
             <div className='subscribe'>
             <h3>JOIN OUR MAILING LIST</h3>
             <form >
@@ -11,6 +11,6 @@ export const Subscribe = () => {
                 <input className='subscribe-btn' type='submit' value='join'/>
             </form>
             </div>
-        </div>
+        </section>
     );
 };

@@ -20,3 +20,13 @@
     color: rgb(255, 255, 255);
     line-height: 1.6;
 }
+
+.no-events a {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+.no-events a:visited {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
