@@ -21,7 +21,7 @@ const App = () => {
             <HomePage />
             <MerchPage />
             <ShowsPage />
-            {/* <FanArtPage /> */}
+            <FanArtPage />
             <Subscribe />
             <ContactPage />
         </main>

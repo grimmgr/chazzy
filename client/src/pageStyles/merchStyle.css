@@ -1,15 +1,49 @@
-.merch-container {
-    display: flex;
-    justify-content: center;
+.merch-wrapper {
+    position: relative;
 }
-.img-container {
+.merch-container {
     border: 1px solid springgreen;
-    height: 165px;
-    margin-bottom: 30px;
+    display: flex;
+    /* flex: none;
+    flex-flow: row nowrap; */
+    margin: 30px auto;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    width: 90%;
+}
+
+.img-container {
+    background-color: white;
+    flex: none;
+    padding: 10px 10px 5px 10px;
+    scroll-snap-align: center;
+    width: 100%;
 }
 
 .img-container img {
-    height: 100%;
+    width: 100%;
+}
+
+.arrow {
+    background-color:  rgba(196, 247, 164, 0.6);
+    /* border: 1px solid springgreen; */
+    box-sizing: content-box;
+    color: white;
+    font-size: 2.2rem;
+    position: absolute;
+    bottom: 40%;
+    -webkit-text-stroke: 1px rgb(46, 12, 70);
+    width: 10%;
+    z-index: 2;
+}
+
+.scrollLeft {
+    padding: 4px 4px 0 0;
+}
+
+.scrollRight {
+    left: 89%;
+    padding: 4px 0 0 4px;
 }
 
 .go-store {
