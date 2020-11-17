@@ -17,6 +17,7 @@
     flex: none;
     padding: 10px 10px 5px 10px;
     scroll-snap-align: center;
+    transition: transform .7s ease;
     width: 100%;
 }
 
