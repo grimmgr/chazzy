@@ -1,3 +1,4 @@
+
 .nav-button {
     cursor: pointer;
     height: 25px;
@@ -19,6 +20,7 @@
 
 .top {
     top: 0;
+    transform-origin: 0 0;
 }
 
 .middle {
@@ -27,4 +29,77 @@
 
 .bottom {
     top: 20px;
+    transform-origin: 0 0;
+}
+
+.open-nav-enter {
+    opacity: 0;
+}
+
+.open-nav-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+.open-nav-exit {
+    opacity: 1;
+}
+
+.open-nav-exit-active {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.close-btn-exit-active .middle {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.close-btn-exit-done .middle {
+    opacity: 0;
+}
+
+.close-btn-enter .middle {
+    opacity: 0;
+}
+
+.close-btn-enter-active .middle {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.close-btn-exit-active .top {
+    transform: rotate(45deg) translateY(-3px);
+    transition: transform 300ms;
+}
+
+.close-btn-exit-done .top {
+    transform: rotate(45deg) translateY(-3px);
+}
+
+.close-btn-enter .top {
+    transform: rotate(45deg) translateY(-3px);
+}
+
+.close-btn-enter-active .top {
+    transform: rotate(0) translateY(0);
+    transition: transform 300ms;
+}
+
+.close-btn-exit-active .bottom {
+    transform: rotate(-45deg) translateY(-1px);
+    transition: transform 300ms;
+}
+
+.close-btn-exit-done .bottom {
+    transform: rotate(-45deg) translateY(-1px);
+}
+
+.close-btn-enter .bottom {
+    transform: rotate(-45deg) translateY(-1px);
+}
+
+.close-btn-enter-active .bottom {
+    transform: rotate(0) translateY(0);
+    transition: transform 300ms;
 }
