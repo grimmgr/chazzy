@@ -8,6 +8,7 @@
     flex-flow: row nowrap; */
     margin: 30px auto;
     overflow: scroll;
+    scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     width: 90%;
 }
@@ -17,7 +18,6 @@
     flex: none;
     padding: 10px 10px 5px 10px;
     scroll-snap-align: center;
-    transition: transform .7s ease;
     width: 100%;
 }
 
@@ -33,19 +33,20 @@
     cursor: pointer;
     font-size: 2.2rem;
     position: absolute;
-    bottom: 40%;
+    bottom: 45%;
     -webkit-text-fill-color: white;
     -webkit-text-stroke: 1px rgb(46, 12, 70);
     width: 10%;
 }
 
 .scrollLeft {
-    padding: 4px 4px 0 0;
+    left: 0;
+    padding: 6px 4px 6px 0;
 }
 
 .scrollRight {
-    left: 89%;
-    padding: 4px 0 0 4px;
+    right: 0;
+    padding: 6px 0 6px 4px;
 }
 
 .go-store {

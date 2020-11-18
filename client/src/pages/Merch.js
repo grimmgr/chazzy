@@ -1,34 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { MerchItem } from '../components/MerchItem';
 import merchData from '../merch.json';
 import '../pageStyles/merchStyle.css';
 
 export const MerchPage = () => {
-    const [scrollPercentage, setScrollPercentage] = useState(0);
-    // const imgContainer = document.querySelector('.merch-container');
-    const imgContainerArray = document.querySelectorAll('.img-container');
 
-    const test = () => {
-        setTimeout(() => console.log(document.querySelector('.img-container').getBoundingClientRect()), 2000);
-    }
-
-    const rightArrowClick = () => {
-        if (scrollPercentage > -700) {
-            setScrollPercentage(prevPercent => prevPercent - 100);
-        };
+    const rightArrowClick = (e) => {
+        e.target.parentElement.firstChild.scrollLeft += 420;
     };
 
-    const leftArrowClick = () => {
-        if (scrollPercentage < 0) {
-            setScrollPercentage(prevPercent => prevPercent + 100);
-        };
+    const leftArrowClick = (e) => {
+        e.target.parentElement.firstChild.scrollLeft -= 420;
     };
-
-    useEffect(() => {
-        imgContainerArray.forEach(img => {
-            img.style.transform = `translate(${scrollPercentage}%, 0)`;
-        });
-    }, [scrollPercentage])
 
     return (
         <section id='merch'>
@@ -43,18 +26,16 @@ export const MerchPage = () => {
                         />
                     )) }
                 </div>
-                <div 
-                    className='arrow scrollLeft'
+                <i 
+                    className='arrow scrollLeft fas fa-chevron-left'
                     onClick={ leftArrowClick }
-                    >
-                    <i className="fas fa-chevron-left"></i>
-                </div>
-                <div 
-                    className='arrow scrollRight'
+                >
+                </i>
+                <i 
+                    className='arrow scrollRight fas fa-chevron-right'
                     onClick={ rightArrowClick }
                     >
-                    <i className="fas fa-chevron-right"></i>
-                </div>
+                </i>
             </div>
             <div className='go-store'>
                 <a href='http://chastitybelt.limitedrun.com/store' target='_blank'  rel='noopener noreferrer'>
@@ -62,7 +43,6 @@ export const MerchPage = () => {
                 </a>
             </div>
             <p className='treat'>treat yourself ;)</p>
-            { test() }
         </section>
     );
 };
