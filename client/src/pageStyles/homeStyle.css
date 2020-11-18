@@ -38,7 +38,7 @@ p {
 .buy {
     cursor: pointer;
     position: relative;
-    bottom: 16%;
+    bottom: 14%;
     margin: 0 auto;
     width: fit-content;
 }
@@ -80,3 +80,16 @@ p {
     font-family: sans-serif;
     font-style: normal;
 } */
+
+@media screen and (min-width: 500px) {
+    .barcode {
+        padding: 2px 20px;
+    }
+}
+@media screen and (min-width: 700px) {
+    .barcode {
+        font-size: 2.5rem;
+        padding: 3px 30px;
+    }
+}
+
