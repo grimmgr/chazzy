@@ -1,11 +1,52 @@
-import React from 'react';
-import { NoShows } from '../components/NoShows';
+import React, { useState, useEffect } from 'react';
+import { NoEvents } from '../components/NoEvents';
+import { Event } from '../components/Event';
+import '../pageStyles/showsStyle.css';
 
 export const ShowsPage = () => {
+    // 5312223 cb
+    // 9078614 ag
+
+    const [events, setEvents] = useState([]);
+    const [loading, toggleLoading] = useState(true);
+
+    useEffect(() => {
+        fetch('https://api.songkick.com/api/3.0/artists/5312223/gigography.json?order=desc&apikey=eRwskBR31ATK6ceV')
+            .then(response => response.json())
+            .then(data => {
+                if (data.resultsPage.results.event) {
+                    console.log(data);
+                    setEvents(data.resultsPage.results.event);
+                }
+                toggleLoading(false);
+            });
+    }, []);
+
+    if (loading) {
+        return <div>loading...</div>
+    }
+    
     return (
         <section id='shows'>
+            { console.log(events) }
             <h2>SHOWS</h2>
-            <NoShows />
+            { events.length ?
+            <div className='events-container'>
+                {events.map(show => (
+                    <Event
+                        key={show.id}
+                        city={show.location.city}
+                        venue={show.venue.displayName}
+                        date={show.start.datetime}
+                        uri={show.uri}
+                    />
+                ))}
+                
+            </div>
+            
+            : <NoEvents />
+            }
+           
         </section>
     );
 };

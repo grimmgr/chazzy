@@ -1,7 +1,7 @@
 import React from 'react';
-import './noShowsStyle.css';
+import './noEventsStyle.css';
 
-export const NoShows = () => {
+export const NoEvents = () => {
     return (
         <div className='no-events'>
             <div className='note'>

@@ -6,7 +6,7 @@
     top: 20px;
     right: 20px;
     width: 30px;
-    z-index: 1;
+    z-index: 3;
 }
 
 .nav-button span {
@@ -69,11 +69,15 @@
 }
 
 .close-btn-exit-active .top {
+    /* background-color: black;
+    height: 4px; */
     transform: rotate(45deg) translateY(-3px);
-    transition: transform 300ms;
+    transition: all 300ms;
 }
 
 .close-btn-exit-done .top {
+    /* background-color: black;
+    height: 4px; */
     transform: rotate(45deg) translateY(-3px);
 }
 
@@ -87,11 +91,15 @@
 }
 
 .close-btn-exit-active .bottom {
+    /* background-color: black;
+    height: 4px; */
     transform: rotate(-45deg) translateY(-1px);
-    transition: transform 300ms;
+    transition: all 300ms;
 }
 
 .close-btn-exit-done .bottom {
+    /* background-color: black;
+    height: 4px; */
     transform: rotate(-45deg) translateY(-1px);
 }
 
