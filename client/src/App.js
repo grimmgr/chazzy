@@ -1,6 +1,5 @@
 import React from 'react';
-// import { Component } from 'react';
-
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import { Menu } from './pages/Menu';
 import { HomePage } from './pages/Home';
@@ -9,6 +8,7 @@ import { ShowsPage } from './pages/Shows';
 import { Subscribe } from './components/Subscribe';
 import { ContactPage } from './pages/Contact';
 import { FanArtPage } from './pages/FanArt';
+import { Tour } from './pages/Tour';
 
 // import logo from './logo.svg';
 import './App.css';
@@ -17,13 +17,20 @@ import './App.css';
 const App = () => {
     return (
         <main>
-            <Menu />
-            <HomePage />
-            <MerchPage />
-            <ShowsPage />
-            <FanArtPage />
-            <Subscribe />
-            <ContactPage />
+            <Router>
+                <Menu />
+                <Route exact path='/'>
+                    <HomePage />
+                    <MerchPage />
+                    <ShowsPage />
+                    <FanArtPage />
+                    <Subscribe />
+                    <ContactPage />
+                </Route>
+                <Route exact path='/tour'>
+                    <Tour />
+                </Route>
+            </Router>
         </main>
     );
 }

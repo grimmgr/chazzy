@@ -4,7 +4,7 @@ import '../pageStyles/contactStyle.css';
 export const ContactPage = () => {
     return (
         <section id='contact'>
-            <h2>Contact</h2>
+            <h2>CONTACT</h2>
             <div className='contact-container'>
                 <ul className='contact-list'>
                     <li className='contact'>

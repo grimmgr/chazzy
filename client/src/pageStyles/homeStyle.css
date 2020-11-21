@@ -16,15 +16,11 @@ p {
 }
 
 .listen {
-    border-bottom: 1px solid white;
     margin: 5px auto;
-    width: fit-content;
 }
 
 .listen p {
     color: white;
-    font-size: .8rem;
-    font-style: normal;
 }
 
 .album-cover {

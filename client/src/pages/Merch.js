@@ -1,5 +1,6 @@
 import React from 'react';
 import { MerchItem } from '../components/MerchItem';
+import { GoTo } from '../components/GoTo';
 import merchData from '../merch.json';
 import '../pageStyles/merchStyle.css';
 
@@ -15,7 +16,7 @@ export const MerchPage = () => {
 
     return (
         <section id='merch'>
-            <h2>New Merch!</h2>
+            <h2>MERCH</h2>
             <div className='merch-wrapper'>
                 <div className='merch-container'>
                     { merchData.map(merch => (
@@ -37,12 +38,13 @@ export const MerchPage = () => {
                     >
                 </i>
             </div>
-            <div className='go-store'>
-                <a href='http://chastitybelt.limitedrun.com/store' target='_blank'  rel='noopener noreferrer'>
-                    <p>GO TO STORE</p>
-                </a>
-            </div>
+            <GoTo 
+                link={'http://chastitybelt.limitedrun.comstore'}
+                name={'store'}
+                text={'GO TO STORE'}
+            />
             <p className='treat'>treat yourself ;)</p>
         </section>
     );
 };
+

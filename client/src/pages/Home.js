@@ -7,7 +7,7 @@ export const HomePage = () => {
             <div className='cover'>
                 <h1>CHASTITY BELT</h1>
                 <p>Self-titled album out now on Hardly Art!</p>
-                <div className='listen'>
+                <div className='listen link'>
                     <a href='https://ffm.to/chazzy' target='_blank' rel="noopener noreferrer">
                         <p>LISTEN</p>
                     </a>

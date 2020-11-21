@@ -10,6 +10,7 @@
 
 main {
     background-color: rgb(255, 207, 203);
+    text-align: center;
 }
 
 ul {
@@ -22,6 +23,24 @@ a {
 
 a:visited {
     color: rgb(0, 0, 0);
+}
+
+h2 {
+    font-size: 2.7rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.link {
+    border-bottom: 1px solid white;
+    width: fit-content;
+}
+
+.link p {
+    font-size: .8rem;
+    font-style: normal;
 }
 
 #menu {
@@ -40,40 +59,24 @@ a:visited {
     position: relative;
 }
 
-#merch {
-    /* background-color: rgb(238, 197, 183); */
-    padding: 50px 0;
-    text-align: center;
-}
-
 #merch h2 {
-    color: rgb(46, 12, 70);
-    margin-bottom: 30px;
-    /* text-shadow: 1px 1px 2px whitesmoke; */
+    color: rgba(46, 12, 70, .4);
+    padding-top: 10px;
 }
 
 #shows {
-    background-image: url(./backgrounds/shows.png);
-    background-position: bottom;
-    background-size: cover;
-    height: 500px;
-    padding: 50px 0;
-    text-align: center;
+    /* background-image: url(./backgrounds/purp.png);
+    background-size: cover; */
+    padding-top: 50px;
 }
 
 #shows h2 {
-    color: rgb(255, 255, 255);
-    font-size: 1.4rem;
-    /* text-shadow: 1px 1px 2px rgb(147, 0, 147); */
+    color: rgba(255, 255, 255, .7);
 }
 
 #fan-art {
     padding: 50px 0;
     text-align: center;
-}
-
-#fan-art h2 {
-    margin-bottom: 30px;
 }
 
 /* #shows img {

@@ -49,25 +49,13 @@
     padding: 6px 0 6px 4px;
 }
 
-.go-store {
-    border-bottom: 1px solid rgb(255, 255, 255);
-    border-top: 1px solid rgb(255, 255, 255);
-    font-size: 1.1rem;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    padding: 3px;
-    width: fit-content;
-}
-
-.go-store p {
-    background-color: rgba(196, 247, 164, 0.6);
+.store-link p {
+    background-color: rgba(196, 247, 164, 0.5);
     color: rgb(46, 12, 70);
-    font-size: .8rem;
-    font-style: normal;
-    font-weight: 600;
-    padding: 2px;
 }
 
 .treat {
-    color: rgb(132, 28, 206)
+    color: rgb(132, 28, 206);
+    padding-right: 32px;
+    text-align: right;
 }

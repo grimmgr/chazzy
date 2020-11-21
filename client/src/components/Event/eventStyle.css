@@ -1,0 +1,28 @@
+.event {
+    margin-top: 30px;
+}
+
+.date {
+    font-style: normal;
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.city {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.venue {
+    font-size: 1.2rem;
+}
+
+.tickets {
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.tickets p {
+    font-weight: 600;
+}

@@ -1,3 +1,9 @@
-a .ViewProfileButton {
-    background-color: aquamarine;
+.iframe-container {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.iframe-container iframe {
+    height: 100vw;
+    width: 100%;
 }
