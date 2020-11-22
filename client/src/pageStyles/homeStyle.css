@@ -1,37 +1,42 @@
-.cover {
-    text-align: center;
-    position: relative;
-    bottom: 4%;
-    width: 100%;
+.home-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: left;
+    z-index: 2;
 }
 
 h1 {
-    color: rgba(238, 238, 238, .6);
-    font-size: 2.1rem;
-    position: absolute;
-    top: 0px;
-    left: 0;
-    text-align: left;
-}
-
-p {
-    color: rgb(255, 249, 222);
+    color: rgba(254, 249, 106, 0.3);
+    font-size: 3.3rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .2px rgba(252, 248, 140, 0.5);
+    
 }
 
 .listen {
-    margin: 5px auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+    margin-top: 5px;
+    padding-left: 10px;
+    width: fit-content;
 }
 
 .listen p {
-    color: white;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cover {
+    text-align: center;
+    position: relative;
+    bottom: 5%;
+    width: 100%;
 }
 
 .album-cover {
-    /* border: 1px solid rgb(255, 255, 255);
-    box-shadow: 3px 3px 5px rgba(69, 68, 68, 0.8); */
+    height: calc(100vw);
     margin: 0 auto;
     margin-top: 5px;
-    width: 90%;
+    width: 100%;
 }
 
 .buy {
@@ -53,13 +58,10 @@ p {
     padding: 1px 12px;
 }
 
-.patreon-link {
-    padding-top: 5%;
-}
-
 .patreon-link p {
-    background-color: rgba(255, 222, 222, 0.5);
-    color: rgb(46, 12, 70);
+    background-color: rgba(146, 187, 79, 0.6);
+    color: rgba(46, 12, 70, 1);
+    font-weight: bold;
 }
 
 @media screen and (min-width: 500px) {

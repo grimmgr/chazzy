@@ -50,7 +50,7 @@ h2 {
 
 #home {
     background-image: url(./backgrounds/home_mobile.png);
-    background-position: 50% 70%;
+    background-position: bottom;
     background-size: cover;
     display: flex;
     flex-direction: column;
