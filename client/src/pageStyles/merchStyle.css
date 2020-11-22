@@ -1,3 +1,8 @@
+#merch h2 {
+    color: rgba(255, 159, 159, 0.6);
+    padding-top: 10px;
+}
+
 .merch-wrapper {
     position: relative;
 }
@@ -26,7 +31,7 @@
 }
 
 .arrow {
-    background-color:  rgba(196, 247, 164, 0.6);
+    background-color:  rgba(255, 255, 116, 0.4);
     /* border: 1px solid springgreen; */
     box-sizing: content-box;
     color: rgba(46, 12, 70, .7);
@@ -50,12 +55,22 @@
 }
 
 .store-link p {
-    background-color: rgba(196, 247, 164, 0.5);
+    background-color: rgba(255, 159, 159, 0.4);
     color: rgb(46, 12, 70);
 }
 
 .treat {
+    animation: 5s ease-in-out infinite alternate pulse;
+    animation-delay: 1s;
     color: rgb(132, 28, 206);
+    /* color: rgb(65, 182, 147); */
     padding-right: 32px;
     text-align: right;
+}
+
+@keyframes pulse {
+    to {
+        /* filter: invert(); */
+        color: rgb(237, 237, 85);
+    }
 }

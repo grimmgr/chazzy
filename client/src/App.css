@@ -59,10 +59,14 @@ h2 {
     position: relative;
 }
 
-#merch h2 {
-    color: rgba(46, 12, 70, .4);
-    padding-top: 10px;
+#merch {
+    background-image: url(./backgrounds/merch.png);
+    background-position: top;
+    background-size: cover;
+    padding-bottom: 30px;
 }
+
+
 
 #shows {
     /* background-image: url(./backgrounds/purp.png);
