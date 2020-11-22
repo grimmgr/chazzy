@@ -1,8 +1,11 @@
 nav {
-    background-image: url(./nav_background.jpg);
+    background-image: url(./nav_background.png);
     background-position: center;
     background-size: cover;
-    height: 50%;
+    /* border: 20px solid rgba(46, 12, 70, .4); */
+    /* border-image: linear-gradient(45deg, rgba(255,255,255, .5), transparent) 1; */
+    box-shadow: inset 30px 30px 70px rgba(46, 12, 70, .7), inset -30px -30px 70px rgba(46, 12, 70, .7);
+    height: 100vh;
     position: fixed;
     top: 0;
     right: 0;
@@ -13,23 +16,28 @@ nav {
 }
 
 .nav-container {
-    background-image: linear-gradient(to right, white, 90%, transparent);
+    /* background-image: linear-gradient(to right, rgba(255, 255, 255, .7), 90%, transparent); */
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: center;
-    padding: 0 7%;
-    width: 40%;
+    width: fit-content;
 }
 
 .nav-list {
-    font-size: 1.5rem;
+    background-image: linear-gradient( rgba(255, 255, 255, .55), rgba(255, 255, 255, .7), rgba(255, 255, 255, .55));
+    box-shadow: 0 0 80px 40px rgba(255, 255, 255, .7);
+    font-size: 1.8rem;
     font-weight: bold;
     line-height: 1.4;
+    padding: 50px 20px;
 }
 
 .nav-list a {
-    color: rgb(0, 0, 0);
+    color: rgb(46, 12, 70);
+}
+.nav-list a:visited {
+    color: rgb(46, 12, 70);
 }
 
 .socials-list {

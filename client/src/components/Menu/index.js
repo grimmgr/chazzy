@@ -11,6 +11,10 @@ export const Menu = () => {
         setOpen(!open)
     };
 
+    const closeNav = () => {
+        setOpen(false);
+    };
+
     return (
         <section id='menu'>
             <CSSTransition
@@ -19,7 +23,7 @@ export const Menu = () => {
             classNames={'open-nav'}
             unmountOnExit
             >
-            <Nav />
+            <Nav  closeNav={ closeNav } />
             </CSSTransition>
             <CSSTransition
             in={!open}

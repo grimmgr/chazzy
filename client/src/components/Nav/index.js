@@ -1,17 +1,16 @@
 import React from 'react';
 import './navStyle.css';
-// import { NavLink } from 'react-router-dom';
 
-export const Nav = () => {
+export const Nav = (props) => {
     return (
-        <nav>
+        <nav onClick={ props.closeNav }>
             <div className='nav-container'>
                 <ul className='nav-list'>
-                    <li><a href='#home'>Home</a></li>
+                    <li><a  href='#home'>Home</a></li>
                     <li><a href='http://chastitybelt.limitedrun.com/store 'target='_blank' rel='noopener noreferrer'>Shop</a></li>
-                    <li><a href='#shows'>Shows</a></li>
+                    <li><a href='/tour'>Tour</a></li>
                     <li><a href='https://www.patreon.com/chastitybelt' target='_blank' rel='noopener noreferrer'>Patreon</a></li>
-                    <li><a href='#fan-art'>Fan Art</a></li>
+                    <li><a href='/fan-art'>Fan Art</a></li>
                     <li><a href='#contact'>Contact</a></li>
                     <ul className='socials-list'>
                         <li><a href='https://chastity-belt.bandcamp.com/' target='_blank' rel='noopener noreferrer'><i className='fab fa-bandcamp'></i></a></li>

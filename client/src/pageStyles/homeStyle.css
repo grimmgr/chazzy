@@ -1,14 +1,17 @@
 .cover {
     text-align: center;
     position: relative;
-    bottom: 8%;
+    bottom: 4%;
     width: 100%;
 }
 
 h1 {
-    color: rgb(238, 238, 238);
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    color: rgba(238, 238, 238, .6);
+    font-size: 2.1rem;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    text-align: left;
 }
 
 p {
@@ -24,11 +27,11 @@ p {
 }
 
 .album-cover {
-    border: 1px solid rgb(255, 255, 255);
-    box-shadow: 3px 3px 5px rgba(69, 68, 68, 0.8);
+    /* border: 1px solid rgb(255, 255, 255);
+    box-shadow: 3px 3px 5px rgba(69, 68, 68, 0.8); */
     margin: 0 auto;
     margin-top: 5px;
-    width: 75%;
+    width: 90%;
 }
 
 .buy {
@@ -50,32 +53,14 @@ p {
     padding: 1px 12px;
 }
 
-.patreon {
-    border-bottom: 1px solid rgb(255, 255, 255);
-    border-top: 1px solid rgb(255, 255, 255);
-    font-size: 1.1rem;
-    margin: 0 auto;
-    padding: 3px;
-    width: fit-content;
+.patreon-link {
+    padding-top: 5%;
 }
 
-.patreon p {
-    background-color: rgba(255, 249, 222, .6);
+.patreon-link p {
+    background-color: rgba(255, 222, 222, 0.5);
     color: rgb(46, 12, 70);
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 600;
-    padding: 2px;
 }
-
-/* #patreon {
-    text-shadow: 2px 2px 3px white;
-} */
-
-/* .wink {
-    font-family: sans-serif;
-    font-style: normal;
-} */
 
 @media screen and (min-width: 500px) {
     .barcode {
