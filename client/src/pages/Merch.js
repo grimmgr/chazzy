@@ -4,7 +4,7 @@ import { GoTo } from '../components/GoTo';
 import merchData from '../merch.json';
 import '../pageStyles/merchStyle.css';
 
-export const MerchPage = () => {
+export const Merch = () => {
 
     const rightArrowClick = (e) => {
         e.target.parentElement.firstChild.scrollLeft += 420;

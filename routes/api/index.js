@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const fanArtRoutes = require('./fanArt');
 
-router.use('/fanArt', fanArtRoutes);
+router.use('/fan-art', fanArtRoutes);
 
 module.exports = router;

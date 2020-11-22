@@ -1,7 +1,7 @@
 import React from 'react';
 import '../pageStyles/homeStyle.css';
 
-export const HomePage = () => {
+export const Home = () => {
     return (
         <section id='home'>
             <div className='cover'>

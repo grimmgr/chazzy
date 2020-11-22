@@ -1,7 +1,7 @@
 import React from 'react';
 import '../pageStyles/contactStyle.css';
 
-export const ContactPage = () => {
+export const Contact = () => {
     return (
         <section id='contact'>
             <h2>CONTACT</h2>

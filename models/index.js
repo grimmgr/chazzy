@@ -1,3 +1,3 @@
 module.exports = {
-    FanArt: require('./fanArt')
+    Art: require('./art')
 };

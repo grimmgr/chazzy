@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const fanArtController = require('../../controllers/fanArtController');
+const artController = require('../../controllers/artController');
 
 router.route('/')
-    .get(fanArtController.findAll)
-    .post(fanArtController.create);
+    .get(artController.findAll)
+    .post(artController.create);
 
 router.route('/:id')
-    .delete(fanArtController.remove);
+    .delete(artController.remove);
 
 module.exports = router;

@@ -1,20 +1,62 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
+import { ArtCard } from '../components/ArtCard';
 import '../pageStyles/fanArtStyle.css';
 
-export const FanArtPage = () => {
+export const FanArt = () => {
+    const [fanArt, setFanArt] = useState([]);
+    const [instaLink, setInstaLink] = useState('');
+
     const getEmbedLink = (shareLink) => {
-        const embedLink = shareLink.split('?')[0] + 'embed';
+        const embedLink = shareLink.trim().split('?')[0] + 'embed';
         return embedLink;
     }
+     
+    const submitArt = () => {
+        if (instaLink) {
+            const embedLink = getEmbedLink(instaLink);
+            axios.post('/api/fan-art', { embed_link: embedLink })
+            .then(response => console.log(response))
+            .catch(err => console.log(err));
+        };
+    };
+
+    axios.get('/api/fan-art')
+    .then(response => setFanArt(response.data))
+    .catch(err => console.log(err));
+
     return (
         <section id='fan-art'>
             <h2>FAN ART</h2>
             <div className='art-container'>
-                <div className='artwork-card'>
-                    <div className='iframe-container'>
-                        <iframe src="https://www.instagram.com/p/CHnunUoj8KX/embed "frameBorder="0" scrolling="no" allowtransparency="true" title="title"></ iframe>
-                    </div>
-                </div>
+                { fanArt.map(art => (
+                    <ArtCard
+                    key={art._id}
+                    link={art.embed_link}
+                    />
+                ))}
+            </div>
+            <div className='form-container'>
+                <h3>Submit your art!</h3>
+                <form>
+                    <label>Shareable link:</label>
+                    <input 
+                        id='link' 
+                        name='link' 
+                        type='text' 
+                        placeholder='paste here'
+                        value={instaLink}
+                        onChange={ event => setInstaLink(event.target.value) }
+                        />
+                    <input 
+                        className='submit-art-btn' 
+                        type='submit' 
+                        value='submit'
+                        onClick={submitArt}/>
+                </form>
+            </div>
+            <div className='art-note'>
+                <p>*If you see your art here and would like it taken down or credited differently, please email us at beltchastity@gmail.com</p>
             </div>
         </section>
     );
