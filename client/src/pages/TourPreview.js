@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useAos } from '../utils/aosContext';
 import { NoEvents } from '../components/NoEvents';
 import { Event } from '../components/Event';
 import { GoTo } from '../components/GoTo';
 import '../pageStyles/tourPreviewStyle.css';
 
 export const TourPreview = () => {
-    // 5312223 cb
-    // 9078614 ag
+    const aos = useAos();
 
     const [events, setEvents] = useState([]);
     const [loading, toggleLoading] = useState(true);
@@ -28,7 +28,7 @@ export const TourPreview = () => {
     
     return (
         <section id='shows'>
-            <h2>SHOWS</h2>
+            <h2 data-aos={ aos.fade_right }>TOUR</h2>
             { events.length ?
                 <div className='events-container'>
                         {events.map(show => (

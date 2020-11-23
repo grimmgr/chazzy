@@ -1,12 +1,13 @@
 import React from 'react';
+import { useAos } from '../utils/aosContext';
 import { GoTo } from '../components/GoTo';
 import '../pageStyles/fanArtPrevStyle.css';
 
 export const FanArtPreview = () => {
-    
+    const aos = useAos();
     return (
         <section id='fan-art-prev'>
-            <h2>FAN ART</h2>
+            <h2 data-aos={ aos.fade_right }>FAN ART</h2>
             <div className='art-container'>
                 <div className='artwork-card'>
                     {/* <div className='iframe-container'>

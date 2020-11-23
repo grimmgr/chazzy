@@ -3,46 +3,67 @@
     top: 0;
     left: 0;
     text-align: left;
-    z-index: 2;
 }
 
 h1 {
-    color: rgba(254, 252, 201, 0.3);
+    color: rgba(255, 255, 255, 0.2);
     font-size: 3.3rem;
     /* -webkit-text-fill-color: transparent;
     -webkit-text-stroke: .2px rgba(252, 248, 140, 0.5); */
-    
 }
 
-.listen {
+.home-links {
+    color: rgba(255, 255, 255, 0.9);
+    padding-top: 3.3rem;
+    text-align: left;
+}
+
+.home-msg-container {
+    overflow: hidden;
+}
+
+.home-msg {
+    animation: 2s ease-out slidein;
+    color: rgba(146, 170, 67, 1);
+    letter-spacing: 4px;
+}
+
+.out-now {
+    margin-bottom: 1.5rem;
+    margin-top: 2.8rem;
+}
+
+.buy-listen {
     border-bottom: 1px solid rgba(255, 255, 255, 0.9);
-    margin-top: 5px;
+    margin-top: 20px;
     padding-left: 10px;
+    position: relative;
     width: fit-content;
+    text-align: right;
+    z-index: 1;
 }
 
-.listen p {
+.buy-listen p {
     color: rgba(255, 255, 255, 0.8);
 }
 
 .cover {
-    text-align: center;
     position: relative;
-    bottom: 5%;
+    bottom: 11%;
+    text-align: center;
     width: 100%;
 }
 
 .album-cover {
-    height: calc(100vw);
     margin: 0 auto;
     margin-top: 5px;
-    width: 100%;
+    width: 90%;
 }
 
-.buy {
+/* .buy {
     cursor: pointer;
     position: relative;
-    bottom: 16%;
+    bottom: 17%;
     margin: 0 auto;
     width: fit-content;
 }
@@ -53,9 +74,14 @@ h1 {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     font-family: 'Libre Barcode 128 Text', cursive;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-style: normal;
     padding: 1px 12px;
+} */
+
+.patreon-link {
+    position: relative;
+    bottom: 3%;
 }
 
 .patreon-link p {
@@ -64,7 +90,7 @@ h1 {
     font-weight: bold;
 }
 
-@media screen and (min-width: 500px) {
+/* @media screen and (min-width: 500px) {
     .barcode {
         padding: 2px 20px;
     }
@@ -74,5 +100,13 @@ h1 {
         font-size: 2.5rem;
         padding: 3px 30px;
     }
-}
+} */
 
+@keyframes slidein {
+    from { 
+        transform: translateX(-100%);
+    }
+    to { 
+        transform: translateX(0);
+    }
+}
