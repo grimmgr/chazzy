@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useNav } from '../../utils/navContext';
+import { useAdmin, useAdminUpdate } from '../../utils/adminContext';
 import './navStyle.css';
 
 export const Nav = (props) => {
     const navHome = useNav();
+    const adminStatus = useAdmin();
+    const toggleAdmin = useAdminUpdate();
+
+    const logout = () => {
+        toggleAdmin();
+        localStorage.removeItem('user');
+    };
+
     return (
         <nav onClick={ props.closeNav }>
             <div className='nav-container'>
@@ -21,6 +30,9 @@ export const Nav = (props) => {
                         <li><a href='https://www.instagram.com/chazzybelt/?hl=en' target='_blank' rel='noopener noreferrer'><i className='fab fa-instagram'></i></a></li>
                         <li><a href='https://www.facebook.com/chastitybeltmusic/' target='_blank' rel='noopener noreferrer'><i className='fab fa-facebook-f'></i></a></li>
                     </ul>
+                    { adminStatus ? 
+                        <li id='logout'><p onClick={logout}>logout</p></li>
+                        : null }
                 </ul>
             </div>
         </nav>

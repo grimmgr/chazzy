@@ -10,28 +10,30 @@ export const Admin = () => {
     const adminStatus = useAdmin();
     const toggleAdminStatus = useAdminUpdate();
     const setNavHomeFalse = useNavSetFalse();
+
     const login = (e) => {
+        
         e.preventDefault();
+        console.log('button clicked');
         axios.post('/tehe', {
             username: username,
             password: password
         })
         .then(response => {
-            document.getElementById('username').value='';
-            document.getElementById('password').value='';
-            if (!adminStatus) {
-                toggleAdminStatus();
-            }
-            // window.location.href='/';
+            localStorage.setItem('user', response.data.username);
+            // if (!adminStatus) {
+            //     toggleAdminStatus();
+            // }
+            setUsername('');
+            setPassword('');
         })
         .catch(err => 
             setError(err));
     };
 
     useEffect(() => {
-        console.log(adminStatus);
         setNavHomeFalse();
-    })
+    });
 
     return (
         <div>
@@ -52,8 +54,8 @@ export const Admin = () => {
             <button
                 onClick={login}
                 >LOGIN</button>
-            <button onClick={toggleAdminStatus}>toggle</button>
-            { error ? <p>incorrect login</p> : null }
+            { error && !adminStatus ? <p>incorrect login</p> : null }
+            { adminStatus ? <p>welcome</p> : null}
         </div>
     );
 };
