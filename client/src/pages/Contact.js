@@ -1,12 +1,12 @@
 import React from 'react';
-import { useAos } from '../utils/aosContext';
+// import { useAos } from '../utils/aosContext';
 import '../pageStyles/contactStyle.css';
 
 export const Contact = () => {
-    const aos = useAos();
+    // const aos = useAos();
     return (
         <section id='contact'>
-            <h2 data-aos={ aos.fade_right }>CONTACT</h2>
+            <h2>CONTACT</h2>
             <div className='contact-container'>
                 <ul className='contact-list'>
                     <li className='contact'>

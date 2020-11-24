@@ -10,6 +10,7 @@ import { Contact } from './pages/Contact';
 import { FanArtPreview } from './pages/FanArtPreview';
 import { FanArt } from './pages/FanArt';
 import { Tour } from './pages/Tour';
+import { Admin } from './pages/Admin';
 import { AosProvider } from './utils/aosContext';
 
 // import logo from './logo.svg';
@@ -22,7 +23,7 @@ export const App = () => {
     useEffect(() => {
         Aos.init({ duration: 1000, easing: "ease-out" });
     }, []);
-    
+
     return (
         <AosProvider>
         <main>
@@ -41,6 +42,9 @@ export const App = () => {
                 </Route>
                 <Route exact path='/fan-art'>
                     <FanArt />
+                </Route>
+                <Route exact path='/tehe'>
+                    <Admin />
                 </Route>
             </Router>
         </main>

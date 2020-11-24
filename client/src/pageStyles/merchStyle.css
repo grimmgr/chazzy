@@ -60,7 +60,7 @@
 }
 
 .treat {
-    animation: 5s ease-in-out infinite alternate pulse;
+    animation: 3s ease-in-out infinite alternate pulse;
     animation-delay: 1s;
     color: rgb(132, 28, 206);
     /* color: rgb(65, 182, 147); */
