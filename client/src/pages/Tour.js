@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
-import { useNavSetFalse } from '../utils/navContext';
+import { useNav } from '../utils/navContext';
 
 export const Tour = () => {
-    const setNavHomeFalse = useNavSetFalse();
+    const setNavHome = useNav().setNavHome;
 
     useEffect(() => {
-        setNavHomeFalse();
+        setNavHome(false);
+        return () => setNavHome(true);
     });
     
     return (
         <h2>Tour</h2>
     );
-}
+};

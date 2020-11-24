@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { useAdmin, useAdminUpdate } from '../utils/adminContext';
-import { useNavSetFalse } from '../utils/navContext';
+import { useAdmin } from '../utils/adminContext';
+import { useNav } from '../utils/navContext';
 import axios from 'axios';
 
 export const Admin = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const adminStatus = useAdmin();
-    const toggleAdminStatus = useAdminUpdate();
-    const setNavHomeFalse = useNavSetFalse();
+    const setNavHome = useNav().setNavHome;
+
+    const {admin, setAdmin} = useAdmin();
 
     const login = (e) => {
         
@@ -21,9 +21,7 @@ export const Admin = () => {
         })
         .then(response => {
             localStorage.setItem('user', response.data.username);
-            // if (!adminStatus) {
-            //     toggleAdminStatus();
-            // }
+            setAdmin(response.data.username);
             setUsername('');
             setPassword('');
         })
@@ -32,7 +30,8 @@ export const Admin = () => {
     };
 
     useEffect(() => {
-        setNavHomeFalse();
+        setNavHome(false);
+        return () => setNavHome(true);
     });
 
     return (
@@ -54,8 +53,8 @@ export const Admin = () => {
             <button
                 onClick={login}
                 >LOGIN</button>
-            { error && !adminStatus ? <p>incorrect login</p> : null }
-            { adminStatus ? <p>welcome</p> : null}
+            { error && admin ? <p>incorrect login</p> : null }
+            { admin ? <p>welcome</p> : null}
         </div>
     );
 };

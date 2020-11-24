@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ArtCard } from '../components/ArtCard';
-import { useNavSetFalse } from '../utils/navContext';
+import { useNav } from '../utils/navContext';
 import '../pageStyles/fanArtStyle.css';
 
 export const FanArt = () => {
-    const setNavHomeFalse = useNavSetFalse();
+    const setNavHome = useNav().setNavHome;
     const [fanArt, setFanArt] = useState([]);
     const [instaLink, setInstaLink] = useState('');
 
@@ -28,7 +28,8 @@ export const FanArt = () => {
     .catch(err => console.log(err));
 
     useEffect(() => {
-        setNavHomeFalse();
+        setNavHome(false);
+        return () => setNavHome(true);
     });
 
     return (

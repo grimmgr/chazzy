@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Aos from 'aos';
-import { useAdmin, useAdminUpdate } from './utils/adminContext';
+import { useAdmin } from './utils/adminContext';
 import { Main } from './pages/Main';
 import { Menu } from './components/Menu';
 import { FanArt } from './pages/FanArt';
@@ -17,11 +17,14 @@ import './App.css';
 
 
 export const App = () => {
-    const adminStatus = useAdmin();
-    const toggleAdminStatus = useAdminUpdate();
+    const setAdmin = useAdmin().setAdmin
 
     useEffect(() => {
         Aos.init({ duration: 1000, easing: "ease-out" });
+        const user = localStorage.getItem('user');
+        if (user) {
+            setAdmin(user);
+        };
     }, []);
 
     return (

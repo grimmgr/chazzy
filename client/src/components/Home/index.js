@@ -1,13 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { GoTo } from '../GoTo';
-import { useNavSetTrue } from '../../utils/navContext';
 import './homeStyle.css';
 
 export const Home = () => {
-    const setNavHomeTrue = useNavSetTrue();
-    useEffect(() => {
-        setNavHomeTrue();
-    });
     return (
         <section id='home'>
             <div className='home-title'>

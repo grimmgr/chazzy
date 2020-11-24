@@ -1,16 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useNav } from '../../utils/navContext';
-import { useAdmin, useAdminUpdate } from '../../utils/adminContext';
+import { useAdmin } from '../../utils/adminContext';
 import './navStyle.css';
 
 export const Nav = (props) => {
-    const navHome = useNav();
-    const adminStatus = useAdmin();
-    const toggleAdmin = useAdminUpdate();
+    const navHome = useNav().navHome;
+    const {admin, setAdmin} = useAdmin();
 
     const logout = () => {
-        toggleAdmin();
+        setAdmin(null);
         localStorage.removeItem('user');
     };
 
@@ -18,7 +17,7 @@ export const Nav = (props) => {
         <nav onClick={ props.closeNav }>
             <div className='nav-container'>
                 <ul className='nav-list'>
-                    <li>{ navHome? <a href='#home'>Home</a> : <Link to='/' exact='true'>Home</Link>}</li>
+                    <li>{ navHome ? <a href='#home'>Home</a> : <Link to='/' exact='true'>Home</Link>}</li>
                     <li><a href='http://chastitybelt.limitedrun.com/store 'target='_blank' rel='noopener noreferrer'>Shop</a></li>
                     <li><Link to='/tour'>Tour</Link></li>
                     <li><a href='https://www.patreon.com/chastitybelt' target='_blank' rel='noopener noreferrer'>Patreon</a></li>
@@ -30,7 +29,7 @@ export const Nav = (props) => {
                         <li><a href='https://www.instagram.com/chazzybelt/?hl=en' target='_blank' rel='noopener noreferrer'><i className='fab fa-instagram'></i></a></li>
                         <li><a href='https://www.facebook.com/chastitybeltmusic/' target='_blank' rel='noopener noreferrer'><i className='fab fa-facebook-f'></i></a></li>
                     </ul>
-                    { adminStatus ? 
+                    { admin ? 
                         <li id='logout'><p onClick={logout}>logout</p></li>
                         : null }
                 </ul>
