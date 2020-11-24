@@ -11,9 +11,9 @@ export const Nav = (props) => {
                 <ul className='nav-list'>
                     <li>{ navHome? <a href='#home'>Home</a> : <Link to='/' exact='true'>Home</Link>}</li>
                     <li><a href='http://chastitybelt.limitedrun.com/store 'target='_blank' rel='noopener noreferrer'>Shop</a></li>
-                    <li><a href='/tour'>Tour</a></li>
+                    <li><Link to='/tour'>Tour</Link></li>
                     <li><a href='https://www.patreon.com/chastitybelt' target='_blank' rel='noopener noreferrer'>Patreon</a></li>
-                    <li><a href='/fan-art'>Fan Art</a></li>
+                    <li><Link to='/fan-art'>Fan Art</Link></li>
                     <li><a href='/#contact'>Contact</a></li>
                     <ul className='socials-list'>
                         <li><a href='https://chastity-belt.bandcamp.com/' target='_blank' rel='noopener noreferrer'><i className='fab fa-bandcamp'></i></a></li>
