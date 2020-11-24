@@ -1,15 +1,17 @@
 import React, { useEffect } from 'react';
 import { GoTo } from '../components/GoTo';
-import { useNavSetTrue } from '../utils/navContext';
+import { useNav, useNavSetTrue } from '../utils/navContext';
 import '../pageStyles/homeStyle.css';
 
 export const Home = () => {
     const setNavHomeTrue = useNavSetTrue();
+    const navHome = useNav();
     useEffect(() => {
         setNavHomeTrue();
     });
     return (
         <section id='home'>
+            {console.log(`navHome: ${navHome}`)}
             <div className='home-title'>
                 <h1>CHASTITY BELT</h1>
             </div>

@@ -33,8 +33,8 @@ export const App = () => {
         <AosProvider>
             <NavProvider>
                 <main>
-                    <Menu />
                     <Router>
+                        <Menu />
                         <Route exact path='/'>
                             <Home />
                             <Merch />

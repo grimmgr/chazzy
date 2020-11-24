@@ -1,14 +1,16 @@
 import React from 'react';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { useNav } from '../../utils/navContext';
 import './navStyle.css';
 
 export const Nav = (props) => {
     const navHome = useNav();
     return (
+        <Router>
         <nav onClick={ props.closeNav }>
             <div className='nav-container'>
                 <ul className='nav-list'>
-                    <li><a href={ navHome ? '#home' : '/' }>Home</a></li>
+                    <li><Link to={ navHome ? '#home' : '/' } exact='true'>Home</Link></li>
                     <li><a href='http://chastitybelt.limitedrun.com/store 'target='_blank' rel='noopener noreferrer'>Shop</a></li>
                     <li><a href='/tour'>Tour</a></li>
                     <li><a href='https://www.patreon.com/chastitybelt' target='_blank' rel='noopener noreferrer'>Patreon</a></li>
@@ -23,5 +25,6 @@ export const Nav = (props) => {
                 </ul>
             </div>
         </nav>
+        </Router>
     );
 };

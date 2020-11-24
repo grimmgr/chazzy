@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAdmin, useAdminUpdate } from '../utils/adminContext';
-import { useNavSetFalse } from '../utils/navContext';
+import { useNav, useNavSetFalse } from '../utils/navContext';
 import axios from 'axios';
 
 export const Admin = () => {
@@ -10,6 +10,7 @@ export const Admin = () => {
     const adminStatus = useAdmin();
     const toggleAdminStatus = useAdminUpdate();
     const setNavHomeFalse = useNavSetFalse();
+    const navHome = useNav();
 
     const login = (e) => {
         e.preventDefault();
@@ -36,6 +37,7 @@ export const Admin = () => {
 
     return (
         <div>
+            {console.log(`navHome: ${navHome}`)}
             <h2>Just the gals...</h2>
             <input 
                 id='username'
@@ -52,7 +54,7 @@ export const Admin = () => {
             />
             <button
                 onClick={login}
-            >LOGIN</button>
+                >LOGIN</button>
             <button onClick={toggleAdminStatus}>toggle</button>
             { error ? <p>incorrect login</p> : null }
         </div>
