@@ -1,3 +1,18 @@
+#contact {
+    position: relative;
+}
+
+.display-contact {
+    font-size: 1.7rem;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+.display-contact i {
+    -webkit-text-stroke: 1px rgb(46, 12, 70);
+}
+
 .contact {
     margin: 10px 0;
 }

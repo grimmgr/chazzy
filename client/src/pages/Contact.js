@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import { useAos } from '../utils/aosContext';
 import '../pageStyles/contactStyle.css';
 
 export const Contact = () => {
     // const aos = useAos();
+    const [open, setOpen] = useState(false);
+    const toggleOpen = () => {
+        setOpen(prevState => !prevState);
+    }
+    const buttonClick = (e) => {
+        e.preventDefault();
+        toggleOpen();
+    }
     return (
         <section id='contact'>
+            <div className='display-contact'><i className="fas fa-chevron-down" onClick={buttonClick}></i></div>
             <h2>CONTACT</h2>
+            { open ?
             <div className='contact-container'>
                 <ul className='contact-list'>
                     <li className='contact'>
@@ -46,6 +56,7 @@ export const Contact = () => {
                     </li>
                 </ul>
             </div>
+            : null }
         </section>
     );
 };
