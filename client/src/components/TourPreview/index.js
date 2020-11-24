@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useAos } from '../utils/aosContext';
-import { NoEvents } from '../components/NoEvents';
-import { Event } from '../components/Event';
-import { GoTo } from '../components/GoTo';
-import '../pageStyles/tourPreviewStyle.css';
+import { useAos } from '../../utils/aosContext';
+import { NoEvents } from '../NoEvents';
+import { Event } from '../Event';
+import { GoTo } from '../GoTo';
+import './tourPreviewStyle.css';
 
 export const TourPreview = () => {
     const aos = useAos();

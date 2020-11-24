@@ -1,7 +1,7 @@
 import React from 'react';
-import { useAos } from '../utils/aosContext';
-import { GoTo } from '../components/GoTo';
-import '../pageStyles/fanArtPrevStyle.css';
+import { useAos } from '../../utils/aosContext';
+import { GoTo } from '../GoTo';
+import './fanArtPrevStyle.css';
 
 export const FanArtPreview = () => {
     const aos = useAos();

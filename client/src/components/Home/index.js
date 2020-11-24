@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { GoTo } from '../components/GoTo';
-import { useNav, useNavSetTrue } from '../utils/navContext';
-import '../pageStyles/homeStyle.css';
+import { GoTo } from '../GoTo';
+import { useNav, useNavSetTrue } from '../../utils/navContext';
+import './homeStyle.css';
 
 export const Home = () => {
     const setNavHomeTrue = useNavSetTrue();

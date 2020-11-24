@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import { useAos } from '../utils/aosContext';
-import '../pageStyles/contactStyle.css';
+import './contactStyle.css';
 
 export const Contact = () => {
     // const aos = useAos();
