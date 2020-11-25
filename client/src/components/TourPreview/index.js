@@ -12,7 +12,7 @@ export const TourPreview = () => {
     // const [loading, toggleLoading] = useState(true);
 
     useEffect(() => {
-        fetch('https://rest.bandsintown.com/v4/artists/chastitybelt/events/?date=2018-03-01,2020-03-01&app_id=062bcc4754fbd4d4106af8bf38bda1c0')
+        fetch('https://rest.bandsintown.com/v4/artists/chastitybelt/events/?date=2019-07-01,2020-03-01&app_id=062bcc4754fbd4d4106af8bf38bda1c0')
             .then(response => response.json())
             .then(data => {
                 console.log(data);
