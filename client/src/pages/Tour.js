@@ -13,3 +13,4 @@ export const Tour = () => {
         <h2>Tour</h2>
     );
 };
+

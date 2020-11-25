@@ -9,35 +9,39 @@ export const TourPreview = () => {
     const aos = useAos();
 
     const [events, setEvents] = useState([]);
-    const [loading, toggleLoading] = useState(true);
+    // const [loading, toggleLoading] = useState(true);
 
     useEffect(() => {
-        fetch('https://api.songkick.com/api/3.0/artists/5312223/gigography.json?order=desc&per_page=10&apikey=eRwskBR31ATK6ceV')
+        fetch('https://rest.bandsintown.com/v4/artists/courtneybarnett/events/?app_id=062bcc4754fbd4d4106af8bf38bda1c0')
             .then(response => response.json())
             .then(data => {
-                if (data.resultsPage.results.event) {
-                    setEvents(data.resultsPage.results.event);
+                console.log(data);
+                if (data.length) {
+                    setEvents(data);
                 }
-                toggleLoading(false);
+                // toggleLoading(false);
             });
     }, []);
 
-    if (loading) {
-        return <div>loading...</div>
-    }
+    // if (loading) {
+    //     return <div>loading...</div>
+    // }
     
     return (
         <section id='shows'>
             <h2 data-aos={ aos.fade_right }>TOUR</h2>
             { events.length ?
                 <div className='events-container'>
-                        {events.map(show => (
+                        {events.map(event => (
                             <Event
-                                key={show.id}
-                                city={show.location.city}
-                                venue={show.venue.displayName}
-                                date={show.start.datetime}
-                                uri={show.uri}
+                                key={event.id}
+                                city={event.venue.city}
+                                country={event.venue.country}
+                                venue={event.venue.name}
+                                timezone={event.venue.timezone}
+                                date={event.datetime}
+                                tickets={event.offers[0].url}
+                                url={event.url}
                             />
                         ))}
                     <GoTo 
