@@ -8,16 +8,26 @@ export const ArtCard = (props) => {
     const admin = useAdmin().admin;
     const { fanArt, setFanArt } = useFanArt();
 
+    const remove = (id) => {
+        axios.delete('api/fan-art/' + id)
+        .then(response => {
+            const newFanArt = fanArt.filter(art => art._id !== id);
+            setFanArt(newFanArt);
+        })
+    }
+
     const verify = (id) => {
         console.log(`verify ${id}`);
         axios.put('api/fan-art/' + id, { verified: true })
         .then((response) => {
             console.log(response.data);
             const otherOnes = fanArt.filter(art => art._id !== id);
-            const newFanArt = [...otherOnes, response.data];
+            const newFanArt = [...otherOnes, {...response.data, verified: true}];
             newFanArt.sort((a, b) => {
                 return new Date(b.submitted) - new Date(a.submitted);
             });
+            console.log('card')
+            console.log(newFanArt);
             setFanArt(newFanArt);
         });
     };
@@ -28,10 +38,12 @@ export const ArtCard = (props) => {
         .then((response) => {
             console.log(response.data);
             const otherOnes = fanArt.filter(art => art._id !== id);
-            const newFanArt = [...otherOnes, response.data];
+            const newFanArt = [...otherOnes, {...response.data, verified: false}];
             newFanArt.sort((a, b) => {
                 return new Date(b.submitted) - new Date(a.submitted);
             });
+            console.log('card')
+            console.log(newFanArt);
             setFanArt(newFanArt);
         });
     };
@@ -41,7 +53,7 @@ export const ArtCard = (props) => {
             { admin ? 
             <div className='art-options'>
 
-                <i className="far fa-times-circle x"></i>
+                <i className="far fa-times-circle x" onClick={() => remove(props._id)}></i>
 
                 { !props.verified ? <i onClick={() => verify(props._id)} className="far fa-check-circle check"></i> : <i onClick={() => unverify(props._id)} className="fas fa-baby"></i> }
             </div>
