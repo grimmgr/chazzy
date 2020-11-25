@@ -12,12 +12,12 @@ export const TourPreview = () => {
     // const [loading, toggleLoading] = useState(true);
 
     useEffect(() => {
-        fetch('https://rest.bandsintown.com/v4/artists/courtneybarnett/events/?app_id=062bcc4754fbd4d4106af8bf38bda1c0')
+        fetch('https://rest.bandsintown.com/v4/artists/chastitybelt/events/?date=2018-03-01,2020-03-01&app_id=062bcc4754fbd4d4106af8bf38bda1c0')
             .then(response => response.json())
             .then(data => {
                 console.log(data);
                 if (data.length) {
-                    setEvents(data);
+                    setEvents(data.slice(0, 10));
                 }
                 // toggleLoading(false);
             });
@@ -40,7 +40,7 @@ export const TourPreview = () => {
                                 venue={event.venue.name}
                                 timezone={event.venue.timezone}
                                 date={event.datetime}
-                                tickets={event.offers[0].url}
+                                tickets={event.offers}
                                 url={event.url}
                             />
                         ))}

@@ -21,7 +21,11 @@ export const App = () => {
     const setAdmin = useAdmin().setAdmin;
 
     useEffect(() => {
-        Aos.init({ duration: 1000, easing: "ease-out" });
+        Aos.init({ 
+            duration: 1000, 
+            easing: "ease-out",
+            mirror: false
+         });
         const user = localStorage.getItem('user');
         if (user) {
             setAdmin(user);
