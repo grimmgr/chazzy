@@ -32,7 +32,7 @@ export const Admin = () => {
     useEffect(() => {
         setNavHome(false);
         return () => setNavHome(true);
-    });
+    }, []);
 
     return (
         <div>

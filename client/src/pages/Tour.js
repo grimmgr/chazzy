@@ -7,7 +7,7 @@ export const Tour = () => {
     useEffect(() => {
         setNavHome(false);
         return () => setNavHome(true);
-    });
+    }, []);
     
     return (
         <h2>Tour</h2>

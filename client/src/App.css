@@ -66,8 +66,6 @@ h2 {
     padding-bottom: 30px;
 }
 
-
-
 #shows {
     /* background-image: url(./backgrounds/purp.png);
     background-size: cover; */
@@ -82,11 +80,6 @@ h2 {
     padding: 50px 0;
     text-align: center;
 }
-
-/* #shows img {
-    max-width: 100%;
-    position: relative;
-} */
 
 #contact {
     color: white;

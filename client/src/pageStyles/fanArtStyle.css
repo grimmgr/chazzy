@@ -1,0 +1,24 @@
+#fan-art {
+    height: 100vh;
+}
+
+#fan-art h2 {
+    color: rgba(140, 74, 169, 0.5);
+    margin-bottom: 0;
+}
+
+
+.art-container {
+    display: flex;
+    height: calc(100vh - 125px);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: scroll;
+    padding: 4% 7%;
+    width: 100%;
+}
+
+.art-submit-form {
+    position: fixed;
+    bottom: 0;
+}

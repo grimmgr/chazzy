@@ -9,6 +9,7 @@ import { Tour } from './pages/Tour';
 import { Admin } from './pages/Admin';
 import { AosProvider } from './utils/aosContext';
 import { NavProvider } from './utils/navContext';
+import { FanArtProvider } from './utils/fanArtContext';
 
 
 // import logo from './logo.svg';
@@ -17,7 +18,7 @@ import './App.css';
 
 
 export const App = () => {
-    const setAdmin = useAdmin().setAdmin
+    const setAdmin = useAdmin().setAdmin;
 
     useEffect(() => {
         Aos.init({ duration: 1000, easing: "ease-out" });
@@ -33,9 +34,11 @@ export const App = () => {
                 <AosProvider>
                     <NavProvider>
                         <Menu />
-                        <Route exact path='/' component={Main} />
+                        <FanArtProvider>
+                            <Route exact path='/' component={Main} />
+                            <Route exact path='/fan-art' component={FanArt} />
+                        </FanArtProvider>
                         <Route exact path='/tour' component={Tour} />
-                        <Route exact path='/fan-art' component={FanArt} />
                         <Route exact path='/tehe' component={Admin} />
                     </NavProvider>
                 </AosProvider>

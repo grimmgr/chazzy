@@ -6,6 +6,7 @@ router.route('/')
     .post(artController.create);
 
 router.route('/:id')
-    .delete(artController.remove);
+    .delete(artController.remove)
+    .put(artController.update);
 
 module.exports = router;
