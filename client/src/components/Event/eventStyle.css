@@ -4,25 +4,38 @@
 
 .date {
     font-style: normal;
-    font-size: 1rem;
+    font-size: .9rem;
     margin-bottom: 2px;
 }
 
 .city {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-style: normal;
     font-weight: 600;
 }
 
 .venue {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+}
+
+.event-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 7px;
+}
+
+.event-links p {
+    font-weight: 600;
 }
 
 .tickets {
-    margin: 0 auto;
-    margin-top: 5px;
+    margin-right: 5px;
 }
 
-.tickets p {
+/* .tickets p {
     font-weight: 600;
 }
+
+.rsvp {
+    margin: 0 auto;
+} */

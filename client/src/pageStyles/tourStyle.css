@@ -1,0 +1,8 @@
+#tour {
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+#tour h2 {
+    color: rgba(100, 147, 67, 0.5);
+}

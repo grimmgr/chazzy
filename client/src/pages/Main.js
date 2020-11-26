@@ -13,8 +13,8 @@ export const Main = () => {
         <>
             <Home />
             <Merch />
-            <TourPreview />
             <FanArtPreview />
+            <TourPreview />
             <Subscribe />
             <Contact />
         </>

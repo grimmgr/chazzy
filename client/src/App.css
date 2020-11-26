@@ -43,6 +43,29 @@ h2 {
     font-style: normal;
 }
 
+.arrow {
+    background-color:  rgba(255, 255, 116, 0.4);
+    box-sizing: content-box;
+    color: rgba(46, 12, 70, .7);
+    cursor: pointer;
+    font-size: 2.2rem;
+    position: absolute;
+    bottom: 45%;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 1px rgb(46, 12, 70);
+    width: 10%;
+}
+
+.scrollLeft {
+    left: 0;
+    padding: 6px 4px 6px 0;
+}
+
+.scrollRight {
+    right: 0;
+    padding: 6px 0 6px 4px;
+}
+
 #menu {
     text-align: left;
     z-index: 3;
@@ -66,19 +89,18 @@ h2 {
     padding-bottom: 30px;
 }
 
-#shows {
+#tour-prev {
     /* background-image: url(./backgrounds/purp.png);
     background-size: cover; */
     padding-top: 50px;
 }
 
-#shows h2 {
+#tour-prev h2 {
     color: rgba(255, 255, 255, .7);
 }
 
 #fan-art-prev {
     padding: 50px 0;
-    text-align: center;
 }
 
 #contact {
@@ -86,7 +108,6 @@ h2 {
     background-image: url(./backgrounds/purp.png);
     background-size: cover;
     padding: 30px 0;
-    text-align: center;
 }
 
 #contact h2 {

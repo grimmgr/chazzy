@@ -1,13 +1,37 @@
-.iframe-container {
-    margin: 0 auto;
-    width: 90%;
+#fan-art-prev h2 {
+    color: rgba(137, 79, 179, 0.5);
 }
 
-.iframe-container iframe {
-    height: 100vw;
+.art-prev-wrapper {
+    position: relative;
+}
+
+.art-prev-container {
+    display: flex;
+    margin: 30px auto;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    width: 80%;
+}
+.prev-artwork-card {
+    height: 93vw;
+    flex-shrink: 0;
+    scroll-snap-align: center;
     width: 100%;
 }
 
+.prev-artwork-card iframe {
+    height: 100%;
+    width: 100%;
+}
+
+#art-arrow-l,
+#art-arrow-r {
+    background-color: transparent;
+}
+
 .submit-yours {
+    padding-right: 8px;
     text-align: right;
 }

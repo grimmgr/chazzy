@@ -49,8 +49,6 @@ export const FanArt = () => {
         .catch(err => console.log(err));
     }, [admin]);
 
-    console.log('render fan art page');
-
     return (
         <section id='fan-art'>
             <h2>FAN ART</h2>
