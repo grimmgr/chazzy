@@ -43,9 +43,10 @@ export const Merch = () => {
                 </i>
             </div>
             <GoTo 
-                link={'http://chastitybelt.limitedrun.comstore'}
-                name={'store'}
-                text={'GO TO STORE'}
+                link='http://chastitybelt.limitedrun.com/store'
+                name='store'
+                text='GO TO STORE'
+                external='true'
             />
             <p className='treat'>treat yourself ;)</p>
         </section>

@@ -29,9 +29,10 @@ export const Home = () => {
             <div className='cover'>
                 <img className='album-cover' src='images/album_cover.png' alt='album cover' />
                 <GoTo 
-                link={'https://www.patreon.com/chastitybelt'}
-                name={'patreon'}
-                text={'JOIN OUR PATREON'}
+                link='https://www.patreon.com/chastitybelt'
+                name='patreon'
+                text='JOIN OUR PATREON'
+                external='true'
                 />
             </div>
         </section>
