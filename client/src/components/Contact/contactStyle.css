@@ -1,16 +1,64 @@
 #contact {
+    background-image: url(../../backgrounds/purp.png);
+    background-size: cover;
+    color: white;
+    /* overflow: hidden; */
+    padding-top: 15px;
     position: relative;
+    text-align: left;
+    transition: height ease-in-out 1s
 }
 
-.display-contact {
-    font-size: 1.7rem;
-    position: absolute;
-    top: 30px;
-    right: 20px;
+#contact h2 {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    padding-bottom: 15px;
 }
 
-.display-contact i {
+.down-arrow {
+    background-color: rgba(255, 255, 255, .3);
+    display: inline-block;
+    font-size: 1.1rem;
+    margin-left: 20px;
+    padding: 3px 5px;
+    transition: transform 500ms;
     -webkit-text-stroke: 1px rgb(46, 12, 70);
+}
+
+.contact-btn-exit-active {
+    transform: rotate(180deg);
+}
+
+.contact-btn-exit-done {
+    transform: rotate(180deg);
+}
+
+.contact-btn-enter-active {
+    transform: rotate(0deg);
+}
+
+.contact-btn-enter-done {
+    transform: rotate(0deg);
+}
+
+.contacts-enter {
+    height: 0;
+    
+}
+
+.contacts-enter-active {
+    height: fit-content;
+    transition: height ease-in-out 1000ms
+}
+
+.contacts-exit {
+    height: fit-content;
+}
+
+.contacts-exit-active {
+    height: 0;
+    transition: height ease-in-out 1000ms
 }
 
 .contact {

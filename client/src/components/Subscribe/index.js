@@ -18,7 +18,6 @@ export const Subscribe = () => {
             status: 'subscribed'
         })
         .then((response) => {
-            console.log(response);
             
             if ( response.data.status === 400 ) {
                 if ( response.data.title === 'Member Exists') {

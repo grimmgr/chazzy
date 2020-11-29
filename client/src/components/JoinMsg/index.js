@@ -2,7 +2,6 @@ import React from 'react';
 import './joinMsgStyle.css';
 
 export const JoinMsg = (props) => {
-    console.log(props.status);
     return (
         <div className='join-msg'>
             { (props.status === 'alreadyMember') &&
