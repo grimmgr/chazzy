@@ -12,6 +12,7 @@
     border-top: 1px solid white;
     margin: 0 auto;
     padding: 10px;
+    position: relative;
     width: fit-content;
 }
 
@@ -27,4 +28,24 @@ input {
 
 .subscribe-btn {
     background-color: rgba(196, 247, 164, 0.6);
+    border: 1px solid white;
+    padding: 2px 10px;
+}
+
+.join-msg-enter {
+    opacity: 0;
+}
+
+.join-msg-enter-active {
+    opacity: 1;
+    transition: opactity 5000ms;
+}
+
+.join-msg-exit {
+    opacity: 1;
+}
+
+.join-msg-exit-active {
+    opacity: 0;
+    transition: opacity 5000ms;
 }

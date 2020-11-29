@@ -1,37 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { CSSTransition } from 'react-transition-group';
+import { JoinMsg } from '../JoinMsg';
 import './subscribeStyle.css';
 
 export const Subscribe = () => {
     const [email, setEmail] = useState('');
-    const [error, setError] = useState('');
-    const [yay, setYay] = useState('');
+    const [submitted, setSubmitted] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState('');
+    // const [yay, setYay] = useState('');
 
     const subscribe = (e) => {
         e.preventDefault();
+        setSubmitStatus(false);
         axios.post('/subscribe', {
             email_address: email,
             status: 'subscribed'
         })
         .then((response) => {
             console.log(response);
+            
             if ( response.data.status === 400 ) {
                 if ( response.data.title === 'Member Exists') {
-                    setError('alreadyMember');
-                } if ( response.data.title === 'Invalid Resource') {
-                    setError('invalidEmail');
+                    setSubmitStatus('alreadyMember');
+                    setEmail('');
+                } else if ( response.data.title === 'Invalid Resource') {
+                    setSubmitStatus('invalidEmail');
                 } else {
-                    setError('cantProcess')
+                    setSubmitStatus('cantProcess')
                 }
             } else {
-                setYay('yay');
+                setEmail('');
+                setSubmitStatus('yay');
             }
 
         })
-        .catch(err => setError(err));
+        .catch(err => setSubmitStatus(err));
     }
 
-
+    useEffect(() => {
+        if ( submitStatus ) {
+            setSubmitted(true);
+        }
+        
+    }, [submitStatus])
 
     return (
         <section id='subscribe' className='subscribe-container'>
@@ -49,6 +61,14 @@ export const Subscribe = () => {
                     onClick={subscribe} 
                     className='subscribe-btn'>join</button>
             </form>
+            <CSSTransition
+            in={submitted}
+            timeout={5000}
+            classNames={'join-msg'}
+            unmountOnExit
+            >
+                <JoinMsg status={submitStatus} />
+            </CSSTransition>
             </div>
         </section>
     );
