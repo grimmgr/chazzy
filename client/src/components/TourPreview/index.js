@@ -42,12 +42,13 @@ export const TourPreview = () => {
                                 url={event.url}
                             />
                         ))}
-                    <GoTo 
-                        data-aos='fade-left'
-                        link={'/tour'}
-                        name={'tour'}
-                        text={'ALL DATES'}
-                    />
+                    <div data-aos='fade-left'>
+                        <GoTo 
+                            link={'/tour'}
+                            name={'tour'}
+                            text={'ALL DATES'}
+                        />
+                    </div>
                 </div>
             : <NoEvents />
             }

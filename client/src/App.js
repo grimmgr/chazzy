@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Aos from 'aos';
+import 'aos/dist/aos.css';
 import { useAdmin } from './utils/adminContext';
 import { Main } from './pages/Main';
 import { Menu } from './components/Menu';
@@ -18,12 +19,14 @@ import './App.css';
 
 export const App = () => {
     const setAdmin = useAdmin().setAdmin;
+    
+    Aos.init({ 
+        duration: 1000, 
+        easing: 'ease-out',
+        offset: 100
+     });
 
     useEffect(() => {
-        Aos.init({ 
-            duration: 1000, 
-            easing: "ease-out"
-         });
         const user = localStorage.getItem('user');
         if (user) {
             setAdmin(user);
