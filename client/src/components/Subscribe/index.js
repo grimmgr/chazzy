@@ -6,8 +6,6 @@ export const Subscribe = () => {
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
     const [yay, setYay] = useState('');
-    console.log(`error: ${error}`);
-    console.log(`yay: ${yay}`);
 
     const subscribe = (e) => {
         e.preventDefault();

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { useAos } from '../../utils/aosContext';
 import './goToStyle.css';
 
 export const GoTo = (props) => {

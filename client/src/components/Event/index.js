@@ -1,13 +1,11 @@
 import React from 'react';
-import { useAos } from '../../utils/aosContext';
 import './eventStyle.css';
 
 export const Event = (props) => {
-    const aos = useAos();
     const date = new Date(props.date);
     const formattedDate = date.toDateString().slice(0, -5).toUpperCase();
     return (
-        <div className='event' data-aos={aos.fade_up}>
+        <div className='event' data-aos='fade-up'>
             <p className='date'>{formattedDate}</p>
             { (props.venue === 'Streaming LIVE') ?
             <div>

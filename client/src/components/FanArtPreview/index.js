@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useAos } from '../../utils/aosContext';
 import { PrevArtCard } from '../PrevArtCard';
 import { GoTo } from '../GoTo';
 import './fanArtPrevStyle.css';
 
 export const FanArtPreview = () => {
-    const aos = useAos();
     const [art, setArt] = useState([]);
 
     const rightArrowClick = (e) => {
@@ -28,7 +26,7 @@ export const FanArtPreview = () => {
 
     return (
         <section id='fan-art-prev'>
-            <h2 data-aos={ aos.fade_right }>FAN ART</h2>
+            <h2 data-aos='fade-right'>FAN ART</h2>
             <div className='art-prev-wrapper'>
                 <div className='art-prev-container'>
                 { art.map(art => (

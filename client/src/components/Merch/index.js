@@ -1,13 +1,11 @@
 import React from 'react';
-import { useAos } from '../../utils/aosContext';
+// import Aos from 'aos';
 import { MerchItem } from '../MerchItem';
 import { GoTo } from '../GoTo';
 import merchData from './merch.json';
 import './merchStyle.css';
 
 export const Merch = () => {
-
-    const aos = useAos();
 
     const rightArrowClick = (e) => {
         e.target.parentElement.firstChild.scrollLeft += 420;
@@ -19,7 +17,7 @@ export const Merch = () => {
 
     return (
         <section id='merch'>
-            <h2 data-aos={aos.fade_right}>MERCH</h2>
+            <h2 data-aos='fade-right'>MERCH</h2>
             
             <div className='merch-wrapper'>
                 <div className='merch-container'>

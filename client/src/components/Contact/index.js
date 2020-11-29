@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { useAos } from '../utils/aosContext';
 import './contactStyle.css';
 
 export const Contact = () => {
@@ -15,7 +14,7 @@ export const Contact = () => {
     return (
         <section id='contact'>
             <div className='display-contact'><i className="fas fa-chevron-down" onClick={buttonClick}></i></div>
-            <h2>CONTACT</h2>
+            <h2 data-aos='fade-right' data-aos-offset='0'>CONTACT</h2>
             { open ?
             <div className='contact-container'>
                 <ul className='contact-list'>

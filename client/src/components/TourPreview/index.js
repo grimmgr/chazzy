@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useAos } from '../../utils/aosContext';
 import { NoEvents } from '../NoEvents';
 import { Event } from '../Event';
 import { GoTo } from '../GoTo';
 import './tourPreviewStyle.css';
 
 export const TourPreview = () => {
-    const aos = useAos();
 
     const [events, setEvents] = useState([]);
     // const [loading, toggleLoading] = useState(true);
@@ -45,7 +43,7 @@ export const TourPreview = () => {
                             />
                         ))}
                     <GoTo 
-                        data-aos={ aos.fade_left }
+                        data-aos='fade-left'
                         link={'/tour'}
                         name={'tour'}
                         text={'ALL DATES'}
