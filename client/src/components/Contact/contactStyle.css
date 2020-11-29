@@ -2,7 +2,7 @@
     background-image: url(../../backgrounds/purp.png);
     background-size: cover;
     color: white;
-    /* overflow: hidden; */
+    overflow: hidden;
     padding-top: 15px;
     position: relative;
     text-align: left;
@@ -42,9 +42,34 @@
     transform: rotate(0deg);
 }
 
-.contacts-enter {
+.contact-sctn {
+    height: 54px;
+}
+
+.contact-sctn-enter {
+    height: 414px;
+}
+
+.contact-sctn-enter-active {
+    height: 54px;
+    /* transition: height ease-in-out 3s; */
+}
+
+.contact-sctn-enter-done {
+    height: 54px;
+}
+
+.contact-sctn-exit-active {
+    height: 414px;
+    /* transition: height ease-in-out 3s; */
+}
+
+.contact-sctn-exit-done {
+    height: 414px;
+}
+
+/* .contacts-enter {
     height: 0;
-    
 }
 
 .contacts-enter-active {
@@ -59,7 +84,7 @@
 .contacts-exit-active {
     height: 0;
     transition: height ease-in-out 1000ms
-}
+} */
 
 .contact {
     margin: 10px 0;

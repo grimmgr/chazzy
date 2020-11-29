@@ -4,7 +4,7 @@ import './contactStyle.css';
 
 export const Contact = () => {
     const [open, setOpen] = useState(false);
-    const [contactHeight, setContactHeight] = useState(null);
+    // const [contactHeight, setContactHeight] = useState(null);
     
     const toggleOpen = () => {
         setOpen(prevState => !prevState);
@@ -15,15 +15,20 @@ export const Contact = () => {
         toggleOpen();
     }
 
-    const calcHeight = (el) => {
-        const height = el.offsetHeight + 54;
-        setContactHeight(height);
-    }
+    // const calcHeight = (el) => {
+    //     const height = el.offsetHeight + 54;
+    //     setContactHeight(height);
+    // }
 
-    console.log(contactHeight);
+    // console.log(contactHeight);
 
     return (
-        <section id='contact' style={{ height: contactHeight }}>
+        <CSSTransition
+            in={!open}
+            timeout={500}
+            classNames={'contact-sctn'}
+        >
+        <section id='contact' className={'contact-sctn'}>
             
             <h2 data-aos='fade-right' data-aos-offset='0'>CONTACT</h2>
             <CSSTransition
@@ -36,13 +41,6 @@ export const Contact = () => {
                     onClick={buttonClick}
                 ></i>
             </CSSTransition>
-            <CSSTransition
-                in={open}
-                timeout={500}
-                classNames={'contacts'}
-                unmountOnExit
-                onEnter={calcHeight}
-            >
                 <div className='contact-container'>
                     <ul className='contact-list'>
                         <li className='contact'>
@@ -82,7 +80,7 @@ export const Contact = () => {
                         </li>
                     </ul>
                 </div>
-            </CSSTransition>
         </section>
+        </CSSTransition>
     );
 };
