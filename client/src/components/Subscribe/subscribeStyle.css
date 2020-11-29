@@ -3,6 +3,7 @@
     color: rgb(46, 12, 70);
     font-size: .9rem;
     padding: 20px;
+    position: relative;
     text-align: center;
 }
 
@@ -38,7 +39,7 @@ input {
 
 .join-msg-enter-active {
     opacity: 1;
-    transition: opactity 5000ms;
+    transition: opacity 500ms;
 }
 
 .join-msg-exit {
@@ -47,5 +48,37 @@ input {
 
 .join-msg-exit-active {
     opacity: 0;
-    transition: opacity 5000ms;
+    transition: opacity 500ms;
+}
+
+.cheers {
+    animation: 2s ease-in-out infinite alternate smileys;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    width: 100%;
+}
+
+.cheers-enter {
+    opacity: 0;
+}
+
+.cheers-enter-active {
+    opacity: 1;
+    transition: opacity ease-in 500ms;
+}
+
+
+.smiley {
+    width: 50px;
+}
+
+@keyframes smileys {
+    to {
+        filter: invert();
+    }
 }
