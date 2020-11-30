@@ -10,6 +10,7 @@
 }
 
 #contact h2 {
+    color: rgba(255, 255, 255, .8);
     display: inline-block;
     font-size: 1.2rem;
     margin-bottom: 0;
@@ -60,12 +61,12 @@
 }
 
 .contact-sctn-exit-active {
-    height: 414px;
+    height: 550px;
     /* transition: height ease-in-out 3s; */
 }
 
 .contact-sctn-exit-done {
-    height: 414px;
+    height: 550px;
 }
 
 /* .contacts-enter {
@@ -86,8 +87,15 @@
     transition: height ease-in-out 1000ms
 } */
 
+.contact-container {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
 .contact {
+    line-height: 1.5;
     margin: 10px 0;
+    margin-bottom: 20px;
 }
 
 .contact a {
@@ -96,4 +104,6 @@
 
 .title {
     color: white;
+    font-size: 1.1rem;
+    font-style: normal;
 }

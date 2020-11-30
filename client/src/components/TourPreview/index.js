@@ -52,9 +52,9 @@ export const TourPreview = () => {
                 </div>
             : <NoEvents />
             }
-            <div className='shows-img-container'>
-                <img src='images/shows.jpg' alt='live show' />
-            </div>
+            
+            <img className='shows-img' src='images/shows.jpg' alt='live show' />
+            
         </section>
     );
 };

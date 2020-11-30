@@ -14,7 +14,8 @@ export const Event = (props) => {
             </div>
               :
               <div>
-                <p className='city'>{props.city}, { (props.country === 'United Kingdom') ? 'UK' : props.country }</p>
+                { (props.country === 'United States') ? <p className='city'>{props.city}, US</p> : 
+                <p className='city'>{props.city}, { (props.country === 'United Kingdom') ? 'UK' : props.country }</p> }
                 <p className='venue'>{props.venue}</p>
             </div>
             }

@@ -1,11 +1,10 @@
 #merch h2 {
-    color: rgba(255, 159, 159, 0.8);
     padding-top: 10px;
 }
 
-.merch-wrapper {
+/* .merch-wrapper {
     position: relative;
-}
+} */
 .merch-container {
     border: 2px solid rgba(196, 247, 164, .8);
     display: flex;
@@ -19,7 +18,7 @@
 }
 
 .img-container {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.4);
     flex: none;
     padding: 10px 10px 5px 10px;
     scroll-snap-align: center;
@@ -46,7 +45,6 @@
 
 @keyframes pulse {
     to {
-        /* filter: invert(); */
         color: rgb(237, 237, 85);
     }
 }

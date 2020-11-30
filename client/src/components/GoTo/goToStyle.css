@@ -20,6 +20,8 @@
 }
 
 .go-to p {
+    background-color: rgba(249, 195, 103, 0.3);
+    color: rgb(46, 12, 70);
     font-size: .95rem;
     /* font-style: normal; */
     font-weight: 600;

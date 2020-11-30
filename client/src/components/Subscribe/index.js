@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { CSSTransition } from 'react-transition-group';
 import './subscribeStyle.css';
@@ -93,8 +93,8 @@ export const Subscribe = () => {
                 unmountOnExit
             >
                 <div className='cheers'>
-                    <img className='smiley' src='images/smiley_pink.png'></img>
-                    <img className='smiley' src='images/smiley_pink.png'></img>
+                    <img className='smiley' src='images/smiley_pink.png' alt='smiley face'></img>
+                    <img className='smiley' src='images/smiley_pink.png' alt='smiley face'></img>
                 </div>
             </CSSTransition>
         </section>

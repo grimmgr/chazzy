@@ -1,7 +1,3 @@
-#fan-art-prev h2 {
-    color: rgba(137, 79, 179, 0.5);
-}
-
 .art-prev-wrapper {
     position: relative;
 }
@@ -31,7 +27,20 @@
     background-color: transparent;
 }
 
+.fan-art-link p {
+    color: rgb(46, 12, 70);
+    background-color: rgba(254, 201, 121, 0.3);
+}
+
 .submit-yours {
+    animation: 3s ease-in-out infinite alternate pulse;
+    color: rgb(132, 28, 206);
     padding-right: 8px;
     text-align: right;
+}
+
+@keyframes pulse {
+    to {
+        color: rgb(237, 237, 85);
+    }
 }

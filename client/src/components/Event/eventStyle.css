@@ -1,5 +1,10 @@
 .event {
+    background-color: rgba(255, 255, 255, .3);
+    color: rgb(64, 16, 99);
+    margin: 0 auto;
     margin-top: 30px;
+    padding: 10px;
+    width: 250px;
 }
 
 .date {
@@ -25,17 +30,14 @@
 }
 
 .event-links p {
+    color: rgb(138, 39, 199);
     font-weight: 600;
+}
+
+.event-links .link {
+    border-bottom: 1px solid rgb(138, 39, 199);
 }
 
 .tickets {
-    margin-right: 5px;
+    margin-right: 10px;
 }
-
-/* .tickets p {
-    font-weight: 600;
-}
-
-.rsvp {
-    margin: 0 auto;
-} */

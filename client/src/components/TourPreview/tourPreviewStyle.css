@@ -1,12 +1,14 @@
-.shows-img-container {
+/* .shows-img-container {
     width: 100%;
-}
+} */
 
-.shows-img-container img {
+.shows-img {
+    top: 5px;
     width: 100%;
 }
 
 .tour-link {
+    margin-bottom: 0;
     position: relative;
     top: 50px;
 }

@@ -1,0 +1,28 @@
+.video-wrapper {
+    margin-bottom: 20px;
+}
+
+.video-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.video-card {
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    width: 100%;
+}
+
+.video-card iframe {
+    height: calc(100vw * 0.56);
+    width: 100%;
+}
+
+#video-arrow-l,
+#video-arrow-r {
+    background-color: transparent;
+    z-index: 2;
+    -webkit-text-fill-color: rgba(255, 255, 255, .5);
+}
