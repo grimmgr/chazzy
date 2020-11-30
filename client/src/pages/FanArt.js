@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { CSSTransition } from 'react-transition-group';
 import { ArtCard } from '../components/ArtCard';
 import { useNav } from '../utils/navContext';
 import { useAdmin } from '../utils/adminContext';
@@ -12,6 +13,7 @@ export const FanArt = () => {
     const { fanArt, setFanArt } = useFanArt();
     const [instaLink, setInstaLink] = useState('');
     const [error, setError] = useState('');
+    const [openForm, setOpenForm] = useState(false);
 
     const getEmbedLink = (shareLink) => {
         const embedLink = shareLink.trim().split('?')[0] + 'embed';
@@ -64,26 +66,49 @@ export const FanArt = () => {
                 ))}
             </div>
             
-            <div className='art-submit-form'>
-                <h3>Submit your art!</h3>
-                <form>
-                    <label>Shareable link:</label>
-                    <input 
-                        id='link' 
-                        name='link' 
-                        type='text' 
-                        placeholder='paste here'
-                        value={instaLink}
-                        onChange={ event => setInstaLink(event.target.value) }
-                        />
-                    <input 
-                        className='submit-art-btn' 
-                        type='submit' 
-                        value='submit'
-                        onClick={submitArt}/>
-                </form>
-                { error ? <p>please use a valid sharing link</p>
-                : null }
+            <div className='art-form-wrapper'>
+                <CSSTransition
+                    in={!openForm}
+                    timeout={500}
+                    unmountOnExit
+                    classNames={'open-form-btn'}
+                >
+                    <div className='open-form-btn' onClick={() => setOpenForm(true)} >
+                        <h3>{ admin ? 'Add art' : 'Add your art to our page!'}</h3>
+                    </div>
+                </CSSTransition>
+                <CSSTransition
+                    in={openForm}
+                    timeout={500}
+                    unmountOnExit
+                    classNames={'art-form-container'}
+                >
+                    <div className='art-form-container'>
+                        <div className='close-form-btn' onClick={() => setOpenForm(false)}>
+                            <span class='left'></span>
+                            <span class='right'></span>
+                        </div>
+                        <form>
+                            <p>We'd love to have your art on our page!</p> 
+                            <p>To share with us, paste a link to your instagram post below.  Check back in a day or two and we'll have it posted on our site ;)</p>
+                            <input 
+                                id='link' 
+                                name='link' 
+                                type='text' 
+                                placeholder='paste link here'
+                                value={instaLink}
+                                onChange={ event => setInstaLink(event.target.value) }
+                                />
+                            <input 
+                                className='submit-art-btn' 
+                                type='submit' 
+                                value='submit'
+                                onClick={submitArt}/>
+                        </form>
+                        { error ? <p>please use a valid sharing link</p>
+                        : null }
+                    </div>
+                </CSSTransition>
             </div>
             {/* <div className='art-note'>
                 <p>*If you see your art here and would like it taken down or credited differently, please email us at beltchastity@gmail.com</p>

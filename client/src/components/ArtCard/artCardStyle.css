@@ -1,6 +1,6 @@
 .artwork-card {
+    height: min-content;
     margin-bottom: 7%;
-    position: relative;
 }
 
 .art-options {
@@ -20,11 +20,11 @@
 }
 
 .check {
-    color: greenyellow;
+    color: rgb(255, 255, 47);
 }
 
 .x {
-    color: red;
+    color: rgb(245, 143, 131);
 }
 
 .not-verified {
@@ -39,7 +39,9 @@
 }
 
 .ig-iframe {
+    height: calc(40vw + 54px);
     position: absolute;
     left: 0;
     top: -54px;
+    width: 100%;
 }

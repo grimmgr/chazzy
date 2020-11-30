@@ -32,22 +32,6 @@ export const ArtCard = (props) => {
         });
     };
 
-    const unverify = (id) => {
-        console.log(`unverify ${id}`);
-        axios.put('api/fan-art/' + id, { verified: false })
-        .then((response) => {
-            console.log(response.data);
-            const otherOnes = fanArt.filter(art => art._id !== id);
-            const newFanArt = [...otherOnes, {...response.data, verified: false}];
-            newFanArt.sort((a, b) => {
-                return new Date(b.submitted) - new Date(a.submitted);
-            });
-            console.log('card')
-            console.log(newFanArt);
-            setFanArt(newFanArt);
-        });
-    };
-
     return (
         <div className={ props.verified ? 'artwork-card' : 'artwork-card not-verified' }>
             { admin ? 
@@ -55,7 +39,7 @@ export const ArtCard = (props) => {
 
                 <i className="far fa-times-circle x" onClick={() => remove(props._id)}></i>
 
-                { !props.verified ? <i onClick={() => verify(props._id)} className="far fa-check-circle check"></i> : <i onClick={() => unverify(props._id)} className="fas fa-baby"></i> }
+                { !props.verified ? <i onClick={() => verify(props._id)} className="far fa-check-circle check"></i> : null }
             </div>
             : null }
 
