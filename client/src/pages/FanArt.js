@@ -20,14 +20,25 @@ export const FanArt = () => {
         return embedLink;
     }
      
-    const submitArt = () => {
-        if (instaLink) {
+    const submitArt = (e) => {
+        e.preventDefault();
+        if ( instaLink ) {
+            let artInfo;
             const embedLink = getEmbedLink(instaLink);
-            axios.post('/api/fan-art', { 
-                embed_link: embedLink,
-                verified: false,
-                submitted: new Date()
-             })
+            if ( admin ) {
+                artInfo = {
+                    embed_link: embedLink,
+                    verified: true,
+                    submitted: new Date()
+                }
+            } else {
+                artInfo = {
+                    embed_link: embedLink,
+                    verified: false,
+                    submitted: new Date()
+                }
+            }
+            axios.post('/api/fan-art', artInfo)
             .then(response => console.log(response))
             .catch(err => setError(err));
         };
@@ -73,8 +84,10 @@ export const FanArt = () => {
                     unmountOnExit
                     classNames={'open-form-btn'}
                 >
+                    <div className='open-form-container'>
                     <div className='open-form-btn' onClick={() => setOpenForm(true)} >
-                        <h3>{ admin ? 'Add art' : 'Add your art to our page!'}</h3>
+                        <h3>{ admin ? 'add art' : 'Submit yours!'}</h3>
+                    </div>
                     </div>
                 </CSSTransition>
                 <CSSTransition

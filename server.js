@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const routes = require('./routes');
@@ -19,7 +20,7 @@ app.use(cors({
     credentials: true
 }));
 app.use(session({
-    secret: "galsonly",
+    secret: 'galsonly',
     resave: true,
     saveUninitialized: true
 }));

@@ -21,6 +21,7 @@ export const Video = () => {
                     { videoData.map(vid => (
                         <VideoCard
                             key={vid.name}
+                            name={vid.name}
                             link={vid.link}
                         />
                     )) }

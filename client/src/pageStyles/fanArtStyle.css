@@ -1,5 +1,5 @@
 #fan-art {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #fan-art h2 {
@@ -14,23 +14,33 @@
     justify-content: space-between;
     overflow: scroll;
     padding: 4% 7%;
+    padding-bottom: 40px;
     width: 100%;
 }
 
-.open-form-btn {
-    background-color: rgba(238, 130, 238, 0.612);
+.open-form-container {
+    /* background-image:  url(../backgrounds/leaves.png);
+    background-size: cover; */
     display: flex;
     justify-content: center;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
-    width: 100%
+    width: 100%;
+}
+
+.open-form-btn {
+    /* background-color: rgba(238, 130, 238, 0.612); */
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    cursor: pointer;
+    padding: 3px 0;
+    width: fit-content;
 }
 
 .open-form-btn h3 {
-    border-bottom: 1px solid white;
-    border-top: 1px solid white;
-    padding: 10px;
+    background-color: rgba(146, 187, 79, 0.6);
+    padding: 2px 8px;
 }
 
 .art-form-container {
@@ -46,21 +56,27 @@
 }
 
 .art-form-container-enter {
-    transform: translateY(100%);
+    /* transform: translateY(100%); */
+    opacity: 0;
 }
 
 .art-form-container-enter-active {
-    transform: translateY(0);
-    transition: transform linear 500ms;
+    /* transform: translateY(0);
+    transition: transform linear 500ms; */
+    opacity: 1;
+    transition: opacity linear 500ms;
 }
 
 .art-form-container-exit {
-    transform: translateY(0);
+    /* transform: translateY(0); */
+    opacity: 1;
 }
 
 .art-form-container-exit-active {
-    transform: translateY(100%);
-    transition: transform linear 500ms;
+    /* transform: translateY(100%);
+    transition: transform linear 500ms; */
+    opacity: 0;
+    transition: opacity linear 500ms;
 }
 
 .close-form-btn {
@@ -109,4 +125,17 @@
     margin: 10px auto;
     padding-top: 10px;
     width: 80px;
+}
+
+.submit-art-btn:focus {
+    filter: saturate(150%);    
+    outline: 0;     
+}
+
+.submit-art-btn:hover {
+    filter: saturate(150%);
+}
+
+.submit-art-btn:active {
+    filter: invert(100%);
 }
