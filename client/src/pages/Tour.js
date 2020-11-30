@@ -28,7 +28,7 @@ export const Tour = () => {
     
     return (
         <section id='tour'>
-            <h2>Tour</h2>
+            <h2>TOUR</h2>
             <div className='tour-container'>
                 {events.map(event => (
                     <Event
@@ -43,7 +43,9 @@ export const Tour = () => {
                     />
                 ))}
             </div>
-            <Subscribe />
+            <div className='tour-page-subscribe'>
+                <Subscribe />
+            </div>
         </section>
     );
 };

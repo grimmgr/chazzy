@@ -1,8 +1,19 @@
 #tour {
     height: 100vh;
     overflow-y: scroll;
+    padding-bottom: 124px;
 }
 
 #tour h2 {
-    color: rgba(100, 147, 67, 0.5);
+    color: rgba(255, 255, 255, .5);
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+
+.tour-page-subscribe {
+    background-color: rgba(198, 65, 255, 0.4);
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
