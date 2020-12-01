@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const ArtSchema = new Schema({
     cdn: String,
+    embed_link: String,
     email: String,
     author: String,
     verified: Boolean,

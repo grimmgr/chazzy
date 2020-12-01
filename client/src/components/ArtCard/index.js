@@ -37,9 +37,9 @@ export const ArtCard = (props) => {
             { admin ? 
             <div className='art-options'>
 
-                <i className="far fa-times-circle x" onClick={() => remove(props._id)}></i>
+                <i className="far fa-times-circle x" onClick={() => remove(props.id)}></i>
 
-                { !props.verified ? <i onClick={() => verify(props._id)} className="far fa-check-circle check"></i> : null }
+                { !props.verified ? <i onClick={() => verify(props.id)} className="far fa-check-circle check"></i> : null }
             </div>
             : null }
 

@@ -16,6 +16,11 @@ export const FanArt = () => {
     const [error, setError] = useState('');
     const [openForm, setOpenForm] = useState(false);
 
+    const getEmbedLink = (shareLink) => {
+        const embedLink = shareLink.trim().split('?')[0] + 'embed';
+        return embedLink;
+    }
+
     const getPostID = (link) => {
         const postID = link.trim().split('/')[4];
         return postID;
@@ -31,12 +36,14 @@ export const FanArt = () => {
         e.preventDefault();
         if ( instaLink ) {
             let artInfo;
+            const embedLink = getEmbedLink(instaLink);
             const post = getPostID(instaLink);
             const { author, cdn } = await getIgInfo(post);
 
             if ( admin ) {
                 artInfo = {
                     cdn: cdn,
+                    embed_link: embedLink,
                     email: null,
                     author: author,
                     verified: true,
@@ -45,6 +52,7 @@ export const FanArt = () => {
             } else {
                 artInfo = {
                     cdn: cdn,
+                    embed_link: embedLink,
                     email: email,
                     author: author,
                     verified: false,
@@ -87,6 +95,7 @@ export const FanArt = () => {
                 { fanArt.map(art => (
                     <ArtCard
                     key={art._id}
+                    id={art._id}
                     link={art.cdn}
                     author={art.author}
                     verified={art.verified}
