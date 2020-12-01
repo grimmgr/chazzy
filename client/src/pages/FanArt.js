@@ -12,28 +12,41 @@ export const FanArt = () => {
     const admin = useAdmin().admin;
     const { fanArt, setFanArt } = useFanArt();
     const [instaLink, setInstaLink] = useState('');
+    const [email, setEmail] = useState('');
     const [error, setError] = useState('');
     const [openForm, setOpenForm] = useState(false);
 
-    const getEmbedLink = (shareLink) => {
-        const embedLink = shareLink.trim().split('?')[0] + 'embed';
-        return embedLink;
+    const getPostID = (link) => {
+        const postID = link.trim().split('/')[4];
+        return postID;
     }
-     
-    const submitArt = (e) => {
+
+    const getIgInfo = async (post) => {
+        const response = await axios.get('/api/ig/' + post);
+        const postInfo = response.data;
+        return postInfo;
+    }
+    
+    const submitArt = async (e) => {
         e.preventDefault();
         if ( instaLink ) {
             let artInfo;
-            const embedLink = getEmbedLink(instaLink);
+            const post = getPostID(instaLink);
+            const { author, cdn } = await getIgInfo(post);
+
             if ( admin ) {
                 artInfo = {
-                    embed_link: embedLink,
+                    cdn: cdn,
+                    email: null,
+                    author: author,
                     verified: true,
                     submitted: new Date()
                 }
             } else {
                 artInfo = {
-                    embed_link: embedLink,
+                    cdn: cdn,
+                    email: email,
+                    author: author,
                     verified: false,
                     submitted: new Date()
                 }
@@ -98,12 +111,12 @@ export const FanArt = () => {
                 >
                     <div className='art-form-container'>
                         <div className='close-form-btn' onClick={() => setOpenForm(false)}>
-                            <span class='left'></span>
-                            <span class='right'></span>
+                            <span className='left'></span>
+                            <span className='right'></span>
                         </div>
                         <form>
                             <p>We'd love to have your art on our page!</p> 
-                            <p>To share with us, paste a link to your instagram post below.  Check back in a day or two and we'll have it posted on our site ;)</p>
+                            <p>To share with us, paste a link to your instagram post below.  If you include your email we'll notify you once we've posted your art on our site ;)</p>
                             <input 
                                 id='link' 
                                 name='link' 
@@ -111,6 +124,14 @@ export const FanArt = () => {
                                 placeholder='paste link here'
                                 value={instaLink}
                                 onChange={ event => setInstaLink(event.target.value) }
+                                />
+                            <input 
+                                id='email' 
+                                name='email' 
+                                type='text' 
+                                placeholder='email (optional)'
+                                value={email}
+                                onChange={ event => setEmail(event.target.value) }
                                 />
                             <input 
                                 className='submit-art-btn' 

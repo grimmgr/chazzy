@@ -2,7 +2,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ArtSchema = new Schema({
-    embed_link: String,
+    cdn: String,
+    email: String,
+    author: String,
     verified: Boolean,
     submitted: Date
 });

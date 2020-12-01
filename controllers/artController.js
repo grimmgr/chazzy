@@ -35,7 +35,6 @@ module.exports = {
                 } else {
                     console.log('email sent');
                 }
-            
             });
             res.json(dbArt)
         })
