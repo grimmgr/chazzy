@@ -60,10 +60,10 @@ export const FanArt = () => {
                 }
             }
             axios.post('/api/fan-art', artInfo)
-            .then(response => {
-                console.log(response);
+            .then(() => {
                 setEmail('');
                 setInstaLink('');
+                setOpenForm(false);
             })
             .catch(err => setError(err));
         };
@@ -85,7 +85,7 @@ export const FanArt = () => {
             }
         })
         .catch(err => console.log(err));
-    }, [admin]);
+    }, [admin, openForm]);
 
     return (
         <section id='fan-art'>
@@ -112,8 +112,9 @@ export const FanArt = () => {
                 >
                     <div className='open-form-container'>
                     <div className='open-form-btn' onClick={() => setOpenForm(true)} >
-                        <h3>{ admin ? 'add art' : 'Submit yours!'}</h3>
+                        <h3>{ admin ? 'add art' : 'submit yours!'}</h3>
                     </div>
+                    <p>*If you see your art here and would like it taken down please email us at beltchastity@gmail.com</p>
                     </div>
                 </CSSTransition>
                 <CSSTransition
@@ -123,13 +124,12 @@ export const FanArt = () => {
                     classNames={'art-form-container'}
                 >
                     <div className='art-form-container'>
+                        <h1 className='art-love'>WE <span className='heart'>&hearts;</span> YOUR ART <br/> !</h1>
                         <div className='close-form-btn' onClick={() => setOpenForm(false)}>
                             <span className='left'></span>
                             <span className='right'></span>
                         </div>
-                        <form>
-                            <p>We'd love to have your art on our page!</p> 
-                            <p>To share with us, paste a link to your instagram post below.  If you include your email we'll notify you once we've posted your art on our site ;)</p>
+                        <form className='submit-form'>
                             <input 
                                 id='link' 
                                 name='link' 
@@ -147,19 +147,19 @@ export const FanArt = () => {
                                 onChange={ event => setEmail(event.target.value) }
                                 />
                             <input 
-                                className='submit-art-btn' 
+                                id='submit-art-btn' 
                                 type='submit' 
                                 value='submit'
                                 onClick={submitArt}/>
-                        </form>
-                        { error ? <p>please use a valid sharing link</p>
+                                { error ? <p>please use a valid sharing link</p>
                         : null }
+                        </form>
+                        <div className='form-msg'>
+                            <p>To share with us, paste a link to your instagram post above.  If you include your email we'll notify you once we've posted your art on our site ;)</p>
+                        </div>
                     </div>
                 </CSSTransition>
             </div>
-            {/* <div className='art-note'>
-                <p>*If you see your art here and would like it taken down or credited differently, please email us at beltchastity@gmail.com</p>
-            </div> */}
         </section>
     );
 };
