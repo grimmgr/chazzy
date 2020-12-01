@@ -19,7 +19,7 @@ router.get('/ig/:post', (req, res) => {
         }
         res.json(igInfo);
     })
-    .catch(err => res.status(422).json(err));
+    .catch(err => res.json(err));
 })
 
 module.exports = router;
