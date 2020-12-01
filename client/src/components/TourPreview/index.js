@@ -15,7 +15,7 @@ export const TourPreview = () => {
             .then(response => response.json())
             .then(data => {
                 if (data.length) {
-                    setEvents(data.slice(0, 10));
+                    setEvents(data.slice(0, 8));
                 }
                 // toggleLoading(false);
             });

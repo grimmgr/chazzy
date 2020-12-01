@@ -5,7 +5,7 @@
 .art-prev-container {
     display: flex;
     margin: 30px auto;
-    overflow: scroll;
+    overflow-x: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     width: 80%;

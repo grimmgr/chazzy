@@ -80,7 +80,8 @@ h1 {
 } */
 
 .patreon-link {
-    position: relative;
+    position: absolute;
+    right: 0;
     bottom: 3%;
 }
 
