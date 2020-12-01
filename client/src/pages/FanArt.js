@@ -27,19 +27,25 @@ export const FanArt = () => {
     }
 
     const getIgInfo = async (post) => {
+        console.log('getIgInfo input:' + post);
         const response = await axios.get('/api/ig/' + post);
         const postInfo = response.data;
+        console.log('getIgInfo output:' + postInfo);
         return postInfo;
     }
     
     const submitArt = async (e) => {
         e.preventDefault();
+        console.log('submit btn pushed');
         if ( instaLink ) {
+            console.log('theres a link');
             let artInfo;
             const embedLink = getEmbedLink(instaLink);
+            console.log('embed link:' + embedLink);
             const post = getPostID(instaLink);
+            console.log('post:' + post);
             const { author, cdn } = await getIgInfo(post);
-
+            console.log('author, cdn:' + author + cdn);
             if ( admin ) {
                 artInfo = {
                     cdn: cdn,
@@ -59,6 +65,7 @@ export const FanArt = () => {
                     submitted: new Date()
                 }
             }
+            console.log('artInfo:' + artInfo);
             axios.post('/api/fan-art', artInfo)
             .then(() => {
                 setEmail('');
