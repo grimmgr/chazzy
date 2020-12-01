@@ -52,7 +52,11 @@ export const FanArt = () => {
                 }
             }
             axios.post('/api/fan-art', artInfo)
-            .then(response => console.log(response))
+            .then(response => {
+                console.log(response);
+                setEmail('');
+                setInstaLink('');
+            })
             .catch(err => setError(err));
         };
     };
@@ -83,8 +87,8 @@ export const FanArt = () => {
                 { fanArt.map(art => (
                     <ArtCard
                     key={art._id}
-                    _id={art._id}
-                    link={art.embed_link}
+                    link={art.cdn}
+                    author={art.author}
                     verified={art.verified}
                     />
                 ))}

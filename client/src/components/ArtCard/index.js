@@ -43,8 +43,8 @@ export const ArtCard = (props) => {
             </div>
             : null }
 
-            <div className='iframe-container'>
-                <iframe className='ig-iframe' src={props.link} frameBorder="0" scrolling="no" allowtransparency="true" title="title"></iframe>
+            <div className='ig-img-container'>
+                <img className='ig-thumbnail' src={props.link} alt='instagram post' />
             </div>
 
         </div>

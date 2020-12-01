@@ -31,17 +31,17 @@
     border: 2px solid rgb(255, 247, 0);
 }
 
-.iframe-container {
+.ig-img-container {
     height: 40vw;
     overflow: hidden;
     position: relative;
     width: 40vw;
 }
 
-.ig-iframe {
-    height: calc(40vw + 54px);
-    position: absolute;
+.ig-thumbnail {
+    /* height: calc(40vw + 54px); */
+    /* position: absolute;
     left: 0;
-    top: -54px;
+    top: -54px; */
     width: 100%;
 }
