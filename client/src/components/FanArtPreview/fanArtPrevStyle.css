@@ -15,6 +15,7 @@
 .prev-artwork-card {
     height: 93vw;
     flex-shrink: 0;
+    overflow-y: hidden;
     scroll-snap-align: center;
     width: 100%;
 }
