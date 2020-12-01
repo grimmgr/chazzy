@@ -16,18 +16,14 @@ export const ArtCard = (props) => {
         })
     }
 
-    const verify = (id) => {
-        console.log(`verify ${id}`);
-        axios.put('api/fan-art/' + id, { verified: true })
+    const verify = (id, email) => {
+        axios.put('api/fan-art/' + id, { email: email })
         .then((response) => {
-            console.log(response.data);
             const otherOnes = fanArt.filter(art => art._id !== id);
             const newFanArt = [...otherOnes, {...response.data, verified: true}];
             newFanArt.sort((a, b) => {
                 return new Date(b.submitted) - new Date(a.submitted);
             });
-            console.log('card')
-            console.log(newFanArt);
             setFanArt(newFanArt);
         });
     };
@@ -39,7 +35,7 @@ export const ArtCard = (props) => {
 
                 <i className="far fa-times-circle x" onClick={() => remove(props.id)}></i>
 
-                { !props.verified ? <i onClick={() => verify(props.id)} className="far fa-check-circle check"></i> : null }
+                { !props.verified ? <i onClick={() => verify(props.id, props.email)} className="far fa-check-circle check"></i> : null }
             </div>
             : null }
 

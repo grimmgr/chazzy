@@ -42,7 +42,11 @@ app.use(routes);
 // });
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/chazzy',
-{useNewUrlParser: true, useUnifiedTopology: true});
+{
+    useNewUrlParser: true, 
+    useUnifiedTopology: true,
+    useFindAndModify: false
+});
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

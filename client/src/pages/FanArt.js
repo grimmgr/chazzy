@@ -97,7 +97,7 @@ export const FanArt = () => {
                     key={art._id}
                     id={art._id}
                     link={art.cdn}
-                    author={art.author}
+                    email={art.email}
                     verified={art.verified}
                     />
                 ))}
