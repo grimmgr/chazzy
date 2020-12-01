@@ -6,6 +6,7 @@ require('dotenv').config();
 router.use('/fan-art', fanArtRoutes);
 
 router.get('/ig/:post', (req, res) => {
+    console.log('get ig info!');
     const igToken = process.env.IG_TOKEN;
     const post = req.params.post;
     console.log(igToken);
