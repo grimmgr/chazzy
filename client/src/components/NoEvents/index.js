@@ -1,14 +1,16 @@
 import React from 'react';
-import './noEventsStyle.css';
+import '../Event/eventStyle.css';
 
 export const NoEvents = () => {
     return (
         <div className='no-events'>
+        <div className='event'>
             <div className='note'>
-            <p>There are no upcoming events ;(
-            <br/>
-            <a href='#subscribe'>Join our mailing list</a> for updates!</p>
+                <p className='venue'>We don't have anything planned at the moment ;(</p>
+                <p className='updates'>join our mailing list below for updates!</p>
             </div>
         </div>
+        </div>
+
     );
 };

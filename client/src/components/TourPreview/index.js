@@ -10,7 +10,7 @@ export const TourPreview = () => {
     // const [loading, toggleLoading] = useState(true);
 
     useEffect(() => {
-        const url = 'https://rest.bandsintown.com/v4/artists/chastitybelt/events/?date=2019-12-01,2020-03-01&app_id=062bcc4754fbd4d4106af8bf38bda1c0';
+        const url = 'https://rest.bandsintown.com/v4/artists/chastitybelt/events/?date=past&app_id=062bcc4754fbd4d4106af8bf38bda1c0';
         fetch(url)
             .then(response => response.json())
             .then(data => {
@@ -36,7 +36,6 @@ export const TourPreview = () => {
                                 city={event.venue.city}
                                 country={event.venue.country}
                                 venue={event.venue.name}
-                                timezone={event.venue.timezone}
                                 date={event.datetime}
                                 tickets={event.offers}
                                 url={event.url}
@@ -49,11 +48,12 @@ export const TourPreview = () => {
                             text={'ALL DATES'}
                         />
                     </div>
+                    <img className='shows-img' src='images/shows.jpg' alt='live show' />
                 </div>
             : <NoEvents />
             }
             
-            <img className='shows-img' src='images/shows.jpg' alt='live show' />
+           
             
         </section>
     );

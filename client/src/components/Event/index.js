@@ -7,10 +7,10 @@ export const Event = (props) => {
     return (
         <div className='event' data-aos='fade-up'>
             <p className='date'>{formattedDate}</p>
-            { (props.venue === 'Streaming LIVE') ?
+            { (props.venue === 'Live Stream') ?
             <div>
                 <p className = 'city'>{props.venue}</p>
-                <p className='venue'>{props.timezone}</p> 
+                <p className='venue'>{props.country}</p> 
             </div>
               :
               <div>
