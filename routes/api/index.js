@@ -8,6 +8,8 @@ router.use('/fan-art', fanArtRoutes);
 router.get('/ig/:post', (req, res) => {
     const igToken = process.env.IG_TOKEN;
     const post = req.params.post;
+    console.log(igToken);
+    console.log(post);
     axios.get(`https://graph.facebook.com/v9.0/instagram_oembed?url=https://www.instagram.com/p/${post}/&omitscript=true&hidecaption=true&access_token=${igToken}`)
     .then(response => {
         const igInfo = {
