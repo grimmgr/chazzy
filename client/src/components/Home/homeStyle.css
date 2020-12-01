@@ -82,7 +82,7 @@ h1 {
 .patreon-link {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -5%;
 }
 
 .patreon-link p {
