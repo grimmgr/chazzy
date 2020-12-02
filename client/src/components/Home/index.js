@@ -27,7 +27,7 @@ export const Home = () => {
             
             
             <div className='cover'>
-                <img className='album-cover' src='images/album_cover.png' alt='album cover' />
+                <img className='album-cover' src='images/album_cover_2.png' alt='album cover' />
                 <GoTo 
                 link='https://www.patreon.com/chastitybelt'
                 name='patreon'
