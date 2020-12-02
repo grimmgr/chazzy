@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import { CSSTransition } from 'react-transition-group';
 import './contactStyle.css';
 
 export const Contact = () => {
     const [open, setOpen] = useState(false);
-    // const [contactHeight, setContactHeight] = useState(null);
+    const [contactHeight, setContactHeight] = useState(54);
+    const bottomEl = useRef();
+    // const [scroll, setScroll] = useState(null);
     
     const toggleOpen = () => {
         setOpen(prevState => !prevState);
@@ -15,20 +17,30 @@ export const Contact = () => {
         toggleOpen();
     }
 
-    // const calcHeight = (el) => {
-    //     const height = el.offsetHeight + 54;
-    //     setContactHeight(height);
+    // const scrollDown = () => {
+    //     Window.scrollTop = 600;
+    //     console.log(contactEl.current);
     // }
 
-    // console.log(contactHeight);
+    const scroll = () => {
+        bottomEl.current.scrollIntoView({ behavior: "smooth"});
+    }
+
+    const grow = () => {
+        setContactHeight(550);
+    }
+
+    const shrink = () => {
+        setContactHeight(54);
+    }
+
+    // console.log(open);
+    // useEffect(() => {
+    //     contactEl.current.scrollTop = 200;
+    // }, [open])
 
     return (
-        <CSSTransition
-            in={!open}
-            timeout={500}
-            classNames={'contact-sctn'}
-        >
-        <section id='contact' className={'contact-sctn'}>
+        <section id='contact' className={'contact-sctn'} style={{ height: contactHeight }} >
             
             <h2 data-aos='fade-right' data-aos-offset='0'>CONTACT</h2>
             <CSSTransition
@@ -41,6 +53,16 @@ export const Contact = () => {
                     onClick={buttonClick}
                 ></i>
             </CSSTransition>
+            <CSSTransition
+                in={open}
+                timeout={500}
+                classNames={'contact-sctn'}
+                unmountOnExit
+                onEnter={grow}
+                onEntered={scroll}
+                onExit={shrink}
+
+                >
                 <div className='contact-container'>
                     <ul className='contact-list'>
                         <li className='contact'>
@@ -71,7 +93,7 @@ export const Contact = () => {
                                 <li><a href='mailto:anna.bewers@paradigmagency.com'>anna.bewers@paradigmagency.com</a></li>
                             </ul>
                         </li>
-                        <li className='contact'>
+                        <li className='contact' ref={bottomEl}>
                             <ul className='contact-info'>
                                 <li className='title'>Publishing</li>
                                 <li>Terrorbird</li>
@@ -80,7 +102,8 @@ export const Contact = () => {
                         </li>
                     </ul>
                 </div>
+            </CSSTransition>
         </section>
-        </CSSTransition>
+        
     );
 };

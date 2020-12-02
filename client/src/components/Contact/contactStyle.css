@@ -6,7 +6,7 @@
     padding-top: 15px;
     position: relative;
     text-align: left;
-    transition: height ease-in-out 500ms
+    transition: height ease-in-out 500ms;
 }
 
 #contact h2 {
@@ -28,45 +28,50 @@
 }
 
 .contact-btn-exit-active {
-    transform: rotate(180deg);
+    transform: rotate(0deg);
 }
 
 .contact-btn-exit-done {
-    transform: rotate(180deg);
+    transform: rotate(0deg);
 }
 
 .contact-btn-enter-active {
-    transform: rotate(0deg);
+    transform: rotate(180deg);
 }
 
 .contact-btn-enter-done {
-    transform: rotate(0deg);
+    transform: rotate(180deg);
 }
 
-.contact-sctn {
-    height: 54px;
-}
+/* .contact-sctn {
+    height: 0px;
+} */
 
 .contact-sctn-enter {
-    height: 414px;
+    transform: translateY(100%);
 }
 
 .contact-sctn-enter-active {
-    height: 54px;
-    /* transition: height ease-in-out 3s; */
+    transform: translateY(0);
+    transition: transform ease-in-out 500ms;
 }
 
-.contact-sctn-enter-done {
-    height: 54px;
+/* .contact-sctn-enter-done {
+    height: 0px;
 }
 
 .contact-sctn-exit-active {
     height: 550px;
     /* transition: height ease-in-out 3s; */
+
+
+.contact-sctn-exit {
+    transform: translateY(0);
 }
 
-.contact-sctn-exit-done {
-    height: 550px;
+.contact-sctn-exit-active {
+    transform: translateY(100%);
+    transition: transform ease-in-out 500ms;
 }
 
 /* .contacts-enter {

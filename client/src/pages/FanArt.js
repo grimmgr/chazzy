@@ -36,16 +36,11 @@ export const FanArt = () => {
     
     const submitArt = async (e) => {
         e.preventDefault();
-        console.log('submit btn pushed');
         if ( instaLink ) {
-            console.log('theres a link');
             let artInfo;
             const embedLink = getEmbedLink(instaLink);
-            console.log('embed link:' + embedLink);
             const post = getPostID(instaLink);
-            console.log('post:' + post);
             const { author, cdn } = await getIgInfo(post);
-            console.log('author, cdn:' + author + cdn);
             if ( admin ) {
                 artInfo = {
                     cdn: cdn,
@@ -65,7 +60,6 @@ export const FanArt = () => {
                     submitted: new Date()
                 }
             }
-            console.log('artInfo:' + artInfo);
             axios.post('/api/fan-art', artInfo)
             .then(() => {
                 setEmail('');
@@ -131,14 +125,14 @@ export const FanArt = () => {
                     classNames={'art-form-container'}
                 >
                     <div className='art-form-container'>
-                        <h1 className='art-love'>WE <span className='heart'>&hearts;</span> YOUR ART <br/> !</h1>
+                        <h1 className='art-love'>WE <span className='heart'>&hearts;</span> YOUR <br/> ART <br/> !</h1>
                         <div className='close-form-btn' onClick={() => setOpenForm(false)}>
                             <span className='left'></span>
                             <span className='right'></span>
                         </div>
                         <form className='submit-form'>
                             <div className='form-inputs'>
-                            <label for='link'>Paste a link to your instagram post:</label>
+                            <label htmlFor='link'>Paste a link to your instagram post:</label>
                             <input 
                                 id='link' 
                                 name='link' 
@@ -147,7 +141,7 @@ export const FanArt = () => {
                                 value={instaLink}
                                 onChange={ event => setInstaLink(event.target.value) }
                                 />
-                            <label for='email'>We'll email you when it's up:</label>
+                            <label htmlFor='email'>We'll email you when it's up:</label>
                             <input 
                                 id='email' 
                                 name='email' 
