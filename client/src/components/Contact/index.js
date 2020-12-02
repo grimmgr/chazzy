@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef} from 'react';
+import React, { useState, useRef} from 'react';
 import { CSSTransition } from 'react-transition-group';
 import './contactStyle.css';
 
@@ -6,7 +6,6 @@ export const Contact = () => {
     const [open, setOpen] = useState(false);
     const [contactHeight, setContactHeight] = useState(54);
     const bottomEl = useRef();
-    // const [scroll, setScroll] = useState(null);
     
     const toggleOpen = () => {
         setOpen(prevState => !prevState);
@@ -16,11 +15,6 @@ export const Contact = () => {
         e.preventDefault();
         toggleOpen();
     }
-
-    // const scrollDown = () => {
-    //     Window.scrollTop = 600;
-    //     console.log(contactEl.current);
-    // }
 
     const scroll = () => {
         bottomEl.current.scrollIntoView({ behavior: "smooth"});
@@ -34,11 +28,6 @@ export const Contact = () => {
         setContactHeight(54);
     }
 
-    // console.log(open);
-    // useEffect(() => {
-    //     contactEl.current.scrollTop = 200;
-    // }, [open])
-
     return (
         <section id='contact' className={'contact-sctn'} style={{ height: contactHeight }} >
             
@@ -49,13 +38,13 @@ export const Contact = () => {
                 classNames={'contact-btn'}
             >
                 <i 
-                    className="down-arrow fas fa-chevron-down" 
+                    className="down-arrow fas fa-chevron-up" 
                     onClick={buttonClick}
                 ></i>
             </CSSTransition>
             <CSSTransition
                 in={open}
-                timeout={500}
+                timeout={300}
                 classNames={'contact-sctn'}
                 unmountOnExit
                 onEnter={grow}

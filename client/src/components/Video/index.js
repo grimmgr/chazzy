@@ -42,9 +42,10 @@ export const Video = () => {
             <GoTo 
                 link='https://www.youtube.com/playlist?list=PLAiByoSfF5ZRBNBvbtcBIWWMwZAD52r16'
                 name='videos'
-                text='SEE MORE'
+                text='WATCH MORE'
                 external='true'
             />
+            <p className='corn'>pop some corn!</p>
         </section>
     );
 };

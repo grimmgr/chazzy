@@ -30,7 +30,6 @@ export const FanArt = () => {
         console.log('getIgInfo input:' + post);
         const response = await axios.get('/api/ig/' + post);
         const postInfo = response.data;
-        console.log('getIgInfo output:' + postInfo);
         return postInfo;
     }
     

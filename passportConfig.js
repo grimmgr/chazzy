@@ -1,6 +1,6 @@
 const db = require('./models');
 const bcrypt = require('bcryptjs');
-const passport = require('passport');
+// const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 
 module.exports = function(passport) {
@@ -22,15 +22,6 @@ module.exports = function(passport) {
             })
         })
     );
-
-    // passport.serializeUser((user, cb) => {
-    //     cb(null, user.id);
-    // });
-    // passport.deserializeUser((id, cb) => {
-    //     db.User.findOne({_id: id}, (err, user) => {
-    //         cb(err, user);
-    //     })
-    // })
 
     passport.serializeUser((user, done) => done(null, user.id));
     passport.deserializeUser((id, done) => {

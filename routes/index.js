@@ -3,15 +3,17 @@ const path = require('path');
 const axios = require('axios');
 const router = require('express').Router();
 const apiRoutes = require('./api');
-
+require('dotenv').config;
 
 router.post('/tehe', passport.authenticate('local'), (req, res) => 
     res.json(req.body));
 
 router.post('/subscribe', (req, res) => {
-    axios.post('https://us7.api.mailchimp.com/3.0/lists/3cc5a7c1c0/members', req.body, {
+    const listId = process.env.MC_AUD_ID;
+    const mcApiKey = process.env.MC_API_KEY;
+    axios.post(`https://us7.api.mailchimp.com/3.0/lists/${listId}/members`, req.body, {
         headers: {
-            'Authorization': 'Basic 64e00b0fc6345847583eb3ff01ba36d2-us7'
+            'Authorization': `Basic ${mcApiKey}`
         }
     })
     .then(response => {
