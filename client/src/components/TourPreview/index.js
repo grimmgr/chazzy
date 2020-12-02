@@ -3,6 +3,7 @@ import { NoEvents } from '../NoEvents';
 import { Event } from '../Event';
 import { GoTo } from '../GoTo';
 import './tourPreviewStyle.css';
+import axios from 'axios';
 
 export const TourPreview = () => {
 
@@ -10,15 +11,13 @@ export const TourPreview = () => {
     // const [loading, toggleLoading] = useState(true);
 
     useEffect(() => {
-        const url = 'https://rest.bandsintown.com/v4/artists/chastitybelt/events/?date=past&app_id=062bcc4754fbd4d4106af8bf38bda1c0';
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                if (data.length) {
-                    setEvents(data.slice(0, 8));
-                }
+        axios.get('api/tour')
+            .then(response => {
+                setEvents(response.data.slice(0, 8));
                 // toggleLoading(false);
-            });
+            })
+            .catch(err => console.log(err));
+            // set error ?
     }, []);
 
     // if (loading) {

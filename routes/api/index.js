@@ -17,6 +17,15 @@ router.get('/ig/:post', (req, res) => {
         res.json(igInfo);
     })
     .catch(err => res.json(err));
+});
+
+router.get('/tour', (req, res) => {
+    const bandsApiKey = process.env.BANDS_API_KEY;
+    axios.get(`https://rest.bandsintown.com/v4/artists/chastitybelt/events/?date=past&app_id=${bandsApiKey}`)
+    .then(response => {
+        res.json(response.data);
+    })
+    .catch(err => res.status(404).json(err));
 })
 
 module.exports = router;
