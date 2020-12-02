@@ -26,6 +26,7 @@ h1 {
     animation: 2s ease-out slidein;
     color: rgba(146, 170, 67, 1);
     letter-spacing: 4px;
+    padding-left: 6px;
 }
 
 .out-now {

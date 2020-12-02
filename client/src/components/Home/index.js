@@ -6,7 +6,7 @@ export const Home = () => {
     return (
         <section id='home'>
             <div className='home-title'>
-                <h1>CHASTITY BELT</h1>
+                <h1>CHASTITY<br/> BELT</h1>
             </div>
             <div className='home-links'>
                 <div className='home-msg-container'>

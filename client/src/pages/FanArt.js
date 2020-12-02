@@ -15,6 +15,7 @@ export const FanArt = () => {
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
     const [openForm, setOpenForm] = useState(false);
+    
 
     const getEmbedLink = (shareLink) => {
         const embedLink = shareLink.trim().split('?')[0] + 'embed';

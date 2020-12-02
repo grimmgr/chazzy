@@ -19,14 +19,12 @@
 }
 
 .open-form-container {
-    /* background-image:  url(../backgrounds/leaves.png);
-    background-size: cover; */
-    /* display: flex;
-    justify-content: center; */
+    background-color: rgba(126, 179, 79, 0.8);
     padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 2;
 }
 
 .open-form-container p {
@@ -45,7 +43,7 @@
 }
 
 .open-form-btn h3 {
-    background-color: rgba(146, 187, 79, 0.6);
+    background-color: rgba(191, 124, 233, 0.6);
     padding: 2px 8px;
 }
 
