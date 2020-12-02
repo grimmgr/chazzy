@@ -30,7 +30,7 @@
 }
 
 .open-form-container p {
-    font-size: .6rem;
+    font-size: .7rem;
     margin-top: 8px;
 }
 
@@ -77,8 +77,9 @@
     align-items: center;
     background-image: url(../backgrounds/selfie.JPG);
     background-size: cover;
-    display: grid;
-    grid-template-rows: 2fr 1fr;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10%;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -100,42 +101,56 @@
 }
 
 .submit-form {
-    padding-bottom: 10%;
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 3px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 280px;
 }
 
-.form-msg {
-    color: white;
-    padding: 0 40px;
+.form-inputs {
+    text-align: left;
 }
+
 
 .submit-form input {
+    font-size: 1rem;
     border-radius: 2px;
     display: block;
-    margin: 10px auto;
+    width: 100%;
 }
 
 #submit-art-btn {
-    background-image: url(../backgrounds/smiley_multi.png);
-    background-size: cover;
-    border: 1px solid rgba(112, 144, 249, 0.4);
-    border-radius: 50%;
-    font-style: normal;
-    height: 80px;
+    background-color: rgba(255, 255, 255, .4);
+    border: 2px solid rgba(255, 255, 255, .9);
+    border-radius: 2px;
+    cursor: pointer;
+    height: 100px;
     margin: 20px auto;
-    padding-top: 10px;
-    width: 80px;
+    padding-top: 5px;
+    width: 100px;
 }
 
-.submit-art-btn:focus {
+.submit-smiley {
+    width: 70%;
+}
+
+.submit-text {
+    font-size: 1rem;
+}
+
+#submit-art-btn:focus {
+    background-color: rgba(250, 171, 122, 0.3);
     filter: saturate(150%);    
     outline: 0;     
 }
 
-.submit-art-btn:hover {
+#submit-art-btn:hover {
+    background-color: rgba(250, 171, 122, 0.3);
     filter: saturate(150%);
 }
 
-.submit-art-btn:active {
+#submit-art-btn:active {
     filter: invert(100%);
 }
 
