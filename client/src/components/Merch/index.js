@@ -9,13 +9,14 @@ import './merchStyle.css';
 export const Merch = () => {
 
     const width = useWidth().width;
+    const scrollWidth = ( width < 600 ) ? width : 0.5 * width;
 
     const rightArrowClick = (e) => {
-        e.target.parentElement.firstChild.scrollLeft += width;
+        e.target.parentElement.firstChild.scrollLeft += scrollWidth;
     };
 
     const leftArrowClick = (e) => {
-        e.target.parentElement.firstChild.scrollLeft -= width;
+        e.target.parentElement.firstChild.scrollLeft -= scrollWidth;
     };
 
     

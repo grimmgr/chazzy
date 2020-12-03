@@ -2,11 +2,13 @@
     padding-top: 10px;
 }
 
+.merch-wrapper {
+    padding-top: 1%;
+}
+
 .merch-container {
     border: 2px solid rgba(196, 247, 164, .8);
     display: flex;
-    /* flex: none;
-    flex-flow: row nowrap; */
     margin: 30px auto;
     overflow: scroll;
     scroll-behavior: smooth;
@@ -44,4 +46,17 @@
     to {
         color: rgb(237, 237, 85);
     }
+}
+
+@media screen and (min-width: 600px) {
+    .merch-container {
+        border: none;
+        width: 100%;
+    }
+    .img-container {
+        padding: 15px 15px 10px 15px;
+        scroll-snap-align: start;
+        width: 50%;
+    }
+
 }
