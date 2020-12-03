@@ -9,6 +9,7 @@ export const FanArtPreview = () => {
     const [art, setArt] = useState([]);
 
     const width = useWidth().width;
+    // const scrollWidth = ( width < 600 ) ? width : 0.5 * width;
 
     const rightArrowClick = (e) => {
         e.target.parentElement.firstChild.scrollLeft += width;

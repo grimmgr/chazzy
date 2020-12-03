@@ -30,10 +30,10 @@
     background-color: transparent;
 }
 
-.fan-art-link p {
+/* .fan-art-link p {
     color: rgb(46, 12, 70);
     background-color: rgba(254, 201, 121, 0.3);
-}
+} */
 
 .submit-yours {
     animation: 3s ease-in-out infinite alternate pulse;
@@ -45,5 +45,28 @@
 @keyframes pulse {
     to {
         color: rgb(237, 237, 85);
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .art-prev-container {
+        width: 70%;
+    }
+    .prev-artwork-card {
+        height: 78vw;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .art-prev-container {
+        width: 92%;
+    }
+    .prev-artwork-card {
+        height: 46vw;
+        scroll-snap-align: start;
+        width: 50%;
+    }
+    .prev-artwork-card iframe {
+        width: 90%;
     }
 }

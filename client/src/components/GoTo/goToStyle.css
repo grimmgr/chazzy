@@ -16,14 +16,25 @@
 
 .line {
     border-bottom: 1px solid rgb(255, 255, 255);
-    width: 30px;
+    width: 20px;
 }
 
 .go-to p {
-    background-color: rgba(249, 195, 103, 0.3);
+    background-color: rgba(146, 187, 79, 0.808);
     color: rgb(46, 12, 70);
     font-size: .95rem;
-    /* font-style: normal; */
     font-weight: 600;
     padding: 2px 5px;
+}
+
+@media screen and (min-width: 600px) and (min-height: 450px) {
+    .go-to p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 700px) and (min-height: 450px) {
+    .go-to p {
+        font-size: 1.1rem;
+    }
 }
