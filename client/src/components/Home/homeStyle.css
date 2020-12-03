@@ -1,3 +1,15 @@
+#home {
+    background-image: url(../../backgrounds/home_mobile_longer.png);
+    background-position: 50% 65%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    position: relative;
+}
+
 .home-title {
     position: absolute;
     top: 0;
@@ -8,18 +20,22 @@
 h1 {
     color: rgba(255, 255, 255, 0.2);
     font-size: 3.3rem;
-    /* -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: .2px rgba(252, 248, 140, 0.5); */
 }
 
 .home-links {
     color: rgba(255, 255, 255, 0.9);
     padding-top: 3.3rem;
+    position: absolute;
+    top: 6.5rem;
     text-align: left;
 }
 
 .home-msg-container {
     overflow: hidden;
+    padding-top: 3.3rem;
+    position: absolute;
+    top: 0;
+    text-align: left;
 }
 
 .home-msg {
@@ -30,7 +46,6 @@ h1 {
 }
 
 .out-now {
-    margin-bottom: 1.5rem;
     margin-top: 2.8rem;
 }
 
@@ -44,29 +59,28 @@ h1 {
     z-index: 1;
 }
 
+.patreon-link-big {
+    display: none;
+}
+
 .buy-listen p {
     color: rgba(255, 255, 255, 0.8);
 }
 
 .cover {
-    position: relative;
-    bottom: 11%;
     text-align: center;
     width: 100%;
 }
 
 .album-cover {
     margin: 0 auto;
-    margin-top: 5px;
     width: 90%;
 }
 
-/* .buy {
-    cursor: pointer;
-    position: relative;
-    bottom: 17%;
-    margin: 0 auto;
-    width: fit-content;
+.patreon-link p {
+    background-color: rgba(146, 187, 79, 0.6);
+    color: rgba(46, 12, 70, 1);
+    font-weight: bold;
 }
 
 .barcode {
@@ -78,31 +92,8 @@ h1 {
     font-size: 1.7rem;
     font-style: normal;
     padding: 1px 12px;
-} */
+} 
 
-.patreon-link {
-    position: absolute;
-    right: 0;
-    bottom: -5%;
-}
-
-.patreon-link p {
-    background-color: rgba(146, 187, 79, 0.6);
-    color: rgba(46, 12, 70, 1);
-    font-weight: bold;
-}
-
-/* @media screen and (min-width: 500px) {
-    .barcode {
-        padding: 2px 20px;
-    }
-}
-@media screen and (min-width: 700px) {
-    .barcode {
-        font-size: 2.5rem;
-        padding: 3px 30px;
-    }
-} */
 
 @keyframes slidein {
     from { 
@@ -110,5 +101,55 @@ h1 {
     }
     to { 
         transform: translateX(0);
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #home {
+        background-image: url(../../backgrounds/big_purp1.png), url(../../backgrounds/home_mobile_longer.png);
+        background-position: right 50% bottom 60vh, 60% 80%;
+    }
+    h1 {
+        font-size: 5.8rem;
+    }
+    .home-msg-container {
+        padding-top: 6.1rem;
+    }
+    .home-links {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0;
+        top: 40vh;
+        width: 100%;
+    }
+    .home-links-pod {
+        display: flex;
+        justify-content: space-evenly;
+        width: calc(.5 * 100vw - 250px);
+    }
+
+    .patreon-link-big {
+        display: flex;
+        justify-content: center;
+        width: calc(.5 * 100vw - 250px);
+    }
+    .buy-listen {
+        margin-top: 5px;
+        font-size: 1.1rem;
+    }
+
+    .buy-listen p {
+        color: white;
+    }
+
+    .album-cover {
+        padding-bottom: 10%;
+        width: 500px;
+    }
+    .patreon-link {
+        display: none;
+    }
+    .out-now {
+        margin-top: 5.8rem;
     }
 }
