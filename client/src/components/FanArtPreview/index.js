@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useWidth } from '../../utils/widthContext';
 import { PrevArtCard } from '../PrevArtCard';
 import { GoTo } from '../GoTo';
 import './fanArtPrevStyle.css';
@@ -7,12 +8,14 @@ import './fanArtPrevStyle.css';
 export const FanArtPreview = () => {
     const [art, setArt] = useState([]);
 
+    const width = useWidth().width;
+
     const rightArrowClick = (e) => {
-        e.target.parentElement.firstChild.scrollLeft += 420;
+        e.target.parentElement.firstChild.scrollLeft += width;
     };
 
     const leftArrowClick = (e) => {
-        e.target.parentElement.firstChild.scrollLeft -= 420;
+        e.target.parentElement.firstChild.scrollLeft -= width;
     };
 
     useEffect(() => {

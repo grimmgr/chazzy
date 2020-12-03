@@ -1,5 +1,6 @@
 import React from 'react';
 // import Aos from 'aos';
+import { useWidth } from '../../utils/widthContext';
 import { MerchItem } from '../MerchItem';
 import { GoTo } from '../GoTo';
 import merchData from './merch.json';
@@ -7,13 +8,17 @@ import './merchStyle.css';
 
 export const Merch = () => {
 
+    const width = useWidth().width;
+
     const rightArrowClick = (e) => {
-        e.target.parentElement.firstChild.scrollLeft += 420;
+        e.target.parentElement.firstChild.scrollLeft += width;
     };
 
     const leftArrowClick = (e) => {
-        e.target.parentElement.firstChild.scrollLeft -= 420;
+        e.target.parentElement.firstChild.scrollLeft -= width;
     };
+
+    
 
     return (
         <section id='merch'>

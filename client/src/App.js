@@ -10,6 +10,7 @@ import { Tour } from './pages/Tour';
 import { Admin } from './pages/Admin';
 import { NavProvider } from './utils/navContext';
 import { FanArtProvider } from './utils/fanArtContext';
+import { WidthProvider } from './utils/widthContext';
 
 
 // import logo from './logo.svg';
@@ -37,13 +38,15 @@ export const App = () => {
         <Router>
             <main>
                 <NavProvider>
-                    <Menu />
-                    <FanArtProvider>
-                        <Route exact path='/' component={Main} />
-                        <Route exact path='/fan-art' component={FanArt} />
-                    </FanArtProvider>
-                    <Route exact path='/tour' component={Tour} />
-                    <Route exact path='/tehe' component={Admin} />
+                    <WidthProvider>
+                        <Menu />
+                        <FanArtProvider>
+                            <Route exact path='/' component={Main} />
+                            <Route exact path='/fan-art' component={FanArt} />
+                        </FanArtProvider>
+                        <Route exact path='/tour' component={Tour} />
+                        <Route exact path='/tehe' component={Admin} />
+                    </WidthProvider>
                 </NavProvider>
             </main>
         </Router>

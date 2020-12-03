@@ -141,7 +141,6 @@ h1 {
     }
     .home-links {
         padding-top: 7.2rem;
-        font-size: 1.2rem;
     }
     .patreon-link {
         bottom: 3%;
@@ -153,46 +152,32 @@ h1 {
 
 @media screen and (min-width: 700px)
               and (min-height: 750px) {
-                h1 {
-                    font-size: 5rem;
-                }
-                .cover {
-                    padding-bottom: 12%;
-                }
-                .home-msg-container {
-                    padding-top: 5rem;
-                }
-                .out-now {
-                    margin-top: 5rem;
-                }
-              }
-@media screen and (min-width: 800px)
-              and (min-height: 1000px) {
-                h1 {
-                    font-size: 5.6rem;
-                }
-                .cover {
-                    padding-bottom: 15%;
-                }
-                .home-msg-container {
-                    padding-top: 6.1rem;
-                }
-                .out-now {
-                    margin-top: 5.8rem;
-                }
-              }
+    h1 {
+        font-size: 4rem;
+    }
+    .cover {
+        padding-bottom: 12%;
+    }
+    .home-msg-container {
+        padding-top: 4rem;
+    }
+    .out-now {
+        margin-top: 3.8rem;
+    }
+}
+
 
 
 @media screen and (min-width: 800px)
               and (min-height: 450px) {
     h1 {
-        font-size: 4.5rem;
+        font-size: 4rem;
     }
     .home-msg-container {
-        padding-top: 4.5rem;
+        padding-top: 4rem;
     }
     .out-now {
-        margin-top: 4.5rem;
+        margin-top: 3.8rem;
     }
     .home-links {
         display: flex;
@@ -213,7 +198,6 @@ h1 {
     }
     .buy-listen {
         margin-top: 5px;
-        font-size: 1.1rem;
     }
 
     .buy-listen p {
@@ -227,15 +211,34 @@ h1 {
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px)
+              and (min-height: 1000px) {
     h1 {
-        font-size: 5rem;
+        font-size: 5.6rem;
+    }
+    .cover {
+        padding-bottom: 15%;
     }
     .home-msg-container {
-        padding-top: 5rem;
+        padding-top: 6.1rem;
     }
     .out-now {
-        margin-top: 4.8rem;
+        margin-top: 5.8rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+    .home-msg-container {
+        padding-top: 4.5rem;
+    }
+    .out-now {
+        margin-top: 4.4rem;
+    }
+    .buy-listen {
+        font-size: 1.1rem;
     }
     
     /* .album-cover {
@@ -246,10 +249,10 @@ h1 {
 @media screen and (min-width: 1000px)
               and (min-height: 850px) {
                 h1 {
-                    font-size: 5.2rem;
+                    font-size: 5rem;
                 }
                 .home-msg-container {
-                    padding-top: 5.6rem;
+                    padding-top: 5rem;
                 }
                 .out-now {
                     margin-top: 5rem;

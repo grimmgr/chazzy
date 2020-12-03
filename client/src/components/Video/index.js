@@ -1,16 +1,19 @@
 import React from 'react';
+import { useWidth } from '../../utils/widthContext';
 import { VideoCard } from '../VideoCard';
 import { GoTo } from '../GoTo'
 import './videoStyle.css';
 import videoData from './video.json';
 
 export const Video = () => {
+    const width = useWidth().width;
+
     const rightArrowClick = (e) => {
-        e.target.parentElement.firstChild.scrollLeft += 420;
+        e.target.parentElement.firstChild.scrollLeft += width;
     };
 
     const leftArrowClick = (e) => {
-        e.target.parentElement.firstChild.scrollLeft -= 420;
+        e.target.parentElement.firstChild.scrollLeft -= width;
     };
     return (
         <section id='video'>
