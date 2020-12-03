@@ -15,6 +15,7 @@
     top: 0;
     left: 0;
     text-align: left;
+    z-index: 2;
 }
 
 h1 {
@@ -43,6 +44,7 @@ h1 {
     color: rgba(146, 170, 67, 1);
     letter-spacing: 4px;
     padding-left: 6px;
+    z-index: 2;
 }
 
 .out-now {
@@ -104,16 +106,93 @@ h1 {
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 560px)
+              and (max-width: 830px)
+              and (orientation: landscape) {
+                  #home {
+                      background-position: 50% 51%;
+                  }
+                  .album-cover {
+                      width: 60%;
+                  }
+                  .patreon-link {
+                      bottom: 7%;
+                  }
+              }
+
+
+@media screen and (min-width: 600px)
+              and (min-height: 450px) {
     #home {
         background-image: url(../../backgrounds/big_purp1.png), url(../../backgrounds/home_mobile_longer.png);
-        background-position: right 50% bottom 60vh, 60% 80%;
+        background-position: right 50% bottom 60vh, 50% 80%;
     }
     h1 {
-        font-size: 5.8rem;
+        font-size: 3.5rem;
+    }
+    .cover {
+        padding-bottom: 7%;
     }
     .home-msg-container {
-        padding-top: 6.1rem;
+        padding-top: 3.5rem;
+    }
+    .out-now {
+        margin-top: 3.2rem;
+    }
+    .home-links {
+        padding-top: 7.2rem;
+        font-size: 1.2rem;
+    }
+    .patreon-link {
+        bottom: 3%;
+    }
+    .album-cover {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 700px)
+              and (min-height: 750px) {
+                h1 {
+                    font-size: 5rem;
+                }
+                .cover {
+                    padding-bottom: 12%;
+                }
+                .home-msg-container {
+                    padding-top: 5rem;
+                }
+                .out-now {
+                    margin-top: 5rem;
+                }
+              }
+@media screen and (min-width: 800px)
+              and (min-height: 1000px) {
+                h1 {
+                    font-size: 5.6rem;
+                }
+                .cover {
+                    padding-bottom: 15%;
+                }
+                .home-msg-container {
+                    padding-top: 6.1rem;
+                }
+                .out-now {
+                    margin-top: 5.8rem;
+                }
+              }
+
+
+@media screen and (min-width: 800px)
+              and (min-height: 450px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+    .home-msg-container {
+        padding-top: 4.5rem;
+    }
+    .out-now {
+        margin-top: 4.5rem;
     }
     .home-links {
         display: flex;
@@ -125,13 +204,12 @@ h1 {
     .home-links-pod {
         display: flex;
         justify-content: space-evenly;
-        width: calc(.5 * 100vw - 250px);
+        width: 25%;
     }
-
     .patreon-link-big {
         display: flex;
         justify-content: center;
-        width: calc(.5 * 100vw - 250px);
+        width: 25%;
     }
     .buy-listen {
         margin-top: 5px;
@@ -141,15 +219,45 @@ h1 {
     .buy-listen p {
         color: white;
     }
-
     .album-cover {
-        padding-bottom: 10%;
-        width: 500px;
+        width: 50%;
     }
     .patreon-link {
         display: none;
     }
-    .out-now {
-        margin-top: 5.8rem;
-    }
 }
+
+@media screen and (min-width: 1000px) {
+    h1 {
+        font-size: 5rem;
+    }
+    .home-msg-container {
+        padding-top: 5rem;
+    }
+    .out-now {
+        margin-top: 4.8rem;
+    }
+    
+    /* .album-cover {
+        width: 55%;
+    } */
+}
+
+@media screen and (min-width: 1000px)
+              and (min-height: 850px) {
+                h1 {
+                    font-size: 5.2rem;
+                }
+                .home-msg-container {
+                    padding-top: 5.6rem;
+                }
+                .out-now {
+                    margin-top: 5rem;
+                }
+              }
+@media screen and (min-width: 1000px)
+              and (min-height: 1100px) {
+                .cover {
+                    padding-bottom: 20%;
+                }
+              }

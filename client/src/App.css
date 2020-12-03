@@ -175,3 +175,17 @@ h2 {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+@media screen and (min-width: 760px) {
+    .go-to {
+        /* border-bottom: 2px solid rgb(255, 255, 255);
+        border-top: 2px solid rgb(255, 255, 255); */
+        
+    }
+    .line {
+        /* border-bottom: 2px solid rgb(255, 255, 255); */
+    }
+    .go-to p {
+        font-size: 1.2rem;
+    }
+}
