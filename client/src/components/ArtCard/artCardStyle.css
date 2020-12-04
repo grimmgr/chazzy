@@ -114,12 +114,10 @@
 }
 
 .close-display-container {
-    background-color: rgba(46, 12, 70, .6);
-    border-radius: 2px;
     padding: 6px;
     position: absolute;
-    right: 30px;
-    top: 45vw;
+    right: 5%;
+    top: 5%;
     z-index: 3;
 }
 
@@ -181,33 +179,82 @@
     z-index: 3;
 }
 
-.big-display::after {
+.big-display-container {
+    align-items: center;
+    /* background-color: rgba(0, 0, 255, .1); */
+    /* background-image: url(../../backgrounds/grass.png);
+    background-size: contain; */
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    width: 100%;
+}
+
+.big-display-container::after {
     content: "";
-    background: url(../../backgrounds/grass.png);
-    background-size: contain;
-    opacity: 0.8;
-    top: 40vw;
+    /* background-color: white; */
+    background: url(../../backgrounds/purp.png);
+    background-size: cover;
+    opacity: .9;
+    top: 0;
     left: 0;
-    bottom: 40vw;
+    bottom: 0;
     right: 0;
     position: absolute;
     z-index: -1;   
 }
 
-.big-display-container {
-    align-items: center;
-    background-image: url(../../backgrounds/grass.png);
-    display: flex;
-    height: 70%;
-    justify-content: center;
-    width: 100%;
-}
-
 .display-card {
-    width: 60%;
+    width: 250px;
 }
 
 .display-iframe {
-    height: 70vw;
+    height: 300px;
     width: 100%;
 }
+
+@media screen and (orientation: landscape) {
+    .big-display-container {
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .big-display-container {
+        height: 500px;
+        width: 500px;
+    }
+    .display-card {
+        width: 350px;
+    }
+    .display-iframe {
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 700px)
+              and (orientation: portrait) {
+    .big-display-container {
+        width: 100%;
+    }
+}   
+
+@media screen and (min-width: 760px) {
+    .big-display-container {
+        height: 700px;
+        width: 600px;
+    }
+    .display-card {
+        width: 450px;
+    }
+    .display-iframe {
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 760px)
+              and (orientation: portrait) {
+    .big-display-container {
+        width: 100%;
+    }
+}   

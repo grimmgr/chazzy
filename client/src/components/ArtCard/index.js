@@ -117,17 +117,19 @@ export const ArtCard = (props) => {
                 classNames={'big-display'}
                 unmountOnExit
                 >
+            
                 <div className='big-display'>
+                    <div className='big-display-container'>
                     <div className='close-display-container'>
-                    <div className='close-display-btn' onClick={() => setDisplayOne(false)}>
-                        <span className='left-display'></span>
-                        <span className='right-display'></span>
-                    </div>
+                        <div className='close-display-btn' onClick={() => setDisplayOne(false)}>
+                            <span className='left-display'></span>
+                            <span className='right-display'></span>
+                        </div>
                     </div>
                     <div className='display-card'>
                         <iframe className='display-iframe' src={props.embedLink} frameBorder="0" scrolling="no" allowtransparency="true" title="title"></iframe>
                     </div>
-                    
+                    </div>
                 </div>
             </CSSTransition>
         </div>

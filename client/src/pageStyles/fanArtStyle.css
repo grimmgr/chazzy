@@ -19,7 +19,7 @@
 }
 
 .open-form-container {
-    background-color: rgba(126, 179, 79, 0.8);
+    background-color: rgba(198, 65, 255, 0.5);
     padding: 10px 0;
     position: fixed;
     bottom: 0;
@@ -43,7 +43,7 @@
 }
 
 .open-form-btn h3 {
-    background-color: rgba(191, 124, 233, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     padding: 2px 8px;
 }
 
