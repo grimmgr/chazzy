@@ -29,6 +29,7 @@ export const TourPreview = () => {
             <h2>TOUR</h2>
             { events.length ?
                 <div className='events-container'>
+                    <div className='events-card-container'>
                         {events.map(event => (
                             <Event
                                 key={event.id}
@@ -40,6 +41,7 @@ export const TourPreview = () => {
                                 url={event.url}
                             />
                         ))}
+                    </div>
                     <div data-aos='fade-left'>
                         <GoTo 
                             link={'/tour'}
