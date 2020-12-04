@@ -31,7 +31,7 @@ export const Tour = () => {
             <h2>TOUR</h2>
             <div className='tour-container'>
                 { events.length ?
-                    <div>
+                    <div className='events-card-container'>
                     {events.map(event => (
                         <Event
                             key={event.id}

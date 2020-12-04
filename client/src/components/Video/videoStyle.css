@@ -52,19 +52,35 @@
 
 @media screen and (min-width: 1000px) {
     .video-container {
-        width: 85%;
+        width: 75%;
+    }
+    .video-card iframe {
+        height: calc(75vw * 0.56);
     }
     #video-arrow-l,
     #video-arrow-r {
     padding-top: 12px;
     padding-bottom: 12px;
-    width: 6%;
+    width: 5%;
     -webkit-text-fill-color: rgba(255, 255, 255, 1);
     }
     #video-arrow-l {
-        margin-left: 10px;
+        margin-left: 4%;
     }
     #video-arrow-r {
-        margin-right: 10px;
+        margin-right: 4%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .video-container {
+        width: 70%;
+    }
+    .video-card iframe {
+        height: calc(70vw * 0.56);
+    }
+    #video-arrow-l,
+    #video-arrow-r {
+        width: 4%;
     }
 }
