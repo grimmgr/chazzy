@@ -62,7 +62,7 @@
         flex-shrink: 0;
         margin: 2% 0;
         padding: 15px;
-        width: 275px
+        /* width: 275px */
     }
     .date {
         font-size: 1rem;
@@ -77,6 +77,8 @@
         font-size: .9rem;
     }
 }
+
+
 
 @media screen and (min-width: 1030px) {
     .event {
@@ -97,3 +99,9 @@
         font-size: 1rem;
     }
 }
+
+@media screen and (min-width: 2000px) {
+    .event {
+        width: 350px;
+    }
+} 

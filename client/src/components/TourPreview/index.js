@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useWidth } from '../../utils/widthContext';
 import { NoEvents } from '../NoEvents';
 import { Event } from '../Event';
 import { GoTo } from '../GoTo';
@@ -6,6 +7,7 @@ import './tourPreviewStyle.css';
 import axios from 'axios';
 
 export const TourPreview = () => {
+    const width = useWidth().width;
 
     const [events, setEvents] = useState([]);
     // const [loading, toggleLoading] = useState(true);
@@ -13,12 +15,18 @@ export const TourPreview = () => {
     useEffect(() => {
         axios.get('api/tour')
             .then(response => {
-                setEvents(response.data.slice(0, 8));
+                let eventsList;
+                if (width < 900) {
+                    eventsList = response.data.slice(0, 8);
+                } else {
+                    eventsList = response.data.slice(0, 9);
+                }
+                setEvents(eventsList);
                 // toggleLoading(false);
             })
             .catch(err => console.log(err));
             // set error ?
-    }, []);
+    }, [width]);
 
     // if (loading) {
     //     return <div>loading...</div>
@@ -49,7 +57,9 @@ export const TourPreview = () => {
                             text={'ALL DATES'}
                         />
                     </div>
-                    <img className='shows-img' src='images/shows.jpg' alt='live show' />
+                    <div className='shows-img-container'>
+                        <img className='shows-img' src='images/shows.jpg' alt='live show' />
+                    </div>
                 </div>
             : <NoEvents />
             }

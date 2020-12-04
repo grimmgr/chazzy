@@ -240,8 +240,8 @@ h1 {
     .out-now {
         margin-top: 4.4rem;
     }
-    .buy-listen {
-        font-size: 1.1rem;
+    .buy-listen p {
+        font-size: 1.2rem;
     }
     
     /* .album-cover {

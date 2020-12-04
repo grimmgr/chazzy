@@ -31,3 +31,40 @@
     text-align: right;
     padding-right: 30px;
 }
+
+@media screen and (min-width: 700px) {
+    .video-container {
+        margin: 0 auto;
+        width: 90%;
+    }
+    .video-card iframe {
+        height: calc(90vw * 0.56);
+    }
+    #video-arrow-l,
+    #video-arrow-r {
+    background-color: rgba(133, 86, 162, .43);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 6%;
+    -webkit-text-fill-color: rgba(255, 255, 255, 1);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .video-container {
+        width: 85%;
+    }
+    #video-arrow-l,
+    #video-arrow-r {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 6%;
+    -webkit-text-fill-color: rgba(255, 255, 255, 1);
+    }
+    #video-arrow-l {
+        margin-left: 10px;
+    }
+    #video-arrow-r {
+        margin-right: 10px;
+    }
+}

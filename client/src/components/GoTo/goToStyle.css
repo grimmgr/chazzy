@@ -33,8 +33,24 @@
     }
 }
 
-@media screen and (min-width: 700px) and (min-height: 450px) {
+@media screen and (min-width: 730px) and (min-height: 450px) {
     .go-to p {
         font-size: 1.1rem;
+    }
+    .line {
+        width: 35px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .go-to {
+        padding: 5px;
+    }
+    .go-to p {
+        padding: 4px 9px;
+        font-size: 1.2rem;
+    }
+    .line {
+        width: 45px;
     }
 }

@@ -171,6 +171,9 @@ h2 {
     h2 {
         font-size: 3.1rem;
     }
+    h3 {
+        font-size: 1.3rem;
+    }
     p {
         font-size: 1.1rem;
     }
@@ -179,5 +182,8 @@ h2 {
 @media screen and (min-width: 1000px) {
     h2 {
         font-size: 3.5rem;
+    }
+    p {
+        font-size: 1.2rem;
     }
 }

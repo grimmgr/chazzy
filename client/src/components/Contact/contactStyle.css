@@ -82,3 +82,21 @@
     font-size: 1.1rem;
     font-style: normal;
 }
+
+@media screen and (min-width: 750px) {
+    #contact h2 {
+        font-size: 1.4rem;
+    }
+    .down-arrow {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #contact h2 {
+        font-size: 1.5rem;
+    }
+    .down-arrow {
+        font-size: 1.4rem;
+    }
+}
