@@ -56,7 +56,7 @@
     /* transform: translateY(0);
     transition: transform linear 500ms; */
     opacity: 1;
-    transition: opacity linear 500ms;
+    transition: opacity linear 200ms;
 }
 
 .art-form-container-exit {
@@ -68,12 +68,13 @@
     /* transform: translateY(100%);
     transition: transform linear 500ms; */
     opacity: 0;
-    transition: opacity linear 500ms;
+    transition: opacity linear 200ms;
 }
 
 .art-form-container {
     align-items: center;
     background-image: url(../backgrounds/selfie.JPG);
+    background-position: 50% 50%;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -99,7 +100,7 @@
 }
 
 .submit-form {
-    background-color: rgba(255, 255, 255, .3);
+    background-color: rgba(255, 255, 255, .5);
     border-radius: 3px;
     margin: 0 auto;
     padding: 20px;
@@ -174,19 +175,34 @@
     transform: rotate(45deg);
     transform-origin: 0 0;
     top: 0;
-    left: 0;
+    left: 1px;
 }
 
 .right {
     transform: rotate(-45deg);
     transform-origin: 100% 100%;
-    top: 0;
-    right: 0;
+    top: -1px;
+    right: -1px;
+}
+
+
+
+@media screen and (min-width: 760px) {
+    .submit-form {
+        width: 320px;
+    }
 }
 
 @media screen and (min-width: 900px) {
     .ig-img-container {
         height: 25vw;
         width: 25vw;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .submit-form {
+        padding: 40px;
+        width: 350px;
     }
 }

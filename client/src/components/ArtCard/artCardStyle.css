@@ -17,6 +17,7 @@
 .art-options i {
     cursor: pointer;
     font-size: 1.5rem;
+    z-index: 2;
 }
 
 .check {
@@ -96,6 +97,7 @@
 .prompt-btn {
     background-color: rgba(255, 255, 255, 0.714);
     border: 1px solid rgba(255, 255, 255, 0.845);
+    cursor: pointer;
     display: block;
     font-size: 1rem;
     margin: 0 auto;
@@ -109,4 +111,103 @@
 
 .verify {
     background-color: rgba(106, 233, 255, 0.7);
+}
+
+.close-display-container {
+    background-color: rgba(46, 12, 70, .6);
+    border-radius: 2px;
+    padding: 6px;
+    position: absolute;
+    right: 30px;
+    top: 45vw;
+    z-index: 3;
+}
+
+.close-display-btn {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+
+.close-display-btn span {
+    background-color: white;
+    border-radius: 3px;
+    height: 3px;
+    position: absolute;
+    width: 28px;
+}
+
+.left-display {
+    transform: rotate(45deg);
+    transform-origin: 0 0;
+    top: 0;
+    left: 1px;
+}
+
+.right-display {
+    transform: rotate(-45deg);
+    transform-origin: 100% 100%;
+    top: -1px;
+    right: -1px;
+}
+
+.big-display-enter {
+    opacity: 0;
+}
+
+.big-display-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.big-display-exit {
+    opacity: 1;
+}
+
+.big-display-exit-active {
+    opacity: 0;
+    transition: opacity 400ms;
+}
+.big-display {
+    align-items: center;
+    background-color: rgba(0, 0, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.big-display::after {
+    content: "";
+    background: url(../../backgrounds/grass.png);
+    background-size: contain;
+    opacity: 0.8;
+    top: 40vw;
+    left: 0;
+    bottom: 40vw;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+
+.big-display-container {
+    align-items: center;
+    background-image: url(../../backgrounds/grass.png);
+    display: flex;
+    height: 70%;
+    justify-content: center;
+    width: 100%;
+}
+
+.display-card {
+    width: 60%;
+}
+
+.display-iframe {
+    height: 70vw;
+    width: 100%;
 }

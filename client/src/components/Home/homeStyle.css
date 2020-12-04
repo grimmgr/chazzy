@@ -79,22 +79,6 @@ h1 {
     width: 90%;
 }
 
-/* .patreon-link p {
-    background-color: rgba(146, 187, 79, 0.6);
-    color: rgba(46, 12, 70, 1);
-    font-weight: bold;
-} */
-
-.barcode {
-    box-shadow: 1px 1px 3px rgb(67, 67, 67);
-    box-sizing: content-box;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    font-family: 'Libre Barcode 128 Text', cursive;
-    font-size: 1.7rem;
-    font-style: normal;
-    padding: 1px 12px;
-} 
 
 
 @keyframes slidein {

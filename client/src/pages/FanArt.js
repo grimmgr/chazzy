@@ -16,6 +16,7 @@ export const FanArt = () => {
     const [error, setError] = useState('');
     const [openForm, setOpenForm] = useState(false);
     
+    
 
     const getEmbedLink = (shareLink) => {
         const embedLink = shareLink.trim().split('?')[0] + 'embed';
@@ -98,6 +99,7 @@ export const FanArt = () => {
                     key={art._id}
                     id={art._id}
                     link={art.cdn}
+                    embedLink={art.embed_link}
                     email={art.email}
                     verified={art.verified}
                     />
@@ -107,7 +109,7 @@ export const FanArt = () => {
             <div className='art-form-wrapper'>
                 <CSSTransition
                     in={!openForm}
-                    timeout={500}
+                    timeout={200}
                     unmountOnExit
                     classNames={'open-form-btn'}
                 >
@@ -120,7 +122,7 @@ export const FanArt = () => {
                 </CSSTransition>
                 <CSSTransition
                     in={openForm}
-                    timeout={500}
+                    timeout={200}
                     unmountOnExit
                     classNames={'art-form-container'}
                 >
@@ -137,7 +139,7 @@ export const FanArt = () => {
                                 id='link' 
                                 name='link' 
                                 type='text' 
-                                placeholder='instaaaaa'
+                                placeholder='paste link'
                                 value={instaLink}
                                 onChange={ event => setInstaLink(event.target.value) }
                                 />

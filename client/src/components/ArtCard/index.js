@@ -8,9 +8,40 @@ import './artCardStyle.css';
 export const ArtCard = (props) => {
     const [deletePrompt, setDeletePrompt] = useState(false);
     const [verifyPrompt, setVerifyPrompt] = useState(false);
+    const [displayOne, setDisplayOne] = useState(false);
 
     const admin = useAdmin().admin;
     const { fanArt, setFanArt } = useFanArt();
+
+    const clickX = (e) => {
+        e.stopPropagation();
+        setDeletePrompt(true);
+    }
+
+    const clickCheck = (e) => {
+        e.stopPropagation();
+        setVerifyPrompt(true);
+    }
+
+    const chooseDelete = (e) => {
+        e.stopPropagation();
+        remove(props.id);
+    }
+
+    const chooseVerify = (e) => {
+        e.stopPropagation();
+        verify(props.id, props.email);
+    }
+
+    const cancelDelete = (e) => {
+        e.stopPropagation();
+        setDeletePrompt(false);
+    }
+
+    const cancelVerify = (e) => {
+        e.stopPropagation();
+        setVerifyPrompt(false);
+    }
 
     const remove = (id) => {
         axios.delete('api/fan-art/' + id)
@@ -34,14 +65,22 @@ export const ArtCard = (props) => {
         });
     };
 
+    const displayBig = (e) => {
+        setDisplayOne(true);
+    }
+
     return (
-        <div className={ props.verified ? 'artwork-card' : 'artwork-card not-verified' }>
+        <div className='artwork-card-wrapper'>
+        <div 
+            className={ props.verified ? 'artwork-card' : 'artwork-card not-verified' }
+            onClick={ displayBig }
+            >
             { admin ? 
             <div className='art-options'>
 
-                <i className="far fa-times-circle x" onClick={() => setDeletePrompt(true)}></i>
+                <i className="far fa-times-circle x" onClick={ clickX }></i>
 
-                { !props.verified ? <i onClick={() => setVerifyPrompt(true)} className="far fa-check-circle check"></i> : null }
+                { !props.verified ? <i onClick={ clickCheck } className="far fa-check-circle check"></i> : null }
             </div>
             : null }
 
@@ -52,8 +91,8 @@ export const ArtCard = (props) => {
                 unmountOnExit
                 >
                 <div className='prompt' id='delete-prompt'>
-                    <button className='prompt-btn delete' onClick={() => remove(props.id)}>delete</button>
-                    <button className='prompt-btn' onClick={() => setDeletePrompt(false)}>cancel</button> 
+                    <button className='prompt-btn delete' onClick={ chooseDelete }>delete</button>
+                    <button className='prompt-btn' onClick={ cancelDelete }>cancel</button> 
                 </div>
             </CSSTransition>
             <CSSTransition
@@ -63,15 +102,34 @@ export const ArtCard = (props) => {
                 unmountOnExit
                 >
                 <div className='prompt' id='verify-prompt'>
-                    <button className='prompt-btn verify' onClick={() => verify(props.id, props.email)}>verify</button> 
-                    <button className='prompt-btn' onClick={() => setVerifyPrompt(false)}>cancel</button> 
+                    <button className='prompt-btn verify' onClick={ chooseVerify }>verify</button> 
+                    <button className='prompt-btn' onClick={ cancelVerify }>cancel</button> 
                 </div>
             </CSSTransition>
-
             <div className='ig-img-container'>
                 <img className='ig-thumbnail' src={props.link} alt='instagram post' />
             </div>
-
+           
+        </div>
+        <CSSTransition
+                in={displayOne}
+                timeout={400}
+                classNames={'big-display'}
+                unmountOnExit
+                >
+                <div className='big-display'>
+                    <div className='close-display-container'>
+                    <div className='close-display-btn' onClick={() => setDisplayOne(false)}>
+                        <span className='left-display'></span>
+                        <span className='right-display'></span>
+                    </div>
+                    </div>
+                    <div className='display-card'>
+                        <iframe className='display-iframe' src={props.embedLink} frameBorder="0" scrolling="no" allowtransparency="true" title="title"></iframe>
+                    </div>
+                    
+                </div>
+            </CSSTransition>
         </div>
     );
 };
