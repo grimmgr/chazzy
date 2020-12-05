@@ -1,16 +1,43 @@
+.join-mailing-container {
+    color: white;
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: flex-end;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.join-mailing {
+    background-color: rgba(0, 0, 0, .2);
+    cursor: pointer;
+    text-align: right;
+    width: max-content;
+}
+
+.join-our {
+    border-bottom: 1px solid white;
+    padding-left: 10px;
+    padding-right: 70px;
+}
+.mailing-list {
+    padding-right: 10px;
+}
 .shows-img {
     top: 5px;
     width: 100%;
 }
 
 .tour-link {
-    margin-bottom: 0;
-    top: 50px;
+    margin: 30px 0;
+    /* top: 50px; */
 }
 
 .tour-link p {
-    background-color: rgba(132, 28, 206, .4);
-    color: rgb(255, 249, 222);
+    background-color: rgba(108, 29, 165, 0.7);
+    color: rgb(255, 255, 255);
 }
 
 @media screen and (min-width: 750px) {
@@ -21,23 +48,38 @@
         padding: 0 5%; 
     }
     .shows-img-container {
-        height: calc(86vw * 0.55);
+        height: 50vw;
         overflow: hidden;
-        padding: 0 7%;
+    }
+    .join-mailing-container p {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+    .join-our {
+        padding-right: 160px;
+    }
+    .mailing-list {
+        padding-right: 30px;
     }
     .shows-img {
-        top: -7%;
+        top: -15%;
     }
-    .tour-link {
+    /* .tour-link {
         top: 80px;
-    }
-    .tour-link .line {
+    } */
+    /* .tour-link .line {
         margin-right: 7%;
-    }
+    } */
 }
-@media screen and (min-width: 845px) {
+@media screen and (min-width: 833px) {
     .events-card-container {
         padding: 0 7%;
+    }
+}
+
+@media screen and (min-width: 870px) {
+    .events-card-container {
+        padding: 0 9%;
     }
 }
 
@@ -47,6 +89,9 @@
     }
     .event {
         margin: 2% 0;
+    }
+    .join-mailing-container {
+        top: 60px;
     }
     /*
     .shows-img {
@@ -66,11 +111,23 @@
     .event {
         margin: 2% 2%;
     }
+    .join-mailing-container {
+        top: 75px;
+    }
 }
 
 @media screen and (min-width: 1400px) {
     .events-card-container {
         padding: 0 10%;
+    }
+    .join-mailing-container {
+        top: 100px;
+    }
+    .join-our {
+        padding-right: 180px;
+    }
+    .mailing-list {
+        padding-right: 50px;
     }
 }
 

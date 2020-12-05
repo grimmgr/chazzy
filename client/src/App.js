@@ -11,6 +11,7 @@ import { Admin } from './pages/Admin';
 import { NavProvider } from './utils/navContext';
 import { FanArtProvider } from './utils/fanArtContext';
 import { WidthProvider } from './utils/widthContext';
+import { SubscribeProvider } from './utils/subscribeContext';
 
 
 // import logo from './logo.svg';
@@ -39,13 +40,15 @@ export const App = () => {
             <main>
                 <NavProvider>
                     <WidthProvider>
-                        <Menu />
-                        <FanArtProvider>
-                            <Route exact path='/' component={Main} />
-                            <Route exact path='/fan-art' component={FanArt} />
-                        </FanArtProvider>
-                        <Route exact path='/tour' component={Tour} />
-                        <Route exact path='/tehe' component={Admin} />
+                        <SubscribeProvider>
+                            <Menu />
+                            <FanArtProvider>
+                                <Route exact path='/' component={Main} />
+                                <Route exact path='/fan-art' component={FanArt} />
+                            </FanArtProvider>
+                            <Route exact path='/tour' component={Tour} />
+                            <Route exact path='/tehe' component={Admin} />
+                        </SubscribeProvider>
                     </WidthProvider>
                 </NavProvider>
             </main>

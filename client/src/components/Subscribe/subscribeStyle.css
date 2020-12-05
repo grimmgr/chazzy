@@ -1,35 +1,74 @@
-.subscribe-container {
-    /* background-color: rgba(255, 0, 191, 0.5); */
-    color: rgb(255, 255, 255);
-    font-size: .9rem;
-    padding: 10px 20px;
-    position: relative;
-    text-align: center;
+
+/* #subscribe-wrapper {
+    background-color: rgba(46, 12, 70, 0.5);
+} */
+
+.subscribe-form-container {
+    background-color: rgba(255, 255, 255, .8);
+    padding: 5%;
 }
 
-.subscribe {
-    /* background-color: rgba(238, 197, 183, .8); */
-    /* border-bottom: 1px solid rgb(255, 255, 255);
-    border-top: 1px solid white; */
-    margin: 0 auto;
-    position: relative;
-    width: fit-content;
+.subscribe-heading {
+    padding-bottom: 10px;
 }
 
-.subscribe form {
-    margin: 5px 0;
+.subscribe-heading h3 {
+    padding-bottom: 5px;
 }
 
 input {
     border: 1px solid white;
     padding: 2px 10px;
-    margin: 10px 3px;
+    margin-top: 10px;
+    /* margin-right: 7px; */
 }
 
 .subscribe-btn {
-    background-color: rgba(255, 246, 181, .7);
+    background-color: rgba(184, 254, 114, 0.5);
+    cursor: pointer;
     border: 1px solid white;
+    margin-left: 15px;
     padding: 2px 10px;
+}
+
+.close-subscribe-form-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 20px;
+    padding: 2px 5px;
+}
+
+.subscribe-enter {
+    opacity: 0;
+}
+
+.subscribe-enter-active {
+    opacity: 1;
+    transition: opacity 200ms;
+}
+
+.subscribe-exit {
+    opacity: 1;
+}
+
+.subscribe-exit-active {
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+.join-msg-container {
+    position: absolute;
+    bottom: 70px;
+}
+
+.join-msg {
+    color: white;
 }
 
 .join-msg-enter {
@@ -53,12 +92,12 @@ input {
 .cheers {
     animation: 2s ease-in-out infinite alternate smileys;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 0 15px;
     position: absolute;
     left: 0;
     right: 0;
-    top: 30%;
+    top: 70px;
     width: 100%;
 }
 
@@ -68,7 +107,7 @@ input {
 
 .cheers-enter-active {
     opacity: 1;
-    transition: opacity ease-in 500ms;
+    transition: opacity ease-in 200ms;
 }
 
 

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { CSSTransition } from 'react-transition-group';
+import { useSubscribe } from '../utils/subscribeContext';
 import { useNav } from '../utils/navContext';
 import { Event } from '../components/Event';
 import { Subscribe } from '../components/Subscribe';
@@ -8,7 +10,7 @@ import axios from 'axios';
 
 export const Tour = () => {
     const setNavHome = useNav().setNavHome;
-
+    const { openSubscribe, setOpenSubscribe } = useSubscribe();
     const [events, setEvents] = useState([]);
 
     useEffect(() => {
@@ -47,9 +49,17 @@ export const Tour = () => {
                     </div>
                 : <NoEvents /> }
             </div>
-            <div className='tour-page-subscribe'>
-                <Subscribe />
+            <div className='tour-footer' onClick={() => setOpenSubscribe(true)}>
+                <p>JOIN OUR MAILING LIST</p>
             </div>
+            <CSSTransition
+                in={openSubscribe}
+                classNames='subscribe'
+                timeout={200}
+                unmountOnExit
+                >
+                <Subscribe />
+            </CSSTransition>
         </section>
     );
 };

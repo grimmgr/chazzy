@@ -168,7 +168,8 @@
 }
 .big-display {
     align-items: center;
-    background-color: rgba(0, 0, 255, 0.4);
+    /* background-color: rgba(0, 0, 255, 0.4); */
+    background-color: rgba(46, 12, 70, 0.5);
     display: flex;
     justify-content: center;
     position: fixed;

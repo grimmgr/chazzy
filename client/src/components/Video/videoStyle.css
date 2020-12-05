@@ -35,10 +35,10 @@
 @media screen and (min-width: 700px) {
     .video-container {
         margin: 0 auto;
-        width: 90%;
+        width: 80%;
     }
     .video-card iframe {
-        height: calc(90vw * 0.56);
+        height: calc(80vw * 0.56);
     }
     #video-arrow-l,
     #video-arrow-r {
@@ -47,6 +47,12 @@
     padding-bottom: 8px;
     width: 6%;
     -webkit-text-fill-color: rgba(255, 255, 255, 1);
+    }
+    #video-arrow-l {
+        margin-left: 2%;
+    }
+    #video-arrow-r {
+        margin-right: 2%;
     }
 }
 

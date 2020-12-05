@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { CSSTransition } from 'react-transition-group';
+import { useSubscribe } from '../../utils/subscribeContext';
 import { useWidth } from '../../utils/widthContext';
 import { NoEvents } from '../NoEvents';
 import { Event } from '../Event';
 import { GoTo } from '../GoTo';
+import { Subscribe } from '../Subscribe';
 import './tourPreviewStyle.css';
 import axios from 'axios';
 
 export const TourPreview = () => {
     const width = useWidth().width;
-
+    const { openSubscribe, setOpenSubscribe } = useSubscribe();
     const [events, setEvents] = useState([]);
     // const [loading, toggleLoading] = useState(true);
 
@@ -57,15 +60,28 @@ export const TourPreview = () => {
                             text={'ALL DATES'}
                         />
                     </div>
-                    <div className='shows-img-container'>
-                        <img className='shows-img' src='images/shows.jpg' alt='live show' />
+                    
+                </div>
+            :
+                <NoEvents />
+            }
+            <div className='shows-img-container'>
+                <div className='join-mailing-container' onClick={() => setOpenSubscribe(true)}>
+                    <div className='join-mailing'>
+                        <p className='join-our'>JOIN OUR</p>
+                        <p className='mailing-list'>MAILING LIST</p>
                     </div>
                 </div>
-            : <NoEvents />
-            }
-            
-           
-            
+                <img className='shows-img' src='images/shows.jpg' alt='live show' />
+            </div>
+            <CSSTransition
+                in={openSubscribe}
+                classNames='subscribe'
+                timeout={200}
+                unmountOnExit
+                >
+                <Subscribe />
+            </CSSTransition>
         </section>
     );
 };
