@@ -3,10 +3,16 @@
     color: rgb(64, 16, 99);
     margin: 30px auto;
     /* margin-top: 30px; */
-    padding: 10px;
+    padding: 30px 20px;
     width: 250px;
 }
 
 .se-arrow {
     top: 4px;
+}
+
+@media screen and (min-width: 700px) {
+    .no-event {
+        width: 300px;
+    }
 }
