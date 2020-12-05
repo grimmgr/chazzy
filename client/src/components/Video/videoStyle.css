@@ -28,6 +28,8 @@
 }
 
 .corn {
+    animation: 3s ease-in-out infinite alternate pulse;
+    color: rgb(132, 28, 206);
     text-align: right;
     padding-right: 30px;
 }
