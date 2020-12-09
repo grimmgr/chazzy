@@ -12,6 +12,7 @@ export const Tour = () => {
     const setNavHome = useNav().setNavHome;
     const { openSubscribe, setOpenSubscribe } = useSubscribe();
     const [events, setEvents] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         setNavHome(false);
@@ -19,7 +20,7 @@ export const Tour = () => {
         axios.get('api/tour')
             .then(response => {
                 setEvents(response.data);
-                // toggleLoading(false);
+                setLoading(false);
             })
             .catch(err => console.log(err));
             // setError ?
@@ -31,6 +32,10 @@ export const Tour = () => {
     return (
         <section id='tour'>
             <h2>TOUR</h2>
+            { loading ? 
+                <div><p className='loading'>\m/</p></div>
+            :
+            
             <div className='tour-container'>
                 { events.length ?
                     <div className='events-card-container'>
@@ -48,7 +53,8 @@ export const Tour = () => {
                     ))}
                     </div>
                 : <NoEvents /> }
-            </div>
+            </div> }
+                    
             <div className='tour-footer' onClick={() => setOpenSubscribe(true)}>
                 <p>JOIN OUR MAILING LIST</p>
             </div>
@@ -60,6 +66,7 @@ export const Tour = () => {
                 >
                 <Subscribe />
             </CSSTransition>
+            
         </section>
     );
 };

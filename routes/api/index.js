@@ -21,7 +21,7 @@ router.get('/ig/:post', (req, res) => {
 
 router.get('/tour', (req, res) => {
     const bandsApiKey = process.env.BANDS_API_KEY;
-    axios.get(`https://rest.bandsintown.com/v4/artists/chastitybelt/events/?app_id=${bandsApiKey}`)
+    axios.get(`https://rest.bandsintown.com/v4/artists/chastitybelt/events/?date=past&app_id=${bandsApiKey}`)
     .then(response => {
         res.json(response.data);
     })

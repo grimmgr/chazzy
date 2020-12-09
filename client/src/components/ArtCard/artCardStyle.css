@@ -286,4 +286,7 @@
         height: 25vw;
         width: 25vw;
     }
+    .art-options {
+        width: 25vw;
+    }
 }

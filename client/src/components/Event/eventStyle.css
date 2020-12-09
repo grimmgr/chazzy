@@ -1,6 +1,7 @@
 .event {
     background-color: rgba(255, 255, 255, .4);
-    color: rgb(64, 16, 99);
+    /* color: rgb(64, 16, 99); */
+    color: black;
     margin: 0 auto;
     margin-top: 30px;
     padding: 10px;
@@ -38,12 +39,13 @@
 } */
 
 .link {
-    border-bottom: 1px solid rgb(138, 39, 199);
+    border-bottom: 1px solid rgb(102, 33, 145);
     width: fit-content;
 }
 
 .link p {
-    color: rgb(138, 39, 199);
+    /* color: rgb(138, 39, 199); */
+    color: rgb(102, 33, 145);
     font-weight: 600;
     font-size: .8rem;
     font-style: normal;
