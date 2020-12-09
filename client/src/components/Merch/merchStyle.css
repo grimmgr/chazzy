@@ -34,20 +34,9 @@
     color: rgb(46, 12, 70);
 } */
 
-.treat {
-    animation: 3s ease-in-out infinite alternate pulse;
-    animation-delay: 1s;
-    color: rgb(132, 28, 206);
-    /* color: rgb(65, 182, 147); */
-    padding-right: 32px;
-    text-align: right;
-}
 
-@keyframes pulse {
-    to {
-        color: rgb(237, 237, 85);
-    }
-}
+
+
 
 @media screen and (min-width: 500px) {
     .merch-container {

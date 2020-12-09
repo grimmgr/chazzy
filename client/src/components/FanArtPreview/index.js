@@ -58,7 +58,7 @@ export const FanArtPreview = () => {
                 name={'fan-art'}
                 text={'SEE ALL'}
             />
-            <p className='submit-yours'>and submit yours!</p>
+            <p id='submit-yours' className='treat'>and submit yours!</p>
         </section>
     );
 };

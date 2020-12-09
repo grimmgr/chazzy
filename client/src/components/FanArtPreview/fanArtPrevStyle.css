@@ -35,18 +35,10 @@
     background-color: rgba(254, 201, 121, 0.3);
 } */
 
-.submit-yours {
-    animation: 3s ease-in-out infinite alternate pulse;
-    color: rgb(132, 28, 206);
-    padding-right: 8px;
-    text-align: right;
+#submit-yours {
+    padding-right: 15px;
 }
 
-@keyframes pulse {
-    to {
-        color: rgb(237, 237, 85);
-    }
-}
 
 @media screen and (min-width: 500px) {
     .art-prev-container {

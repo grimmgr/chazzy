@@ -48,7 +48,7 @@ export const Video = () => {
                 text='WATCH MORE'
                 external='true'
             />
-            <p className='corn'>pop some corn!</p>
+            <p className='treat corn'>pop some corn!</p>
         </section>
     );
 };

@@ -12,17 +12,18 @@
 #contact h2 {
     color: rgba(255, 255, 255, .8);
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-bottom: 0;
     padding-bottom: 15px;
 }
 
 .down-arrow {
     /* background-color: rgba(255, 255, 255, .3); */
+    bottom: 7px;
     cursor: pointer;
     display: inline-block;
-    font-size: 1.1rem;
-    margin-left: 20px;
+    font-size: 1.3rem;
+    margin-left: 10px;
     padding: 3px 5px;
     transition: transform 500ms;
     -webkit-text-stroke: 1px rgb(46, 12, 70);
@@ -76,17 +77,28 @@
 
 .contact a {
     color: white;
+    font-size: 1.2rem;
 }
 
+/*
+.contact li {
+    font-size: 1.2rem;
+} */
+
 .title {
-    color: white;
-    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.4rem;
+    /* font-style: normal; */
+}
+
+.contact-name {
+    color: rgba(255, 255, 255, .8);
     font-style: normal;
 }
 
 @media screen and (min-width: 750px) {
     #contact h2 {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
     }
     .down-arrow {
         font-size: 1.3rem;
@@ -94,9 +106,9 @@
 }
 
 @media screen and (min-width: 1000px) {
-    #contact h2 {
+    /* #contact h2 {
         font-size: 1.5rem;
-    }
+    } */
     .down-arrow {
         font-size: 1.4rem;
     }

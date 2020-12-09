@@ -20,7 +20,9 @@
 
 h1 {
     color: rgba(255, 255, 255, 0.2);
+    font-family: 'Didot', serif;
     font-size: 3.3rem;
+    font-weight: bold;
 }
 
 .home-links {
@@ -40,8 +42,9 @@ h1 {
 }
 
 .home-msg {
-    animation: 2s ease-out slidein;
+    animation: 1s ease-out slidein;
     color: rgba(146, 170, 67, 1);
+    font-size: 1rem;
     letter-spacing: 4px;
     padding-left: 6px;
     z-index: 2;
@@ -109,14 +112,14 @@ h1 {
               and (min-height: 450px) {
     #home {
         background-image: url(../../backgrounds/big_purp1.png), url(../../backgrounds/home_mobile_longer.png);
-        background-position: right 50% bottom 60vh, 50% 80%;
+        background-position: right 50% bottom 55vh, 50% 80%;
     }
     h1 {
         font-size: 3.5rem;
     }
-    .buy-listen p {
+    /* .buy-listen p {
         font-size: 1.1rem;
-    }
+    } */
     .cover {
         padding-bottom: 7%;
     }
@@ -140,16 +143,16 @@ h1 {
 @media screen and (min-width: 700px)
               and (min-height: 750px) {
     h1 {
-        font-size: 4rem;
+        font-size: 4.2rem;
     }
     .cover {
         padding-bottom: 12%;
     }
     .home-msg-container {
-        padding-top: 4rem;
+        padding-top: 4.4rem;
     }
     .out-now {
-        margin-top: 3.8rem;
+        margin-top: 3.9rem;
     }
 }
 
@@ -170,7 +173,7 @@ h1 {
         display: flex;
         justify-content: space-between;
         padding-top: 0;
-        top: 40vh;
+        top: 40.5vh;
         width: 100%;
     }
     .home-links-pod {
@@ -186,9 +189,11 @@ h1 {
     .buy-listen {
         margin-top: 5px;
     }
-
     .buy-listen p {
-        color: white;
+        color: rgb(230, 230, 230);
+    }
+    .buy-listen {
+        border-bottom: 1px solid rgb(191, 196, 161);
     }
     .album-cover {
         width: 50%;
@@ -224,9 +229,9 @@ h1 {
     .out-now {
         margin-top: 4.4rem;
     }
-    .buy-listen p {
+    /* .buy-listen p {
         font-size: 1.2rem;
-    }
+    } */
     
     /* .album-cover {
         width: 55%;

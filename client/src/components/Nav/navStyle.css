@@ -29,6 +29,7 @@ nav {
     background-image: linear-gradient( rgba(255, 255, 255, .55), rgba(255, 255, 255, .7), rgba(255, 255, 255, .55));
     box-shadow: 
         0 0 80px 40px rgba(255, 255, 255, .7);
+    
     font-size: 1.8rem;
     font-weight: bold;
     line-height: 1.4;
@@ -37,6 +38,8 @@ nav {
 
 .nav-list a {
     color: rgb(46, 12, 70);
+    /* font-family: 'Didot', serif;
+    font-weight: 600; */
 }
 .nav-list a:visited {
     color: rgb(46, 12, 70);

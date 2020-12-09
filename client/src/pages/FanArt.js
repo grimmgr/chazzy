@@ -115,9 +115,9 @@ export const FanArt = () => {
                 >
                     <div className='open-form-container'>
                     <div className='open-form-btn' onClick={() => setOpenForm(true)} >
-                        <h3>{ admin ? 'add art' : 'submit yours!'}</h3>
+                        <p>{ admin ? 'ADD ART' : 'SUBMIT YOURS!'}</p>
                     </div>
-                    <p>*If your art is here and you'd like it taken down  email us at beltchastity@gmail.com</p>
+                    <p className='in-case'>*If your art is here and you'd like it taken down  email us at beltchastity@gmail.com</p>
                     </div>
                 </CSSTransition>
                 <CSSTransition

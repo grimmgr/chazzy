@@ -39,7 +39,7 @@ export const Admin = () => {
 
     return (
         <section id='admin-page'>
-            { admin ? <h2>wecome back ;)</h2> :  
+            { admin ? <h2>welcome back ;)</h2> :  
             <div>
             <div className='hmmm' onClick={() => setOpenLogin(true)}></div>
             <CSSTransition
