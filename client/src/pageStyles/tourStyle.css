@@ -83,4 +83,31 @@
 @keyframes loading-spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
-  }
+}
+
+@media screen and (orientation: landscape) {
+    .tour-no-events {
+        background-position: 50% 70%;
+    }
+    .resting-container {
+        padding-top: 10%;
+    }
+}
+
+@media screen and (min-width: 600px) and (min-height: 450px) {
+    .tour-no-events {
+        height: calc(100vh - 145px);
+    }
+    .resting-container p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .tour-no-events {
+        height: calc(100vh - 170px);
+    }
+    .resting-container p {
+        font-size: 1.6rem;
+    }
+}
