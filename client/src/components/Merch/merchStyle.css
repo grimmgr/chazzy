@@ -29,10 +29,10 @@
     width: 100%;
 }
 
-/* .store-link p {
-    background-color: rgba(255, 159, 159, 0.4);
+.store-link p {
     color: rgb(46, 12, 70);
-} */
+    text-shadow: 0 0 30px rgb(148, 171, 102), 1px 1px 20px rgb(148, 171, 102), -1px -1px 20px rgb(148, 171, 102), 0 10px 10px rgb(148, 171, 102), 0 -10px 10px rgb(148, 171, 102), 10px 0 10px rgb(148, 171, 102), -10px 0 10px rgb(148, 171, 102), 0 -5px 5px  rgb(148, 171, 102), 0 5px 5px  rgb(148, 171, 102);
+}
 
 
 

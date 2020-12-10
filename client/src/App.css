@@ -18,7 +18,11 @@ main {
     text-align: center;
 }
 
-main::before {
+.main-page {
+    background-image: linear-gradient(transparent 20%, rgba(120, 0, 159, 0.6));
+}
+
+/* main::before {
     background-image: linear-gradient(transparent 20%, rgba(43, 0, 57, 0.6));
     content: '';
     position: absolute;
@@ -26,7 +30,7 @@ main::before {
     bottom: 0;
     right: 0;
     left: 0;
-}
+} */
 
 p {
     font-size: 1.1rem;
@@ -60,7 +64,7 @@ input {
 }
 
 .treat {
-    animation: 3s ease-in-out infinite alternate pulse;
+    animation: 2s ease-in-out infinite alternate pulse;
     animation-delay: 1s;
     color: rgb(132, 28, 206);
     font-size: 1.2rem;

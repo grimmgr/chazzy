@@ -92,6 +92,12 @@ export const FanArt = () => {
     return (
         <section id='fan-art'>
             <h2>FAN ART</h2>
+            <div className='open-form-container'>
+                <div className='open-form-btn' onClick={() => setOpenForm(true)} >
+                    <p>{ admin ? 'ADD ART' : 'ADD YOUR ART TO OUR COLLECTION!'}</p>
+                </div>
+                
+            </div>
             
             <div className='art-container'>
                 { fanArt.map(art => (
@@ -107,19 +113,6 @@ export const FanArt = () => {
             </div>
             
             <div className='art-form-wrapper'>
-                <CSSTransition
-                    in={!openForm}
-                    timeout={200}
-                    unmountOnExit
-                    classNames={'open-form-btn'}
-                >
-                    <div className='open-form-container'>
-                    <div className='open-form-btn' onClick={() => setOpenForm(true)} >
-                        <p>{ admin ? 'ADD ART' : 'SUBMIT YOURS!'}</p>
-                    </div>
-                    <p className='in-case'>*If your art is here and you'd like it taken down  email us at beltchastity@gmail.com</p>
-                    </div>
-                </CSSTransition>
                 <CSSTransition
                     in={openForm}
                     timeout={200}
@@ -164,6 +157,7 @@ export const FanArt = () => {
                     </div>
                 </CSSTransition>
             </div>
+            <div className='smiley-banner'></div>
         </section>
     );
 };

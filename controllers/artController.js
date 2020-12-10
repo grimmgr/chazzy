@@ -1,6 +1,5 @@
 const db = require('../models');
 const nodemailer = require('nodemailer');
-const { getMaxListeners } = require('../models/art');
 require('dotenv').config();
 
 const transporter = nodemailer.createTransport({

@@ -64,6 +64,11 @@ h1 {
     z-index: 1;
 }
 
+.patreon-link p {
+    color: rgb(46, 12, 70);
+    text-shadow: 0 0 30px rgba(146, 170, 67, 1), 1px 1px 20px rgba(146, 170, 67, 1), -1px -1px 20px rgba(146, 170, 67, 1), 0 10px 10px rgba(146, 170, 67, 1), 0 -10px 10px rgba(146, 170, 67, 1), 10px 0 10px rgba(146, 170, 67, 1), -10px 0 10px rgba(146, 170, 67, 1), 0 -5px 5px  rgba(146, 170, 67, 1), 0 5px 5px  rgba(146, 170, 67, 1);
+}
+
 .patreon-link-big {
     display: none;
 }
@@ -229,6 +234,9 @@ h1 {
     .out-now {
         margin-top: 4.4rem;
     }
+    .cover {
+        padding-bottom: 2%;
+    }
     /* .buy-listen p {
         font-size: 1.2rem;
     } */
@@ -249,10 +257,13 @@ h1 {
                 .out-now {
                     margin-top: 5rem;
                 }
+                .cover {
+                    padding-bottom: 0;
+                }
               }
 @media screen and (min-width: 1000px)
               and (min-height: 1100px) {
                 .cover {
-                    padding-bottom: 20%;
+                    padding-bottom: 0;
                 }
               }

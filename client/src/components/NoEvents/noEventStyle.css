@@ -1,7 +1,7 @@
 .no-event {
-    background-color: rgba(255, 255, 255, .4);
+    /* background-color: rgba(255, 255, 255, .4); */
     /* color: rgb(64, 16, 99); */
-    color: black;
+    color: white;
     margin: 30px auto;
     /* margin-top: 30px; */
     padding: 30px 20px;

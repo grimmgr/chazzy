@@ -1,39 +1,40 @@
 #tour {
-    background-color: rgba(43, 0, 57, 0.6);
-    height: 100vh;
-    overflow-y: scroll;
-    padding: 0 5%;
-    padding-bottom: 124px;
+    min-height: 100vh;
+    padding-top: 10px;
 }
 
 #tour h2 {
-    color: rgba(255, 255, 255, .5);
-    font-size: 4rem;
+    color: rgb(40 18 67);
     margin-bottom: 0;
+    height: 55px;
+    padding-top: 10px;
+    font-size: 3.1rem;
 }
 
-.tour-footer {
-    /* background-color: rgba(46, 12, 70, .8); */
-    background-color: rgba(46, 12, 70, .9);
-    cursor: pointer;
-    display: flex;
-    justify-content: flex-end;
-    margin: 0 auto;
-    padding: 10px 0 20px 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+.tour-open-subscribe-container {
+    background-image: url(../backgrounds/big_purp1.png);
+    padding: 2% 0 1.5% 0;
     width: 100%;
 }
 
-.tour-footer p {
-    /* background-color: rgba(46, 12, 70, .5); */
+.never {
+    color: rgba(255, 255, 255, .7);
+    padding-left: 2%;
+    text-align: left;
+}
+
+.tour-open-subscribe {
+    /* padding: 3px 0; */
+    text-align: left;
+}
+
+.tour-open-subscribe p {
+    /* background-color: rgba(255, 255, 255, 0.6); */
     border-bottom: 1px solid white;
     color: white;
-    /* font-weight: 700; */
-    padding: 2px 8px;
-    padding-right: 7%;
-    text-align: right;
+    cursor: pointer;
+    padding: 3px 8px;
+    padding-left: 7%;
     width: fit-content;
 }
 
@@ -44,6 +45,39 @@
     font-size: 2rem;
     font-style: normal;
     transform-origin: center;
+}
+
+.tour-no-events {
+    background-image: url(../backgrounds/resting.png);
+    background-position: center;
+    background-size: cover;
+    height: calc(100vh - 130px);
+    /* position: fixed;
+    bottom: 10px;
+    width: 100%; */
+}
+
+.resting-container {
+    padding-top: 20%;
+    padding-left: 40%;
+}
+
+.resting-container p {
+    color: rgb(46, 12, 70);
+    font-size: 1.4rem;
+}
+.brb {
+    padding-left: 120px;
+}
+
+
+.smiley-banner {
+    background-image: url(../backgrounds/smiley_multi.png);
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 @keyframes loading-spin {

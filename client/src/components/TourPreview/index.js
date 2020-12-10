@@ -63,17 +63,22 @@ export const TourPreview = () => {
                     
                 </div>
             :
-                <NoEvents />
+                <div className='main-no-events'>
+                    <p className='nothing'>Nothing planned</p>
+                    <p className='at-the'> at the moment...</p>
+                    <p className='for-updates'>for updates ...</p>
+                </div>
             }
             <div className='shows-img-container'>
+            {/* { events.length && */}
                 <div className='join-mailing-container' onClick={() => setOpenSubscribe(true)}>
                     <div className='join-mailing'>
                         <p className='join-our'>JOIN OUR</p>
                         <p className='mailing-list'>MAILING LIST</p>
                     </div>
-                </div>
+                </div> 
                 <img className='shows-img' src='images/shows.jpg' alt='live show' />
-            </div>
+            </div> 
             <CSSTransition
                 in={openSubscribe}
                 classNames='subscribe'

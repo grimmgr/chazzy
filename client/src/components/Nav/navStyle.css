@@ -38,8 +38,8 @@ nav {
 
 .nav-list a {
     color: rgb(46, 12, 70);
-    /* font-family: 'Didot', serif;
-    font-weight: 600; */
+    font-family: 'Didot', serif;
+    font-weight: 600;
 }
 .nav-list a:visited {
     color: rgb(46, 12, 70);

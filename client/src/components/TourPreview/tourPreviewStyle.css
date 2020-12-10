@@ -11,11 +11,12 @@
 }
 
 .join-mailing {
-    background-color: rgba(0, 0, 0, .2);
+    /* background-color: rgba(0, 0, 0, .2); */
     cursor: pointer;
     text-align: right;
     width: max-content;
 }
+
 
 .join-our {
     border-bottom: 1px solid white;
@@ -38,6 +39,30 @@
 .tour-link p {
     background-color: rgba(108, 29, 165, 0.7);
     color: rgb(255, 255, 255);
+}
+
+.main-no-events {
+    text-align: left;
+    top: 10px;
+    z-index: 1;
+}
+
+.main-no-events p {
+    color: rgb(237, 237, 237);
+    font-size: 1.3rem;
+}
+
+.nothing {
+    padding-left: 5%;
+}
+
+.at-the {
+    padding-left: 20%;
+}
+
+.for-updates {
+    margin-top: 10px;
+    padding-left: 40%;
 }
 
 @media screen and (min-width: 750px) {
@@ -64,6 +89,22 @@
     .shows-img {
         top: -15%;
     }
+    .main-no-events {
+        top: 5px;
+    }
+    .nothing {
+        padding-left: 10%;
+    }
+    
+    .at-the {
+        padding-left: 25%;
+    }
+    
+    .for-updates {
+        margin-top: 0;
+        padding-left: 45%;
+    }
+    
     /* .tour-link {
         top: 80px;
     } */
@@ -90,8 +131,12 @@
     .event {
         margin: 2% 0;
     }
-    .join-mailing-container {
-        top: 60px;
+    .join-our {
+        padding-left: 15px;
+        padding-right: 180px;
+    }
+    .mailing-list {
+        padding-right: 50px;
     }
     /*
     .shows-img {
@@ -104,6 +149,26 @@
         margin-right:10%;
     } */
 }
+@media screen and (min-width: 1000px) {
+    .join-our {
+        padding-right: 230px;
+    }
+    .mailing-list {
+        padding-right: 100px;
+    }
+    .nothing {
+        padding-left: 15%;
+    }
+    
+    .at-the {
+        padding-left: 30%;
+    }
+    
+    .for-updates {
+        margin-top: 20px;
+        padding-left: 50%;
+    }
+}
 @media screen and (min-width: 1200px) {
     .events-card-container {
         padding: 0 7%;
@@ -111,8 +176,17 @@
     .event {
         margin: 2% 2%;
     }
-    .join-mailing-container {
+    /* .join-mailing-container {
         top: 75px;
+    } */
+    .join-our {
+        padding-right: 300px;
+    }
+    .mailing-list {
+        padding-right: 160px;
+    }
+    .main-no-events p {
+        font-size: 1.4rem;
     }
 }
 
@@ -121,14 +195,14 @@
         padding: 0 10%;
     }
     .join-mailing-container {
-        top: 100px;
+        top: 50px;
     }
-    .join-our {
+    /* .join-our {
         padding-right: 180px;
-    }
-    .mailing-list {
+    } */
+    /* .mailing-list {
         padding-right: 50px;
-    }
+    } */
 }
 
 @media screen and (min-width: 1660px) {

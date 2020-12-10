@@ -20,11 +20,12 @@
 }
 
 .go-to p {
-    background-color: rgba(146, 187, 79, 0.808);
-    color: rgb(46, 12, 70);
+    /* background-color: rgba(146, 187, 79, 0.808); */
+    /* color: rgb(46, 12, 70); */
     /* font-size: 1.1rem; */
     font-weight: 600;
     padding: 2px 5px;
+    z-index: -1;
 }
 
 /* @media screen and (min-width: 600px) and (min-height: 450px) {

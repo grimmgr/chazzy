@@ -32,6 +32,12 @@ export const Tour = () => {
     return (
         <section id='tour'>
             <h2>TOUR</h2>
+            <div className='tour-open-subscribe-container'>
+                <p className='never'>never miss a show...</p>
+                <div className='tour-open-subscribe' onClick={() => setOpenSubscribe(true)}>
+                    <p>JOIN OUR MAILING LIST</p>
+                </div>
+            </div>
             { loading ? 
                 <div><p className='loading'>\m/</p></div>
             :
@@ -52,12 +58,15 @@ export const Tour = () => {
                         />
                     ))}
                     </div>
-                : <NoEvents /> }
+                : <div className='tour-no-events'>
+                        <div className='resting-container'>
+                            <p className='resting'>resting...</p>
+                            <p className='brb'>brb</p>
+                        </div>
+                  </div> }
             </div> }
                     
-            <div className='tour-footer' onClick={() => setOpenSubscribe(true)}>
-                <p>JOIN OUR MAILING LIST</p>
-            </div>
+            
             <CSSTransition
                 in={openSubscribe}
                 classNames='subscribe'
@@ -66,7 +75,7 @@ export const Tour = () => {
                 >
                 <Subscribe />
             </CSSTransition>
-            
+            <div className='smiley-banner'></div>
         </section>
     );
 };

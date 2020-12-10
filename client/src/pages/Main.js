@@ -10,14 +10,14 @@ import { Contact } from '../components/Contact';
 
 export const Main = () => {
     return (
-        <>
+        <div className='main-page'>
             <Home />
             <Merch />
             <FanArtPreview />
             <Video />
             <TourPreview />
             <Contact />
-        </>
+        </div>
     )
 }
 

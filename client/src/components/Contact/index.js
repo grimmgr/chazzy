@@ -23,7 +23,7 @@ export const Contact = () => {
     }
 
     const grow = () => {
-        setContactHeight((width < 500) ? 605 : 625);
+        setContactHeight((width < 500) ? 605 : 650);
     }
 
     const shrink = () => {
