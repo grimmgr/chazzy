@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { useSubscribe } from '../../utils/subscribeContext';
 import { useWidth } from '../../utils/widthContext';
-import { NoEvents } from '../NoEvents';
 import { Event } from '../Event';
 import { GoTo } from '../GoTo';
 import { Subscribe } from '../Subscribe';
@@ -77,11 +76,11 @@ export const TourPreview = () => {
                         <p className='mailing-list'>MAILING LIST</p>
                     </div>
                 </div> 
-                <img className='shows-img' src='images/shows.jpg' alt='live show' />
+                <img className='shows-img' src='images/tour-prev.png' alt='live show' />
             </div> 
             <CSSTransition
                 in={openSubscribe}
-                classNames='subscribe'
+                classNames='big-display'
                 timeout={200}
                 unmountOnExit
                 >

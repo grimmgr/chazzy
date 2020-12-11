@@ -5,7 +5,6 @@ import { useNav } from '../utils/navContext';
 import { Event } from '../components/Event';
 import { Subscribe } from '../components/Subscribe';
 import '../pageStyles/tourStyle.css';
-import { NoEvents } from '../components/NoEvents';
 import axios from 'axios';
 
 export const Tour = () => {
@@ -69,7 +68,7 @@ export const Tour = () => {
             
             <CSSTransition
                 in={openSubscribe}
-                classNames='subscribe'
+                classNames='big-display'
                 timeout={200}
                 unmountOnExit
                 >

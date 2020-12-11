@@ -4,7 +4,7 @@
     font-size: 1.1rem;
     justify-content: flex-end;
     position: absolute;
-    top: 25px;
+    top: 10vw;
     right: 0;
     width: 100%;
     z-index: 1;
@@ -65,6 +65,18 @@
     padding-left: 40%;
 }
 
+@media screen and (orientation: landscape) {
+    .join-mailing-container {
+        top: 10vh;
+    }
+}
+
+@media screen and (min-width: 750px) and (orientation: landscape) {
+    .main-no-events {
+        top: 5vh;
+    }
+}
+
 @media screen and (min-width: 750px) {
     .events-card-container {
         display: flex;
@@ -73,7 +85,7 @@
         padding: 0 5%; 
     }
     .shows-img-container {
-        height: 50vw;
+        height: 55vw;
         overflow: hidden;
     }
     .join-mailing-container p {
@@ -87,10 +99,10 @@
         padding-right: 30px;
     }
     .shows-img {
-        top: -15%;
+        top: 0;
     }
     .main-no-events {
-        top: 5px;
+        top: 5vw;
     }
     .nothing {
         padding-left: 10%;
@@ -104,13 +116,6 @@
         margin-top: 0;
         padding-left: 45%;
     }
-    
-    /* .tour-link {
-        top: 80px;
-    } */
-    /* .tour-link .line {
-        margin-right: 7%;
-    } */
 }
 @media screen and (min-width: 833px) {
     .events-card-container {
@@ -138,16 +143,6 @@
     .mailing-list {
         padding-right: 50px;
     }
-    /*
-    .shows-img {
-        padding: 0 10%;
-    }
-    .tour-link {
-        top: 100px;
-    }
-    .tour-link .line {
-        margin-right:10%;
-    } */
 }
 @media screen and (min-width: 1000px) {
     .join-our {
@@ -176,9 +171,6 @@
     .event {
         margin: 2% 2%;
     }
-    /* .join-mailing-container {
-        top: 75px;
-    } */
     .join-our {
         padding-right: 300px;
     }
@@ -194,14 +186,8 @@
     .events-card-container {
         padding: 0 10%;
     }
-    .join-mailing-container {
+    /* .join-mailing-container {
         top: 50px;
-    }
-    /* .join-our {
-        padding-right: 180px;
-    } */
-    /* .mailing-list {
-        padding-right: 50px;
     } */
 }
 
@@ -210,17 +196,3 @@
         padding: 0 15%;
     }
 }
-
-/* @media screen and (min-width: 1120px) {
-    .events-card-container {
-        justify-content: space-around;
-        padding: 0 15%;
-    }
-}
-
-@media screen and (min-width: 1450px) {
-    .events-card-container {
-        justify-content: space-between;
-        padding: 0 25%;
-    }
-} */

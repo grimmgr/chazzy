@@ -33,7 +33,7 @@ export const Contact = () => {
     return (
         <section id='contact' className={'contact-sctn'} style={{ height: contactHeight }} >
             
-            <h2 data-aos='fade-right' data-aos-offset='0'>CONTACT</h2>
+            <h2 data-aos='fade-right' data-aos-offset='0' onClick={buttonClick}>CONTACT</h2>
             <CSSTransition
                 in={!open}
                 timeout={500}

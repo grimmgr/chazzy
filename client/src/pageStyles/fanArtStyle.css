@@ -20,7 +20,7 @@
     justify-content: flex-start;
     overflow: scroll;
     padding: 6% 7%;
-    padding-bottom: 65px;
+    padding-bottom: 6.5vw;
     width: 100%;
 }
 
@@ -44,14 +44,6 @@
     padding-left: 5%;
     width: fit-content;
 }
-.smiley-banner {
-    background-image: url(../backgrounds/smiley_multi.png);
-    height: 60px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
 
 .in-case {
     display: none;
@@ -59,33 +51,25 @@
     margin-top: 8px;
 }
 
-
-
-.art-form-container-enter {
-    /* transform: translateY(100%); */
+/* .art-form-container-enter {
     opacity: 0;
 }
 
 .art-form-container-enter-active {
-    /* transform: translateY(0);
-    transition: transform linear 500ms; */
     opacity: 1;
     transition: opacity linear 200ms;
 }
 
 .art-form-container-exit {
-    /* transform: translateY(0); */
     opacity: 1;
 }
 
 .art-form-container-exit-active {
-    /* transform: translateY(100%);
-    transition: transform linear 500ms; */
     opacity: 0;
     transition: opacity linear 200ms;
-}
+} */
 
-.art-form-container {
+/* .art-form-container {
     align-items: center;
     background-image: url(../backgrounds/selfie.JPG);
     background-position: 50% 50%;
@@ -99,9 +83,10 @@
     left: 0;
     right: 0;
     z-index: 3;
-}
+} */
 
 .art-love {
+    font-size: 4rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -113,18 +98,35 @@
     margin-right: 12px;
 }
 
+/* #art-form-container::before {
+    background-image: url(../backgrounds/smiley_pink.png);
+    background-repeat: round;
+    background-size: 10%;
+    content: "";
+    opacity: .7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;   
+} */
+
 .submit-form {
-    background-color: rgba(255, 255, 255, .5);
-    border-radius: 3px;
+    /* border: 2px solid rgb(163, 201, 104); */
     margin: 0 auto;
-    padding: 20px;
-    width: 280px;
+    padding: 5%;
+    width: 80%;
 }
 
 .submit-form input,
-.submit-form label, 
-.submit-form p {
+.submit-form label {
+    font-size: 1.1rem;
     font-style: normal;
+}
+
+.submit-form label {
+    color: white;
 }
 
 .form-inputs {
@@ -133,25 +135,28 @@
 
 
 .submit-form input {
-    font-size: 1rem;
+    background-color: rgb(255, 255, 255, .8);
+    font-size: 1.1rem;
     border-radius: 2px;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     margin-top: 5px;
     width: 100%;
 }
 
 .submit-form input::placeholder {
+    color: rgb(46, 12, 70);
     font-style: italic;
 }
 
 #submit-art-btn {
-    background-color: rgba(255, 255, 255, .4);
+    background-color: rgba(255, 255, 255, .8);
     border: 2px solid rgba(255, 255, 255, .9);
     border-radius: 2px;
     cursor: pointer;
     height: 100px;
     margin: 10px auto;
+    margin-bottom: 0;
     padding-top: 5px;
     width: 100px;
 }
@@ -161,7 +166,9 @@
 }
 
 .submit-text {
-    font-size: 1rem;
+    color: rgb(46, 12, 70);
+    font-size: 1.1rem;
+    /* font-weight: bold; */
 }
 
 #submit-art-btn:focus {
@@ -179,7 +186,7 @@
     filter: invert(100%);
 }
 
-.close-form-btn {
+/* .close-form-btn {
     cursor: pointer;
     height: 20px;
     position: fixed;
@@ -209,21 +216,26 @@
     transform-origin: 100% 100%;
     top: -1px;
     right: -1px;
+} */
+
+@media screen and (orientation: landscape) {
+    .art-container {
+        padding-bottom: 3.5vw;
+    }
 }
-
-
 
 @media screen and (min-width: 760px) {
     .submit-form {
-        width: 320px;
+        width: 60%;
     }
+    .submit-form input {
+        margin-bottom: 25px;
+        margin-top: 10px;
+    }
+    .submit-form input,
+    .submit-form label, 
+    .submit-text {
+    font-size: 1.2rem;
+}
 }
 
-
-
-@media screen and (min-width: 1000px) {
-    .submit-form {
-        padding: 40px;
-        width: 350px;
-    }
-}

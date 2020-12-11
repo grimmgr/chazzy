@@ -112,51 +112,57 @@ export const FanArt = () => {
                 ))}
             </div>
             
-            <div className='art-form-wrapper'>
+           
                 <CSSTransition
                     in={openForm}
                     timeout={200}
                     unmountOnExit
-                    classNames={'art-form-container'}
+                    classNames={'big-display'}
                 >
-                    <div className='art-form-container'>
-                        <h1 className='art-love'>WE <span className='heart'>&hearts;</span> YOUR <br/> ART <br/> !</h1>
-                        <div className='close-form-btn' onClick={() => setOpenForm(false)}>
-                            <span className='left'></span>
-                            <span className='right'></span>
-                        </div>
-                        <form className='submit-form'>
-                            <div className='form-inputs'>
-                            <label htmlFor='link'>Paste a link to your instagram post:</label>
-                            <input 
-                                id='link' 
-                                name='link' 
-                                type='text' 
-                                placeholder='paste link'
-                                value={instaLink}
-                                onChange={ event => setInstaLink(event.target.value) }
-                                />
-                            <label htmlFor='email'>We'll email you when it's up:</label>
-                            <input 
-                                id='email' 
-                                name='email' 
-                                type='text' 
-                                placeholder='email (optional)'
-                                value={email}
-                                onChange={ event => setEmail(event.target.value) }
-                                />
-                            </div>
-                            <button id='submit-art-btn' onClick={submitArt}>
-                                <img className='submit-smiley' src='./images/smiley_multi.png' alt='smiley face' />
-                                <p className= 'submit-text'>submit</p>
-                            </button>
-                            </form>
-                                { error ? <p>please use a valid sharing link</p>
-                        : null }
+                    <div className='big-display'>
                         
+                        <div id='art-form-container' className='big-display-container'>
+                            {/* <p className='art-love'>WE <span className='heart'>&hearts;</span> YOUR <br/> ART <br/> !</p> */}
+                            <div className='close-display-container'>
+                                <div className='close-display-btn' onClick={() => setOpenForm(false)} >
+                                    <span className='left-display'></span>
+                                    <span className='right-display'></span>
+                                </div>
+                            </div>
+                            <form className='submit-form '>
+                                <div className='form-inputs'>
+                                <label htmlFor='link'>Paste a link to your instagram post!</label>
+                                <input 
+                                    id='link' 
+                                    name='link' 
+                                    type='text' 
+                                    placeholder='paste link'
+                                    value={instaLink}
+                                    onChange={ event => setInstaLink(event.target.value) }
+                                    />
+                                <label htmlFor='email'>We'll email you when it's up ;)</label>
+                                <input 
+                                    id='email' 
+                                    name='email' 
+                                    type='text' 
+                                    placeholder='email (optional)'
+                                    value={email}
+                                    onChange={ event => setEmail(event.target.value) }
+                                    />
+                                </div>
+                                <button id='submit-art-btn' onClick={submitArt}>
+                                    <img className='submit-smiley' src='./images/smiley_multi.png' alt='smiley face' />
+                                    <p className= 'submit-text'>SUBMIT</p>
+                                </button>
+                                
+                                </form>
+
+                                { error ? <p>please use a valid sharing link</p>
+                                : null }
+                        </div>
                     </div>
                 </CSSTransition>
-            </div>
+           
             <div className='smiley-banner'></div>
         </section>
     );

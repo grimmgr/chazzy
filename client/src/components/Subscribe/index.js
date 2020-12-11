@@ -41,7 +41,7 @@ export const Subscribe = () => {
 
     return (
         <section id='subscribe' className='big-display'>
-                    <div className='subscribe-container big-display-container'>
+                    <div id='subscribe-container' className='big-display-container'>
                         <div className='close-display-container'>
                             <div className='close-display-btn' onClick={() => setOpenSubscribe(false)} >
                                 <span className='left-display'></span>
