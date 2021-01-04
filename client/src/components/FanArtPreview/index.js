@@ -22,7 +22,7 @@ export const FanArtPreview = () => {
     useEffect(() => {
         axios.get('/api/fan-art?verified=true')
         .then(response => {
-            const displayArt = response.data.slice(0, 15);
+            const displayArt = response.data.slice(0, 6);
             setArt(displayArt);
         })
         .catch(err => console.log(err));
@@ -30,12 +30,13 @@ export const FanArtPreview = () => {
 
     return (
         <section id='fan-art-prev'>
-            <h2 data-aos='fade-right'>FAN ART</h2>
+            <h2>FAN ART</h2>
             <div className='art-prev-wrapper'>
                 <div className='art-prev-container'>
                 { art.map(art => (
                         <PrevArtCard
                         key={art._id}
+                        title={art._id}
                         link={art.embed_link}
                         />
                     ))}

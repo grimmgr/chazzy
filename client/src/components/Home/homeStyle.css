@@ -1,8 +1,8 @@
 #home {
-    background-image: url(../../backgrounds/home_mobile_longer.png);
-    background-position: 50% 65%;
+    background-image: url(../../backgrounds/big_purp1.png), url(../../backgrounds/home.png);
+    background-size: cover, contain;
+    background-position: right 50% bottom 60vh, right 50% top 40vh;
     background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -116,8 +116,8 @@ h1 {
 @media screen and (min-width: 600px)
               and (min-height: 450px) {
     #home {
-        background-image: url(../../backgrounds/big_purp1.png), url(../../backgrounds/home_mobile_longer.png);
-        background-position: right 50% bottom 55vh, 50% 80%;
+        background-size: cover, cover;
+        background-position: right 50% bottom 55vh, 50% 30%;
     }
     h1 {
         font-size: 3.5rem;
@@ -225,6 +225,10 @@ h1 {
 }
 
 @media screen and (min-width: 1000px) {
+    #home {
+        background-size: cover, cover;
+        background-position: right 50% bottom 55vh, 50% 40%;
+    }
     h1 {
         font-size: 4.5rem;
     }

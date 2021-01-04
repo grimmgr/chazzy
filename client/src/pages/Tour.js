@@ -38,7 +38,7 @@ export const Tour = () => {
                 </div>
             </div>
             { loading ? 
-                <div><p className='loading'>\m/</p></div>
+                <div><p id='tour-page-loading' className='loading'>\m/</p></div>
             :
             
             <div className='tour-container'>

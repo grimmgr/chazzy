@@ -12,7 +12,7 @@ export const TourPreview = () => {
     const width = useWidth().width;
     const { openSubscribe, setOpenSubscribe } = useSubscribe();
     const [events, setEvents] = useState([]);
-    // const [loading, toggleLoading] = useState(true);
+    const [loading, toggleLoading] = useState(true);
 
     useEffect(() => {
         axios.get('api/tour')
@@ -24,48 +24,50 @@ export const TourPreview = () => {
                     eventsList = response.data.slice(0, 9);
                 }
                 setEvents(eventsList);
-                // toggleLoading(false);
+                toggleLoading(false);
             })
             .catch(err => console.log(err));
             // set error ?
     }, [width]);
-
-    // if (loading) {
-    //     return <div>loading...</div>
-    // }
     
     return (
         <section id='tour-prev'>
             <h2>TOUR</h2>
-            { events.length ?
-                <div className='events-container'>
-                    <div className='events-card-container'>
-                        {events.map(event => (
-                            <Event
-                                key={event.id}
-                                city={event.venue.city}
-                                country={event.venue.country}
-                                venue={event.venue.name}
-                                date={event.datetime}
-                                tickets={event.offers}
-                                url={event.url}
-                            />
-                        ))}
-                    </div>
-                    <div data-aos='fade-left'>
-                        <GoTo 
-                            link={'/tour'}
-                            name={'tour'}
-                            text={'ALL DATES'}
-                        />
-                    </div>
-                    
-                </div>
+            { loading ? 
+                <div><p className='loading'>\m/</p></div>
             :
-                <div className='main-no-events'>
-                    <p className='nothing'>Nothing planned</p>
-                    <p className='at-the'> at the moment...</p>
-                    <p className='for-updates'>for updates ...</p>
+                <div>
+                { events.length ?
+                    <div className='events-container'>
+                        <div className='events-card-container'>
+                            {events.map(event => (
+                                <Event
+                                    key={event.id}
+                                    city={event.venue.city}
+                                    country={event.venue.country}
+                                    venue={event.venue.name}
+                                    date={event.datetime}
+                                    tickets={event.offers}
+                                    url={event.url}
+                                />
+                            ))}
+                        </div>
+                        <div data-aos='fade-left'>
+                            <GoTo 
+                                link={'/tour'}
+                                name={'tour'}
+                                text={'ALL DATES'}
+                            />
+                        </div>
+                        
+                    </div>
+                :
+                    <div className='main-no-events'>
+                        <p className='nothing'>Nothing planned</p>
+                        <p className='at-the'> at the moment...</p>
+                        <p className='for-updates'>for updates ...</p>
+                    </div>
+                }
                 </div>
             }
             <div className='shows-img-container'>

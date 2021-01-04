@@ -5,7 +5,7 @@ export const Event = (props) => {
     const date = new Date(props.date);
     const formattedDate = date.toDateString().slice(0, -5).toUpperCase();
     return (
-        <div className='event' data-aos='fade-up'>
+        <div className='event' >
             <p className='date'>{formattedDate}</p>
             { (props.venue === 'Live Stream') ?
             <div>

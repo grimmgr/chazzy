@@ -38,13 +38,8 @@
     width: fit-content;
 }
 
-.loading {
-    animation: loading-spin 2s infinite;
-    color: white;
-    font-family: sans-serif;
-    font-size: 2rem;
-    font-style: normal;
-    transform-origin: center;
+#tour-page-loading {
+    top: 50px;
 }
 
 .tour-no-events {
@@ -80,10 +75,7 @@
     right: 0;
 } */
 
-@keyframes loading-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
+
 
 @media screen and (orientation: landscape) {
     .tour-no-events {

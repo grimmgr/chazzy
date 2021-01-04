@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './goToStyle.css';
 
 export const GoTo = (props) => {
-    // const aos = useAos();
     return (
         <div className={`go-to-container ${props.name}-link`}>
             <div className='go-to'>
