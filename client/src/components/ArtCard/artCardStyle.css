@@ -10,7 +10,6 @@
 }
 
 .art-options {
-    /* background-color: rgba(70, 63, 12, 0.5); */
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -53,10 +52,6 @@
 }
 
 .ig-thumbnail {
-    /* height: calc(40vw + 54px); */
-    /* position: absolute;
-    left: 0;
-    top: -54px; */
     width: 100%;
 }
 
@@ -130,94 +125,6 @@
     background-color: rgba(106, 233, 255, 0.7);
 }
 
-/* .close-display-container {
-    padding: 6px;
-    position: absolute;
-    right: 5%;
-    top: 5%;
-    z-index: 3;
-}
-
-.close-display-btn {
-    cursor: pointer;
-    height: 20px;
-    width: 20px;
-}
-
-.close-display-btn span {
-    background-color: white;
-    border-radius: 3px;
-    height: 3px;
-    position: absolute;
-    width: 28px;
-}
-
-.left-display {
-    transform: rotate(45deg);
-    transform-origin: 0 0;
-    top: 0;
-    left: 1px;
-}
-
-.right-display {
-    transform: rotate(-45deg);
-    transform-origin: 100% 100%;
-    top: -1px;
-    right: -1px;
-}
-
-.big-display-enter {
-    opacity: 0;
-}
-
-.big-display-enter-active {
-    opacity: 1;
-    transition: opacity 300ms;
-}
-
-.big-display-exit {
-    opacity: 1;
-}
-
-.big-display-exit-active {
-    opacity: 0;
-    transition: opacity 400ms;
-}
-.big-display {
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 3;
-}
-
-.big-display-container {
-    align-items: center;
-    display: flex;
-    height: 400px;
-    justify-content: center;
-    width: 100%;
-}
-
-.big-display-container::after {
-    content: "";
-    background: url(../../backgrounds/purp.png);
-    background-size: cover;
-    opacity: .9;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;   
-} */
-
-
 .display-iframe {
     height: 80vw;
     width: 70vw;
@@ -253,46 +160,6 @@
         width: 55vh;
     }
 }
-
-/* @media screen and (min-width: 700px) {
-    .big-display-container {
-        height: 500px;
-        width: 500px;
-    }
-    .display-card {
-        width: 350px;
-    }
-    .display-iframe {
-        height: 400px;
-    }
-} */
-
-/* @media screen and (min-width: 700px)
-              and (orientation: portrait) {
-    .big-display-container {
-        width: 100%;
-    }
-}    */
-
-/* @media screen and (min-width: 760px) {
-    .big-display-container {
-        height: 700px;
-        width: 600px;
-    }
-    .display-card {
-        width: 450px;
-    }
-    .display-iframe {
-        height: 500px;
-    }
-} */
-
-/* @media screen and (min-width: 760px)
-              and (orientation: portrait) {
-    .big-display-container {
-        width: 100%;
-    }
-}    */
 
 @media screen and (min-width: 800px) {
     .artwork-card-wrapper {

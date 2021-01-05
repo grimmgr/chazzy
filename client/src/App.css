@@ -221,25 +221,6 @@ input {
     to { transform: rotate(360deg); }
 }
 
-/* .big-display-container::after {
-    content: "";
-    background: url(./backgrounds/purp.png);
-    background-size: cover;
-    opacity: .9;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;   
-} */
-
-/* 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-} */
-
 @media screen and (orientation: landscape) {
     .smiley-banner {
         background-size: 6.25%;
@@ -280,9 +261,6 @@ input {
 }
 
 @media screen and (min-width: 1000px) {
-    /* h2 {
-        font-size: 3.5rem;
-    } */
     p {
         font-size: 1.3rem;
     }

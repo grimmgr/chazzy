@@ -1,11 +1,9 @@
 #fan-art {
-    /* background-color: rgba(43, 0, 57, 0.5); */
     min-height: 100vh;
     padding-top: 10px;
 }
 
 #fan-art h2 {
-    /* color: rgba(140, 74, 169, 0.5); */
     color: rgb(40 18 67);
     margin-bottom: 0;
     height: 55px;
@@ -31,12 +29,10 @@
 }
 
 .open-form-btn {
-    /* padding: 3px 0; */
     text-align: left;
 }
 
 .open-form-btn p {
-    /* background-color: rgba(255, 255, 255, 0.6); */
     border-bottom: 1px solid white;
     color: white;
     cursor: pointer;
@@ -51,40 +47,6 @@
     margin-top: 8px;
 }
 
-/* .art-form-container-enter {
-    opacity: 0;
-}
-
-.art-form-container-enter-active {
-    opacity: 1;
-    transition: opacity linear 200ms;
-}
-
-.art-form-container-exit {
-    opacity: 1;
-}
-
-.art-form-container-exit-active {
-    opacity: 0;
-    transition: opacity linear 200ms;
-} */
-
-/* .art-form-container {
-    align-items: center;
-    background-image: url(../backgrounds/selfie.JPG);
-    background-position: 50% 50%;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 10%;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 3;
-} */
-
 .art-love {
     font-size: 4rem;
     position: absolute;
@@ -98,22 +60,7 @@
     margin-right: 12px;
 }
 
-/* #art-form-container::before {
-    background-image: url(../backgrounds/smiley_pink.png);
-    background-repeat: round;
-    background-size: 10%;
-    content: "";
-    opacity: .7;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: 0;   
-} */
-
 .submit-form {
-    /* border: 2px solid rgb(163, 201, 104); */
     margin: 0 auto;
     padding: 5%;
     width: 80%;
@@ -168,7 +115,6 @@
 .submit-text {
     color: rgb(46, 12, 70);
     font-size: 1.1rem;
-    /* font-weight: bold; */
 }
 
 #submit-art-btn:focus {
@@ -185,38 +131,6 @@
 #submit-art-btn:active {
     filter: invert(100%);
 }
-
-/* .close-form-btn {
-    cursor: pointer;
-    height: 20px;
-    position: fixed;
-    right: 30px;
-    top: 30px;
-    width: 20px;
-    z-index: 3;
-}
-
-.close-form-btn span {
-    background-color: white;
-    border-radius: 3px;
-    height: 3px;
-    position: absolute;
-    width: 28px;
-}
-
-.left {
-    transform: rotate(45deg);
-    transform-origin: 0 0;
-    top: 0;
-    left: 1px;
-}
-
-.right {
-    transform: rotate(-45deg);
-    transform-origin: 100% 100%;
-    top: -1px;
-    right: -1px;
-} */
 
 @media screen and (orientation: landscape) {
     .art-container {

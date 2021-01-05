@@ -33,18 +33,12 @@
     margin-top: 7px;
 }
 
-/* .event-links p {
-    color: rgb(138, 39, 199);
-    font-weight: 600;
-} */
-
 .link {
     border-bottom: 1px solid rgb(102, 33, 145);
     width: fit-content;
 }
 
 .link p {
-    /* color: rgb(138, 39, 199); */
     color: rgb(102, 33, 145);
     font-weight: 600;
     font-size: .8rem;
@@ -60,7 +54,6 @@
         flex-shrink: 0;
         margin: 2% 0;
         padding: 15px;
-        /* width: 275px */
     }
     .date {
         font-size: 1rem;

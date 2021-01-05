@@ -24,12 +24,10 @@
 }
 
 .tour-open-subscribe {
-    /* padding: 3px 0; */
     text-align: left;
 }
 
 .tour-open-subscribe p {
-    /* background-color: rgba(255, 255, 255, 0.6); */
     border-bottom: 1px solid white;
     color: white;
     cursor: pointer;
@@ -47,9 +45,6 @@
     background-position: center;
     background-size: cover;
     height: calc(100vh - 130px);
-    /* position: fixed;
-    bottom: 10px;
-    width: 100%; */
 }
 
 .resting-container {
@@ -64,18 +59,6 @@
 .brb {
     padding-left: 120px;
 }
-
-
-/* .smiley-banner {
-    background-image: url(../backgrounds/smiley_multi.png);
-    height: 60px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-} */
-
-
 
 @media screen and (orientation: landscape) {
     .tour-no-events {

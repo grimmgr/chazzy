@@ -122,9 +122,6 @@ h1 {
     h1 {
         font-size: 3.5rem;
     }
-    /* .buy-listen p {
-        font-size: 1.1rem;
-    } */
     .cover {
         padding-bottom: 7%;
     }
@@ -241,13 +238,6 @@ h1 {
     .cover {
         padding-bottom: 2%;
     }
-    /* .buy-listen p {
-        font-size: 1.2rem;
-    } */
-    
-    /* .album-cover {
-        width: 55%;
-    } */
 }
 
 @media screen and (min-width: 1000px)

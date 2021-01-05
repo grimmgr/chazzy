@@ -17,7 +17,6 @@
 }
 
 .img-container {
-    /* background-color: rgba(255, 255, 255, 0.4); */
     background-color: rgba(133, 86, 162, .43);
     flex: none;
     padding: 10px 10px 5px 10px;
@@ -33,10 +32,6 @@
     color: rgb(46, 12, 70);
     text-shadow: 0 0 30px rgb(148, 171, 102), 1px 1px 20px rgb(148, 171, 102), -1px -1px 20px rgb(148, 171, 102), 0 10px 10px rgb(148, 171, 102), 0 -10px 10px rgb(148, 171, 102), 10px 0 10px rgb(148, 171, 102), -10px 0 10px rgb(148, 171, 102), 0 -5px 5px  rgb(148, 171, 102), 0 5px 5px  rgb(148, 171, 102);
 }
-
-
-
-
 
 @media screen and (min-width: 500px) {
     .merch-container {

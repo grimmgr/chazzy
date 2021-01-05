@@ -11,7 +11,6 @@
 }
 
 .join-mailing {
-    /* background-color: rgba(0, 0, 0, .2); */
     cursor: pointer;
     text-align: right;
     width: max-content;
@@ -33,7 +32,6 @@
 
 .tour-link {
     margin: 30px 0;
-    /* top: 50px; */
 }
 
 .tour-link p {
@@ -186,9 +184,6 @@
     .events-card-container {
         padding: 0 10%;
     }
-    /* .join-mailing-container {
-        top: 50px;
-    } */
 }
 
 @media screen and (min-width: 1660px) {
