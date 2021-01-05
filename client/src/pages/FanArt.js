@@ -28,35 +28,34 @@ export const FanArt = () => {
         return postID;
     }
 
-    const getIgInfo = async (post) => {
-        console.log('getIgInfo input:' + post);
-        const response = await axios.get('/api/ig/' + post);
-        const postInfo = response.data;
-        return postInfo;
-    }
+    // const getIgInfo = async (post) => {
+    //     const response = await axios.get('/api/ig/' + post);
+    //     const postInfo = response.data;
+    //     return postInfo;
+    // }
     
     const submitArt = async (e) => {
         e.preventDefault();
         if ( instaLink ) {
             let artInfo;
             const embedLink = getEmbedLink(instaLink);
-            const post = getPostID(instaLink);
-            const { author, cdn } = await getIgInfo(post);
+            const postID = getPostID(instaLink);
+            // const { author, cdn } = await getIgInfo(post);
             if ( admin ) {
                 artInfo = {
-                    cdn: cdn,
+                    // cdn: cdn,
+                    post_ID: postID,
                     embed_link: embedLink,
                     email: null,
-                    author: author,
                     verified: true,
                     submitted: new Date()
                 }
             } else {
                 artInfo = {
-                    cdn: cdn,
+                    // cdn: cdn,
+                    post_ID: postID,
                     embed_link: embedLink,
                     email: email,
-                    author: author,
                     verified: false,
                     submitted: new Date()
                 }
@@ -104,7 +103,7 @@ export const FanArt = () => {
                     <ArtCard
                     key={art._id}
                     id={art._id}
-                    link={art.cdn}
+                    post={art.post_ID}
                     embedLink={art.embed_link}
                     email={art.email}
                     verified={art.verified}

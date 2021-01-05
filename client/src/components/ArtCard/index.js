@@ -1,17 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import axios from 'axios';
 import { useAdmin } from '../../utils/adminContext';
 import { useFanArt } from '../../utils/fanArtContext';
+import LazyLoad from 'react-lazy-load';
 import './artCardStyle.css';
 
 export const ArtCard = (props) => {
     const [deletePrompt, setDeletePrompt] = useState(false);
     const [verifyPrompt, setVerifyPrompt] = useState(false);
     const [displayOne, setDisplayOne] = useState(false);
+    const [imgSrc, setImgSrc] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     const admin = useAdmin().admin;
     const { fanArt, setFanArt } = useFanArt();
+
 
     const clickX = (e) => {
         e.stopPropagation();
@@ -69,6 +73,23 @@ export const ArtCard = (props) => {
         setDisplayOne(true);
     }
 
+    const getIgInfo = async (post) => {
+        const response = await axios.get('/api/ig/' + post);
+        const postInfo = response.data;
+        return postInfo;
+    }
+
+    const getImgThumbnail = async () => {
+        console.log(props.post);
+        const { author, cdn } = await getIgInfo(props.post);
+        setImgSrc(cdn);
+        setLoading(false);
+    }
+
+    useEffect(() => {
+        getImgThumbnail();
+    }, []);
+
     return (
         <div className='artwork-card-wrapper'>
         <div 
@@ -107,7 +128,22 @@ export const ArtCard = (props) => {
                 </div>
             </CSSTransition>
             <div className='ig-img-container'>
-                <img className='ig-thumbnail' src={props.link} alt='instagram post' />
+                { loading ? 
+                    <LazyLoad
+                        debounce={false}
+                        offsetHorizontal={300}
+                        offsetVertical={500}
+                        >
+                        <div className='ig-thumbnail-loading'></div>
+                    </LazyLoad>
+                : 
+                    <LazyLoad
+                        debounce={false}
+                        offsetHorizontal={300}
+                        offsetVertical={500}
+                        >
+                        <img className='ig-thumbnail' src={imgSrc} alt='instagram post' /> 
+                    </LazyLoad> }
             </div>
            
         </div>

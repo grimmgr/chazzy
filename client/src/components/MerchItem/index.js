@@ -8,7 +8,7 @@ export const MerchItem = (props) => {
                 <LazyLoad
                     debounce={false}
                     offsetHorizontal={300}
-                    offsetVertical={300}
+                    offsetVertical={200}
                     >
                     <img src={ props.imgLink } alt={ props.alt } />
                 </LazyLoad>
