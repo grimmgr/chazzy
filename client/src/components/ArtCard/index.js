@@ -80,7 +80,6 @@ export const ArtCard = (props) => {
     }
 
     const getImgThumbnail = async () => {
-        console.log(props.post);
         const { author, cdn } = await getIgInfo(props.post);
         setImgSrc(cdn);
         setLoading(false);
