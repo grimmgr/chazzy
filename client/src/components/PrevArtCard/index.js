@@ -6,7 +6,7 @@ export const PrevArtCard = (props) => {
         <div className='prev-artwork-card'>
             <LazyLoad
                 debounce={false}
-                offsetHorizontal={300}
+                offsetHorizontal={500}
                 offsetVertical={500}
                 >
                 <iframe className='prev-ig-iframe' src={props.link} frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title={props.title}></iframe>
