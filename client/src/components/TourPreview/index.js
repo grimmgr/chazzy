@@ -78,7 +78,7 @@ export const TourPreview = () => {
                         <p className='mailing-list'>MAILING LIST</p>
                     </div>
                 </div> 
-                <img className='shows-img' src='images/tour-prev.png' alt='live show' />
+                <img className='shows-img' src='images/tour-prev.png' alt='Chastity Belt on stage at a live show' />
             </div> 
             <CSSTransition
                 in={openSubscribe}
