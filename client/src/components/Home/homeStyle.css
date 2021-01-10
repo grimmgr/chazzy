@@ -78,6 +78,7 @@ h1 {
 }
 
 .cover {
+    bottom: 10vh;
     text-align: center;
     width: 100%;
 }
@@ -99,10 +100,10 @@ h1 {
 }
 
 @media screen and (min-width: 560px)
-              and (max-width: 830px)
               and (orientation: landscape) {
                   #home {
-                      background-position: 50% 51%;
+                    background-position: right 50% bottom 60vh, right 50% top -30vh;
+                    background-size: cover, cover;
                   }
                   .album-cover {
                       width: 60%;
@@ -113,17 +114,13 @@ h1 {
               }
 
 
-@media screen and (min-width: 600px)
-              and (min-height: 450px) {
+@media screen and (min-width: 600px) {
     #home {
         background-size: cover, cover;
-        background-position: right 50% bottom 55vh, 50% 30%;
+        background-position: right 50% bottom 60vh, right 50% top 10vh;
     }
     h1 {
         font-size: 3.5rem;
-    }
-    .cover {
-        padding-bottom: 7%;
     }
     .home-msg-container {
         padding-top: 3.5rem;
@@ -142,116 +139,47 @@ h1 {
     }
 }
 
-@media screen and (min-width: 700px)
-              and (min-height: 750px) {
-    h1 {
-        font-size: 4.2rem;
-    }
-    .cover {
-        padding-bottom: 12%;
-    }
-    .home-msg-container {
-        padding-top: 4.4rem;
-    }
-    .out-now {
-        margin-top: 3.9rem;
-    }
-}
-
-
-
-@media screen and (min-width: 800px)
-              and (min-height: 450px) {
-    h1 {
-        font-size: 4rem;
-    }
-    .home-msg-container {
-        padding-top: 4rem;
-    }
-    .out-now {
-        margin-top: 3.8rem;
-    }
-    .home-links {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 0;
-        top: 40.5vh;
-        width: 100%;
-    }
-    .home-links-pod {
-        display: flex;
-        justify-content: space-evenly;
-        width: 25%;
-    }
-    .patreon-link-big {
-        display: flex;
-        justify-content: center;
-        width: 25%;
-    }
-    .buy-listen {
-        margin-top: 5px;
-    }
-    .buy-listen p {
-        color: rgb(230, 230, 230);
-    }
-    .buy-listen {
-        border-bottom: 1px solid rgb(191, 196, 161);
-    }
-    .album-cover {
-        width: 50%;
-    }
-    .patreon-link {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 800px)
-              and (min-height: 1000px) {
-    h1 {
-        font-size: 5.6rem;
-    }
-    .cover {
-        padding-bottom: 15%;
-    }
-    .home-msg-container {
-        padding-top: 6.1rem;
-    }
-    .out-now {
-        margin-top: 5.8rem;
-    }
-}
-
 @media screen and (min-width: 1000px) {
     #home {
-        background-size: cover, cover;
-        background-position: right 50% bottom 55vh, 50% 40%;
+        background-position: right 50% bottom 60vh, 50% 15%;
     }
     h1 {
         font-size: 4.5rem;
     }
     .home-msg-container {
-        padding-top: 4.5rem;
+        padding-top: 4.7rem;
     }
     .out-now {
         margin-top: 4.4rem;
     }
-    .cover {
-        padding-bottom: 2%;
+    .home-links {
+        padding-top: 4.5rem;
     }
 }
 
 @media screen and (min-width: 1000px)
-              and (min-height: 850px) {
+              and (orientation: portrait) {
+                #home {
+                    background-position: right 50% bottom 60vh, right 50% top 15vh;
+                }
                 h1 {
                     font-size: 5rem;
                 }
                 .home-msg-container {
-                    padding-top: 5rem;
+                    padding-top: 5.3rem;
+                }
+                .home-links {
+                    padding-top: 7.5rem;
                 }
                 .out-now {
                     margin-top: 5rem;
                 }
-                .cover {
-                    padding-bottom: 5%;
-                }
               }
+@media screen and (min-width: 1400px) {
+    #home {
+        background-position: right 50% bottom 60vh, 50% 30%;
+    }
+    .album-cover {
+        width: 55%;
+    }
+}
