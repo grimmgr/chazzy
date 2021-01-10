@@ -23,7 +23,7 @@ export const Video = () => {
                 <div className='video-container'>
                     { videoData.map(vid => (
                         <VideoCard
-                            key={vid.name}
+                            key={vid.title}
                             name={vid.name}
                             link={vid.link}
                         />

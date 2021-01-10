@@ -155,6 +155,9 @@ h1 {
     .home-links {
         padding-top: 4.5rem;
     }
+    .album-cover {
+        width: 55%;
+    }
 }
 
 @media screen and (min-width: 1000px)
@@ -174,12 +177,15 @@ h1 {
                 .out-now {
                     margin-top: 5rem;
                 }
+                .album-cover {
+                    width: 70%;
+                }
               }
+
+
 @media screen and (min-width: 1400px) {
     #home {
-        background-position: right 50% bottom 60vh, 50% 30%;
+        background-position: right 50% bottom 55vh, 50% -25vh;
     }
-    .album-cover {
-        width: 55%;
-    }
+    
 }

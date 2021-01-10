@@ -7,7 +7,7 @@ export const VideoCard = (props) => {
             <LazyLoad
                 debounce={false}
                 offsetHorizontal={300}
-                offsetVertical={300}
+                offsetVertical={500}
                 >
                 <iframe src={props.link} frameBorder="0" title={props.name} allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </LazyLoad>
