@@ -12,10 +12,6 @@
     width: 80%;
 }
 .prev-artwork-card {
-    background-color: rgba(255, 255, 129, 0.461);
-    background-image: url(../../backgrounds/smiley_green.png);
-    background-position: center;
-    background-size: cover;
     height: 93vw;
     flex-shrink: 0;
     scroll-snap-align: center;
@@ -27,6 +23,10 @@
 }
 
 .prev-artwork-card iframe {
+    background-color: rgba(255, 255, 129, 0.461);
+    background-image: url(../../backgrounds/smiley_green.png);
+    background-position: center;
+    background-size: cover;
     height: 100%;
     width: 100%;
 }

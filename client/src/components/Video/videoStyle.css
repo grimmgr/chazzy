@@ -10,10 +10,7 @@
 }
 
 .video-card {
-    background-color: rgba(255, 255, 129, 0.461);
-    background-image: url(../../backgrounds/smiley_green.png);
-    background-position: center;
-    background-size: cover;
+    
     flex-shrink: 0;
     height: calc(100vw * 0.56);
     scroll-snap-align: center;
@@ -21,6 +18,10 @@
 }
 
 .video-card iframe {
+    background-color: rgba(255, 255, 129, 0.461);
+    background-image: url(../../backgrounds/smiley_green.png);
+    background-position: center;
+    background-size: cover;
     height: calc(100vw * 0.56);
     width: 100%;
 }

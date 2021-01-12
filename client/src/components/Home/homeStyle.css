@@ -1,7 +1,7 @@
 #home {
     background-image: url(../../backgrounds/big_purp1.png), url(../../backgrounds/home.png);
     background-size: cover, contain;
-    background-position: right 50% bottom 60vh, right 50% top 40vh;
+    background-position: right 50% bottom 55vh, right 50% top 40vh;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -78,7 +78,7 @@ h1 {
 }
 
 .cover {
-    bottom: 10vh;
+    bottom: 5vh;
     text-align: center;
     width: 100%;
 }
@@ -102,8 +102,11 @@ h1 {
 @media screen and (min-width: 560px)
               and (orientation: landscape) {
                   #home {
-                    background-position: right 50% bottom 60vh, right 50% top -30vh;
+                    background-position: right 50% bottom 50vh, right 50% top 0vh;
                     background-size: cover, cover;
+                  }
+                  .cover {
+                      bottom: 0vh;
                   }
                   .album-cover {
                       width: 60%;
@@ -114,10 +117,10 @@ h1 {
               }
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) and (orientation: portrait) {
     #home {
         background-size: cover, cover;
-        background-position: right 50% bottom 60vh, right 50% top 10vh;
+        background-position: right 50% bottom 55vh, right 50% top 15vh;
     }
     h1 {
         font-size: 3.5rem;
@@ -139,9 +142,10 @@ h1 {
     }
 }
 
+
 @media screen and (min-width: 1000px) {
     #home {
-        background-position: right 50% bottom 60vh, 50% 15%;
+        background-position: right 50% bottom 50vh, 50% 0vh;
     }
     h1 {
         font-size: 4.5rem;
@@ -163,7 +167,7 @@ h1 {
 @media screen and (min-width: 1000px)
               and (orientation: portrait) {
                 #home {
-                    background-position: right 50% bottom 60vh, right 50% top 15vh;
+                    background-position: right 50% bottom 50vh, right 50% top 15vh;
                 }
                 h1 {
                     font-size: 5rem;
@@ -183,9 +187,32 @@ h1 {
               }
 
 
+@media screen and (min-width: 1200px) {
+    #home {
+        background-position: right 50% bottom 50vh, 50% 0vh;
+    }
+    .album-cover {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    h1 {
+        font-size: 5.3rem;
+    }
+    .home-msg-container {
+        padding-top: 5.6rem;
+    }
+    .out-now {
+        margin-top: 5.4rem;
+    }
+    .home-links {
+        padding-top: 7.5rem;
+    }
+}
+
 @media screen and (min-width: 1400px) {
     #home {
-        background-position: right 50% bottom 55vh, 50% -25vh;
+        background-position: right 50% bottom 50vh, 50% -20vh;
     }
-    
 }
