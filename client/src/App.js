@@ -12,6 +12,7 @@ import { WidthProvider } from './utils/widthContext';
 import { SubscribeProvider } from './utils/subscribeContext';
 
 import './App.css';
+import ScrollToTop from './components/ScrollToTop';
 
 
 
@@ -27,6 +28,7 @@ export const App = () => {
 
     return (
         <Router>
+            <ScrollToTop />
             <main>
                 <NavProvider>
                     <WidthProvider>
