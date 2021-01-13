@@ -121,7 +121,6 @@ export const FanArt = () => {
                     <div className='big-display'>
                         
                         <div id='art-form-container' className='big-display-container'>
-                            {/* <p className='art-love'>WE <span className='heart'>&hearts;</span> YOUR <br/> ART <br/> !</p> */}
                             <div className='close-display-container'>
                                 <div className='close-display-btn' onClick={() => setOpenForm(false)} >
                                     <span className='left-display'></span>
