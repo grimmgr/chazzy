@@ -25,7 +25,7 @@ nav {
 }
 
 .nav-list {
-    background-image: linear-gradient( rgba(255, 255, 255, .55), rgba(255, 255, 255, .7), rgba(255, 255, 255, .55));
+    background-color: rgba(255, 255, 255, .6);
     box-shadow: 
         0 0 80px 40px rgba(255, 255, 255, .7);
     
@@ -72,12 +72,6 @@ nav {
 @media screen and (min-width: 530px) {
     nav {
         background-position: 100% 50%;
-    }
-}
-
-@media screen and (min-width: 600px) {
-    .nav-list {
-        background-image: linear-gradient( rgba(255, 255, 255, .55), rgba(255, 255, 255, .6), rgba(255, 255, 255, .55));
     }
 }
 
