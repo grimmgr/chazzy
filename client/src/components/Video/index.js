@@ -7,13 +7,14 @@ import videoData from './video.json';
 
 export const Video = () => {
     const width = useWidth().width;
+    const scrollWidth = ( width < 700 ) ? width : 0.5 * width;
 
     const rightArrowClick = (e) => {
-        e.target.parentElement.firstChild.scrollLeft += width;
+        e.target.parentElement.firstChild.scrollLeft += scrollWidth;
     };
 
     const leftArrowClick = (e) => {
-        e.target.parentElement.firstChild.scrollLeft -= width;
+        e.target.parentElement.firstChild.scrollLeft -= scrollWidth;
     };
     return (
         <section id='video'>
