@@ -22,7 +22,10 @@ export const Nav = (props) => {
                     <li><Link to='/tour'>Tour</Link></li>
                     <li><a href='https://www.patreon.com/chastitybelt' target='_blank' rel='noopener noreferrer'>Patreon</a></li>
                     <li><Link to='/fan-art'>Fan Art</Link></li>
-                    <li><a href='/#contact'>Contact</a></li>
+                    <li><Link to={{
+                            pathname: '/',
+                            hash: '#contact'
+                        }}>Contact</Link></li>
                     <ul className='socials-list'>
                         <li><a href='https://chastity-belt.bandcamp.com/' target='_blank' rel='noopener noreferrer'><i className='fab fa-bandcamp'></i></a></li>
                         <li><a href='https://twitter.com/chast1tybelt?lang=en' target='_blank' rel='noopener noreferrer'><i className='fab fa-twitter'></i></a></li>

@@ -1,9 +1,10 @@
-import React, { useState, useRef} from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { useWidth } from '../../utils/widthContext';
 import './contactStyle.css';
 
-export const Contact = () => {
+export const Contact = (props) => {
+
     const width = useWidth().width;
     const [open, setOpen] = useState(false);
     const [contactHeight, setContactHeight] = useState((width < 500) ? 60 : 80);
@@ -29,6 +30,10 @@ export const Contact = () => {
     const shrink = () => {
         setContactHeight((width < 500) ? 60 : 80);
     }
+
+    useEffect(() => {
+        setOpen(props.open);
+    }, [props]);
 
     return (
         <section id='contact' className={'contact-sctn'} style={{ height: contactHeight }} >
