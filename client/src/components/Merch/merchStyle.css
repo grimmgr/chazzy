@@ -28,9 +28,53 @@
     width: 100%;
 }
 
-.store-link p {
+.merch-links-container {
+    position: relative;
+}
+
+.merch-links {
+    cursor: pointer;
+}
+
+.merch-links p {
     color: rgb(46, 12, 70);
     text-shadow: 0 0 30px rgb(148, 171, 102), 1px 1px 20px rgb(148, 171, 102), -1px -1px 20px rgb(148, 171, 102), 0 10px 10px rgb(148, 171, 102), 0 -10px 10px rgb(148, 171, 102), 10px 0 10px rgb(148, 171, 102), -10px 0 10px rgb(148, 171, 102), 0 -5px 5px  rgb(148, 171, 102), 0 5px 5px  rgb(148, 171, 102);
+}
+
+.store-links {
+    background-color: rgb(46, 12, 70);
+    padding: 3px 10px;
+    position: absolute;
+    right: 20px;
+    transform-origin: top;
+    top: 32px;
+}
+
+.store-links p {
+    color: rgb(255, 255, 255);
+    line-height: 1.5;
+}
+
+.store-links p:hover {
+    color: rgb(164, 211, 110);
+}
+
+.store-links-enter {
+    transform: scaleY(0);
+}
+
+.store-links-enter-active {
+    transform: scaleY(1);
+    transition: transform 200ms;
+}
+
+.store-links-exit {
+    transform: scaleY(1);
+}
+
+.store-links-exit-active {
+    transform: scaleY(0);
+    transition: transform 200ms;
 }
 
 @media screen and (min-width: 500px) {
@@ -56,6 +100,12 @@
     }
 }
 
+@media screen and (min-width: 730px) and (min-height: 450px) {
+    .store-links {
+        right: 35px;
+    }
+}
+
 @media screen and (min-width: 900px) {
     .img-container {
         padding: 25px 25px 20px 25px;
@@ -71,5 +121,12 @@
     .img-container {
         padding: 10px 10px 5px 10px;
         width: 33.3%
+    }
+    .store-links {
+        right: 45px;
+        top: 42px;
+    }
+    .treat {
+        padding-right: 30px;
     }
 }

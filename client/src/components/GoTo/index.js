@@ -7,7 +7,7 @@ export const GoTo = (props) => {
         <div className={`go-to-container ${props.name}-link`}>
             <div className='go-to'>
                 {props.external ?
-                    <a href={props.link} target='_blank'  rel='noopener noreferrer'>
+                    <a href={props.link} target='_blank' rel='noopener noreferrer'>
                         <p>{props.text}</p>
                     </a>
                 :

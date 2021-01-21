@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import { useWidth } from '../../utils/widthContext';
 import { MerchItem } from '../MerchItem';
 import { GoTo } from '../GoTo';
@@ -7,7 +8,12 @@ import './merchStyle.css';
 
 export const Merch = () => {
 
+    const [ merchLinks, setMerchLinks ] = useState(false);
     const width = useWidth().width;
+
+    const toggleMerchLinks = () => {
+        merchLinks ? setMerchLinks(false) : setMerchLinks(true);
+    }
 
     const rightArrowClick = (e) => {
         e.target.parentElement.firstChild.scrollLeft += width;
@@ -17,7 +23,7 @@ export const Merch = () => {
         e.target.parentElement.firstChild.scrollLeft -= width;
     };
 
-    
+    console.log(merchLinks);
 
     return (
         <section id='merch'>
@@ -45,12 +51,25 @@ export const Merch = () => {
                     >
                 </i>
             </div>
-            <GoTo 
-                link='http://chastitybelt.limitedrun.com/store'
-                name='store'
-                text='GO TO STORE'
-                external='true'
-            />
+
+            <div className='merch-links-container go-to-container'>
+                <div className='merch-links go-to' onClick={toggleMerchLinks} onMouseEnter={()=> setMerchLinks(true)} onMouseLeave={()=> setMerchLinks(false)}>
+                    <p>GO TO STORE</p>
+                </div>
+                <div className='line'></div>
+                <CSSTransition
+                    in={merchLinks}
+                    timeout={200}
+                    classNames='store-links'
+                    unmountOnExit
+                    >
+                    <div className='store-links' onMouseEnter={()=> setMerchLinks(true)} onMouseLeave={()=> setMerchLinks(false)}>
+                        <a href='http://chastitybelt.limitedrun.com/store' target='_blank' rel='noopener noreferrer'><p>US / International</p></a>
+                        <a href='http://chastitybelt.limitedrun.com/store' target='_blank' rel='noopener noreferrer'><p>UK</p></a>
+                    </div>
+                </CSSTransition>
+            </div>
+
             <p className='treat'>treat yourself ;)</p>
         </section>
     );
