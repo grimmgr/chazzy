@@ -43,16 +43,17 @@
 
 .store-links {
     background-color: rgb(46, 12, 70);
-    padding: 3px 10px;
+    padding: 4px 10px;
     position: absolute;
     right: 20px;
     transform-origin: top;
     top: 32px;
+    width: 130px;
 }
 
 .store-links p {
     color: rgb(255, 255, 255);
-    line-height: 1.5;
+    line-height: 1.7;
 }
 
 .store-links p:hover {
@@ -100,6 +101,12 @@
     }
 }
 
+@media screen and (min-width: 600px) and (orientation: portrait) {
+    .store-links {
+        width: 140px;
+    }
+}
+
 @media screen and (min-width: 730px) and (min-height: 450px) {
     .store-links {
         right: 35px;
@@ -125,6 +132,7 @@
     .store-links {
         right: 45px;
         top: 42px;
+        width: 152px;
     }
     .treat {
         padding-right: 30px;

@@ -23,8 +23,6 @@ export const Merch = () => {
         e.target.parentElement.firstChild.scrollLeft -= width;
     };
 
-    console.log(merchLinks);
-
     return (
         <section id='merch'>
             <h2>MERCH</h2>
@@ -64,8 +62,8 @@ export const Merch = () => {
                     unmountOnExit
                     >
                     <div className='store-links' onMouseEnter={()=> setMerchLinks(true)} onMouseLeave={()=> setMerchLinks(false)}>
-                        <a href='http://chastitybelt.limitedrun.com/store' target='_blank' rel='noopener noreferrer'><p>US / International</p></a>
-                        <a href='http://chastitybelt.limitedrun.com/store' target='_blank' rel='noopener noreferrer'><p>UK</p></a>
+                        <a href='http://chastitybelt.limitedrun.com/store' target='_blank' rel='noopener noreferrer'><p>US</p></a>
+                        <a href='https://chastitybelt.ochre.store/' target='_blank' rel='noopener noreferrer'><p>UK</p></a>
                     </div>
                 </CSSTransition>
             </div>
