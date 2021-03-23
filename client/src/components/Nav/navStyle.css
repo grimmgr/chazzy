@@ -44,6 +44,12 @@ nav {
     color: rgb(46, 12, 70);
 }
 
+#nav-store-links {
+    right: 0;
+    width: 100%;
+    z-index: 5;
+}
+
 .socials-list {
     display: flex;
     flex-wrap: wrap;

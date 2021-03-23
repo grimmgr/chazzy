@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { useWidth } from '../../utils/widthContext';
 import { MerchItem } from '../MerchItem';
-import { GoTo } from '../GoTo';
+//import { GoTo } from '../GoTo';
 import merchData from './merch.json';
 import './merchStyle.css';
 
@@ -63,7 +63,7 @@ export const Merch = () => {
                     >
                     <div className='store-links' onMouseEnter={()=> setMerchLinks(true)} onMouseLeave={()=> setMerchLinks(false)}>
                         <a href='http://chastitybelt.limitedrun.com/store' target='_blank' rel='noopener noreferrer'><p>US</p></a>
-                        <a href='https://chastitybelt.ochre.store/' target='_blank' rel='noopener noreferrer'><p>UK</p></a>
+                        <a href='https://chastitybelt.terriblemerch.com/' target='_blank' rel='noopener noreferrer'><p>UK</p></a>
                     </div>
                 </CSSTransition>
             </div>
