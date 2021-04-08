@@ -15,7 +15,7 @@ export const Home = () => {
             <div className='home-links'>
                 <div className='home-links-pod'>
                     <div className='buy-listen'>
-                        <a href='https://www.hardlyart.com/releases/chastity_belt/chastity_belt' target='_blank' rel='noopener  noreferrer'>
+                        <a href='http://chastitybelt.limitedrun.com/store' target='_blank' rel='noopener  noreferrer'>
                             <p>BUY</p>
                         </a>
                     </div>

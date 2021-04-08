@@ -20,12 +20,12 @@ export const Nav = (props) => {
     }
 
     return (
-        <nav onClick={ props.closeNav }>
+        <nav>
             <div className='nav-container'>
                 <ul className='nav-list'>
-                    <li>{ navHome ? <a href='#home'>Home</a> : <Link to='/' exact='true'>Home</Link>}</li>
+                    <li onClick={ props.closeNav }>{ navHome ? <a href='#home'>Home</a> : <Link to='/' exact='true'>Home</Link>}</li>
                     <li>
-                        <a href='' onClick={toggleMerchLinks} onMouseEnter={()=> setMerchLinks(true)} onMouseLeave={()=> setMerchLinks(false)}>Shop</a>
+                        <a href='#' onClick={toggleMerchLinks} onMouseEnter={()=> setMerchLinks(true)} onMouseLeave={()=> setMerchLinks(false)}>Shop</a>
                         <CSSTransition
                             in={merchLinks}
                             timeout={200}
@@ -39,10 +39,10 @@ export const Nav = (props) => {
                         </CSSTransition>
                     </li>
                     
-                    <li><Link to='/tour'>Tour</Link></li>
+                    <li onClick={ props.closeNav }><Link to='/tour'>Tour</Link></li>
                     <li><a href='https://www.patreon.com/chastitybelt' target='_blank' rel='noopener noreferrer'>Patreon</a></li>
-                    <li><Link to='/fan-art'>Fan Art</Link></li>
-                    <li><Link to={{
+                    <li onClick={ props.closeNav }><Link to='/fan-art'>Fan Art</Link></li>
+                    <li onClick={ props.closeNav }><Link to={{
                             pathname: '/',
                             hash: '#contact'
                         }}>Contact</Link></li>
